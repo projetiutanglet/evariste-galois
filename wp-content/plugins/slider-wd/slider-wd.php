@@ -4,7 +4,7 @@
  * Plugin Name: Slider WD
  * Plugin URI: https://10web.io/plugins/wordpress-slider/
  * Description: This is a responsive plugin, which allows adding sliders to your posts/pages and to custom location. It uses large number of transition effects and supports various types of layers.
- * Version: 1.2.3
+ * Version: 1.2.4
  * Author: 10Web
  * Author URI: https://10web.io
  * License: GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -19,8 +19,8 @@ define('WD_S_PREFIX', 'wds');
 define('WD_S_NICENAME', __( 'Slider WD', WD_S_PREFIX ));
 define('WD_S_NONCE', 'nonce_wd');
 
-define('WD_S_DB_VERSION', '1.2.3');
-define('WD_S_VERSION', '1.2.3');
+define('WD_S_DB_VERSION', '1.2.4');
+define('WD_S_VERSION', '1.2.4');
 
 define('WD_S_FREE', TRUE);
 
@@ -55,7 +55,7 @@ function wds_options_panel() {
   $parent_slug = WD_S_FREE ? null : 'sliders_wds';
   if( !WD_S_FREE || get_option( "wds_subscribe_done" ) == 1 ) {
     $main_title = __('Slider WD', 'wds');
-    if (WD_S_FREE && !get_transient(WD_S_PREFIX . '_overview_visited')) {
+    if (FALSE && WD_S_FREE && !get_transient(WD_S_PREFIX . '_overview_visited')) {
       $main_title .= ' <span class="update-plugins count-2" style="background-color: #d54e21;"><span class="plugin-count">1</span></span>';
     }
     add_menu_page(__('Slider WD', 'wds'), $main_title, 'manage_options', 'sliders_wds', 'wd_sliders', WD_S_URL . '/images/wd_slider.png');

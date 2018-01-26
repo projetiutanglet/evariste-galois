@@ -4,7 +4,7 @@ Tags: responsive slider, slider, slideshow, wordpress slider, image slider, gall
 Requires at least: 3.4
 Tested up to: 4.9
 Requires PHP: 5.2
-Stable tag: 1.2.3
+Stable tag: 1.2.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -128,6 +128,9 @@ After downloading the ZIP file of the slider plugin,
 
 
 == Changelog ==
+
+= 1.2.4 =
+* Removed: Notification   
 
 = 1.2.3 =
 * Fixed: Some js and css conflicts with other plugins and builders.   
