@@ -69,7 +69,7 @@
                 $parent_slug = null;                
             }
             $title = __( 'Premium', $wd_options->prefix );
-            if (!get_transient($wd_options->prefix . '_overview_visited')) {
+            if (FALSE && !get_transient($wd_options->prefix . '_overview_visited')) {
                 $title .= ' <span class="update-plugins count-2" > <span class="plugin-count">1</span></span>';
             }
 			$overview_page = add_submenu_page( $parent_slug, __( 'Premium', $wd_options->prefix ), '<span style="color:#4481ea;">' . $title . '</span>', $capability, 'overview_' . $wd_options->prefix, array( $this, 'display_overview_page' ));

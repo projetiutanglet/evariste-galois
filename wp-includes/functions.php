@@ -2449,6 +2449,7 @@ function wp_get_mime_types() {
 	'ra|ram' => 'audio/x-realaudio',
 	'wav' => 'audio/wav',
 	'ogg|oga' => 'audio/ogg',
+	'flac' => 'audio/flac',
 	'mid|midi' => 'audio/midi',
 	'wma' => 'audio/x-ms-wma',
 	'wax' => 'audio/x-ms-wax',
@@ -2534,7 +2535,7 @@ function wp_get_ext_types() {
 	 */
 	return apply_filters( 'ext2type', array(
 		'image'       => array( 'jpg', 'jpeg', 'jpe',  'gif',  'png',  'bmp',   'tif',  'tiff', 'ico' ),
-		'audio'       => array( 'aac', 'ac3',  'aif',  'aiff', 'm3a',  'm4a',   'm4b',  'mka',  'mp1',  'mp2',  'mp3', 'ogg', 'oga', 'ram', 'wav', 'wma' ),
+		'audio'       => array( 'aac', 'ac3',  'aif',  'aiff', 'flac', 'm3a',  'm4a',   'm4b',  'mka',  'mp1',  'mp2',  'mp3', 'ogg', 'oga', 'ram', 'wav', 'wma' ),
 		'video'       => array( '3g2',  '3gp', '3gpp', 'asf', 'avi',  'divx', 'dv',   'flv',  'm4v',   'mkv',  'mov',  'mp4',  'mpeg', 'mpg', 'mpv', 'ogm', 'ogv', 'qt',  'rm', 'vob', 'wmv' ),
 		'document'    => array( 'doc', 'docx', 'docm', 'dotm', 'odt',  'pages', 'pdf',  'xps',  'oxps', 'rtf',  'wp', 'wpd', 'psd', 'xcf' ),
 		'spreadsheet' => array( 'numbers',     'ods',  'xls',  'xlsx', 'xlsm',  'xlsb' ),
@@ -5808,14 +5809,3 @@ All at ###SITENAME###
 		$site_name
 	), $email_change_email['message'], $email_change_email['headers'] );
 }
-
-// Rediriger les non-administrateurs vers la page d'accueil À partir de l'administration
-function wpm_admin_redirection() {
-		//Si on essaye d'accéder à L'administration Sans avoir le rôle administrateur
-        if ( is_admin() && ! current_user_can( 'administrator' ) ) {
-			// On redirige vers la page d'accueil
-            wp_redirect( home_url() );
-            exit;
-        }
-}
-add_action( 'init', 'wpm_admin_redirection' );
