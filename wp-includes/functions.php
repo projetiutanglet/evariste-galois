@@ -5809,3 +5809,26 @@ All at ###SITENAME###
 		$site_name
 	), $email_change_email['message'], $email_change_email['headers'] );
 }
+
+
+/**
+ * 
+ * GESTION DES ROLES
+ * 
+ **/
+ 
+ 
+ 
+// On définit la fonction
+function egalois_add_role() {
+	// son identifiant et son nom visible
+	remove_role('parent');
+    add_role( 'parent', 'Parent',			 
+       // On liste les droits à donner
+       array( 
+          'read' => true,
+          'read_private_pages' => true,		 
+		)
+	);
+}
+add_action( 'init', 'egalois_add_role' );	// On lance la création de notre fonction

@@ -1,0 +1,15 @@
+[31-Jan-2018 15:57:29 UTC] PHP Fatal error:  Call to undefined function remove_role() in /home/ubuntu/workspace/wp-includes/functions.php on line 5822
+[31-Jan-2018 15:57:29 UTC] PHP Stack trace:
+[31-Jan-2018 15:57:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[31-Jan-2018 15:57:29 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[31-Jan-2018 15:57:29 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[31-Jan-2018 15:57:29 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:92
+[31-Jan-2018 15:57:29 UTC] PHP   5. require() /home/ubuntu/workspace/wp-settings.php:98
+[31-Jan-2018 15:57:32 UTC] PHP Fatal error:  Call to undefined function remove_role() in /home/ubuntu/workspace/wp-includes/functions.php on line 5822
+[31-Jan-2018 15:57:32 UTC] PHP Stack trace:
+[31-Jan-2018 15:57:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/users.php:0
+[31-Jan-2018 15:57:32 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/users.php:11
+[31-Jan-2018 15:57:32 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/admin.php:31
+[31-Jan-2018 15:57:32 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:37
+[31-Jan-2018 15:57:32 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:92
+[31-Jan-2018 15:57:32 UTC] PHP   6. require() /home/ubuntu/workspace/wp-settings.php:98
