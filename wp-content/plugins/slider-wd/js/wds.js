@@ -1675,9 +1675,22 @@ function wds_media_uploader_add_slide(e, id, multiple) {
     multiple: multiple,
     id: id
   });
+
   // Insert files to slider.
-  custom_uploader.on('insert', function() {
-    var attachment = custom_uploader.state().get('selection').toJSON();
+  custom_uploader.on('insert select', function() {
+    var attachment = [];
+    if ( custom_uploader.state().id == "embed" ) {
+      if ( custom_uploader.state().changed.type != "image" ) {
+        alert(wds.file_not_supported);
+        return;
+      }
+      // Insert image from URL.
+      attachment.push({'url': custom_uploader.state().props.attributes.url, 'mime': 'image/jpeg'});
+    }
+    else {
+      attachment = custom_uploader.state().get('selection').toJSON();
+    }
+
     var supported_image_mime = ['image/jpeg', 'image/png', 'image/gif'];
     var supported_video_mime = ['video/mp4', 'audio/ogg', 'video/webm'];
     var supported_audio_mime = ['audio/mpeg3', 'audio/ogg', 'audio/aac', 'audio/m4a', 'audio/f4a', 'audio/mp4'];

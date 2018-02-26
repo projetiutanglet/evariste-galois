@@ -3,7 +3,7 @@
         exit;
     }
 
-    class TenWebDeactivate{
+    class DoradoWebDeactivate{
         ////////////////////////////////////////////////////////////////////////////////////////
         // Events                                                                             //
         ////////////////////////////////////////////////////////////////////////////////////////
@@ -112,14 +112,14 @@
 			if( isset( $_POST[$wd_options->prefix . "_submit_and_deactivate"] ) ){
 				
 				if( $_POST[$wd_options->prefix . "_submit_and_deactivate"] == 2 || $_POST[$wd_options->prefix . "_submit_and_deactivate"] == 3 ){
-					$api = new TenWebApi( $wd_options );
+					$api = new DoradoWebApi( $wd_options );	
 					$hash = $api->get_hash();
 					if($hash != null){
 						$data = array();
 						
 						$data["reason"] = isset($_POST[$wd_options->prefix . "_reasons"]) ? $_POST[$wd_options->prefix . "_reasons"] : "";
 						$data["site_url"] = site_url();
-						$data["plugin_id"] = 69;
+						$data["plugin_id"] = $wd_options->wd_plugin_id;
 						
 						$data["additional_details"] = isset($_POST[$wd_options->prefix . "_additional_details"]) ? $_POST[$wd_options->prefix . "_additional_details"] : "";
 						$admin_data = wp_get_current_user();
@@ -129,7 +129,6 @@
 						
 						$data["name"] = $user_first_name || $user_last_name ? $user_first_name . " " . $user_last_name : $admin_data->data->user_login;							
 						$data["hash"] = $hash;
-
 						$response = wp_remote_post( "https://api.web-dorado.com/deactivatereasons", array(
 							'method' => 'POST',
 							'timeout' => 45,

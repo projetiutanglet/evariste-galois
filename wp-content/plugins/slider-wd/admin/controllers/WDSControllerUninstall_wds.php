@@ -4,12 +4,12 @@ class WDSControllerUninstall_wds {
   public function __construct() {
     if ( WD_S_FREE ) {
       global $wds_options;
-      if ( !class_exists("TenWebConfig") ) {
+      if ( !class_exists("DoradoWebConfig") ) {
         include_once(WD_S_DIR . "/wd/config.php");
       }
-      $config = new TenWebConfig();
+      $config = new DoradoWebConfig();
       $config->set_options($wds_options);
-      $deactivate_reasons = new TenWebDeactivate($config);
+      $deactivate_reasons = new DoradoWebDeactivate($config);
       $deactivate_reasons->submit_and_deactivate();
     }
   }

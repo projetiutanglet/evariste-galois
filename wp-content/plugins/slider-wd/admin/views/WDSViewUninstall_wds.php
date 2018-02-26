@@ -33,8 +33,8 @@ class WDSViewUninstall_wds {
         <h2><?php _e('Uninstall Slider WD', 'wds');?></h2>
         <div class="goodbye-text">
           <?php
-          $support_team = '<a href="https://10web.io/contact-us/" target="_blank">' . __('support team', 'wds') . '</a>';
-          $contact_us = '<a href="https://10web.io/contact-us/" target="_blank">' . __('Contact us', 'wds') . '</a>';
+          $support_team = '<a href="https://web-dorado.com/support/contact-us.html?source=slider-wd" target="_blank">' . __('support team', 'wds') . '</a>';
+          $contact_us = '<a href="https://web-dorado.com/support/contact-us.html?source=slider-wd" target="_blank">' . __('Contact us', 'wds') . '</a>';
           echo sprintf(__("Before uninstalling the plugin, please Contact our %s. We'll do our best to help you out with your issue. We value each and every user and value what's right for our users in everything we do.<br />
           However, if anyway you have made a decision to uninstall the plugin, please take a minute to %s and tell what you didn't like for our plugins further improvement and development. Thank you !!!", "wds"), $support_team, $contact_us); ?>
         </div>

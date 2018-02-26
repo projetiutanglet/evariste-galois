@@ -2,11 +2,11 @@
 
 /**
  * Plugin Name: Slider WD
- * Plugin URI: https://10web.io/plugins/wordpress-slider/
+ * Plugin URI: https://web-dorado.com/products/wordpress-slider-plugin.html
  * Description: This is a responsive plugin, which allows adding sliders to your posts/pages and to custom location. It uses large number of transition effects and supports various types of layers.
- * Version: 1.2.4
- * Author: 10Web
- * Author URI: https://10web.io
+ * Version: 1.2.5
+ * Author: WebDorado
+ * Author URI: https://web-dorado.com/wordpress-plugins-bundle.html
  * License: GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  */
 
@@ -19,8 +19,8 @@ define('WD_S_PREFIX', 'wds');
 define('WD_S_NICENAME', __( 'Slider WD', WD_S_PREFIX ));
 define('WD_S_NONCE', 'nonce_wd');
 
-define('WD_S_DB_VERSION', '1.2.4');
-define('WD_S_VERSION', '1.2.4');
+define('WD_S_DB_VERSION', '1.2.5');
+define('WD_S_VERSION', '1.2.5');
 
 define('WD_S_FREE', TRUE);
 
@@ -54,11 +54,7 @@ $WD_S_UPLOAD_DIR = str_replace(ABSPATH, '', $upload_dir['basedir']) . '/slider-w
 function wds_options_panel() {
   $parent_slug = WD_S_FREE ? null : 'sliders_wds';
   if( !WD_S_FREE || get_option( "wds_subscribe_done" ) == 1 ) {
-    $main_title = __('Slider WD', 'wds');
-    if (FALSE && WD_S_FREE && !get_transient(WD_S_PREFIX . '_overview_visited')) {
-      $main_title .= ' <span class="update-plugins count-2" style="background-color: #d54e21;"><span class="plugin-count">1</span></span>';
-    }
-    add_menu_page(__('Slider WD', 'wds'), $main_title, 'manage_options', 'sliders_wds', 'wd_sliders', WD_S_URL . '/images/wd_slider.png');
+    add_menu_page(__('Slider WD', 'wds'), __('Slider WD', 'wds'), 'manage_options', 'sliders_wds', 'wd_sliders', WD_S_URL . '/images/wd_slider.png');
     $parent_slug = "sliders_wds";
   }
 
@@ -70,6 +66,10 @@ function wds_options_panel() {
   add_action('admin_print_styles-' . $global_options_page, 'wds_styles');
   add_action('admin_print_scripts-' . $global_options_page, 'wds_scripts');
 
+  if ( WD_S_FREE ) {
+    add_submenu_page($parent_slug, __('Get Pro', 'wds'), __('Get Pro', 'wds'), 'manage_options', 'licensing_wds', 'wds_licensing');
+  }
+
   $demo_slider = add_submenu_page($parent_slug, __('Import', 'wds'), __('Import', 'wds'), 'manage_options', 'demo_sliders_wds', 'wds_demo_sliders');
   add_action('admin_print_scripts-' . $demo_slider, 'wds_scripts');
   add_action('admin_print_styles-' . $demo_slider, 'wds_styles');
@@ -79,6 +79,20 @@ function wds_options_panel() {
   add_action('admin_print_scripts-' . $uninstall_page, 'wds_scripts');
 }
 add_action('admin_menu', 'wds_options_panel');
+
+function wds_licensing() {
+  if (function_exists('current_user_can')) {
+    if (!current_user_can('manage_options')) {
+      die('Access Denied');
+    }
+  }
+  else {
+    die('Access Denied');
+  }
+  wp_register_style('wds_licensing', WD_S_URL . '/licensing/style.css', array(), WD_S_VERSION);
+  wp_print_styles('wds_licensing');
+  require_once(WD_S_DIR . '/licensing/licensing.php');
+}
 
 function wd_sliders() {
   if (function_exists('current_user_can')) {
@@ -270,7 +284,11 @@ function wds_filemanager_ajax() {
 // Slider Widget.
 if (class_exists('WP_Widget')) {
   require_once(WD_S_DIR . '/admin/controllers/WDSControllerWidgetSlideshow.php');
-  add_action('widgets_init', create_function('', 'return register_widget("WDSControllerWidgetSlideshow");'));
+  add_action('widgets_init', 'wds_register_widget');
+}
+
+function wds_register_widget() {
+  return register_widget("WDSControllerWidgetSlideshow");
 }
 
 // Activate plugin.
@@ -296,7 +314,6 @@ function wds_install() {
     if ( WD_S_FREE ) {
       add_option("wds_theme_version", '1.0.0', '', 'no');
     }
-    set_transient(WD_S_PREFIX . '_overview_visited', 1, '', 'no');
   }
 }
 if ((!isset($_GET['action']) || $_GET['action'] != 'deactivate')
@@ -577,7 +594,7 @@ function wds_scripts() {
     "prefix" => "wds" ,
     "deactivate_class" =>  'wds_deactivate_link',
     "email" => $admin_data->data->user_email,
-    "plugin_wd_url" => "https://10web.io/plugins/wordpress-slider/",
+    "plugin_wd_url" => "https://web-dorado.com/products/wordpress-slider-plugin.html",
   ));
 }
 
@@ -661,55 +678,77 @@ function wds_get_sliders() {
 
 function wds_overview() {
   if (is_admin() && !isset($_REQUEST['ajax'])) {
-    if (!class_exists("TenWeb")) {
+    if (!class_exists("DoradoWeb")) {
       require_once(WD_S_DIR . '/wd/start.php');
     }
     global $wds_options;
     $wds_options = array(
       "prefix" => "wds",
-      "wd_plugin_id" => 97,
+      "wd_plugin_id" => 69,
       "plugin_title" => "Slider WD",
       "plugin_wordpress_slug" => "slider-wd",
       "plugin_dir" => WD_S_DIR,
       "plugin_main_file" => __FILE__,
-      "description" => __('CREATE FANCY AND INTERACTIVE WEBSITE!', WD_S_PREFIX),
+      "description" => __('Slider WD is a responsive plugin, which allows adding sliders to your posts/pages and to custom location. It uses large number of transition effects and supports various types of layers.', WD_S_PREFIX),
       // from web-dorado.com
       "plugin_features" => array(
         0 => array(
-          "title" => __("Video Slide Support", "wds"),
-          "description" => __("Create catchy video slides. Embed YouTube, Vimeo, Flickr or Dailymotion videos by adding the URL of the video you want to include in the slider.", "wds"),
-          "logo" => WD_S_URL . "/images/overview/SLD1.svg"
+          "title" => __("Responsive", "wds"),
+          "description" => __("Sleek, powerful and intuitive design and layout brings the slides on a new level, for perfect and fast web surfing. Ways that users interact with 100% responsive Slider WD guarantees better and brave experience.", "wds"),
         ),
         1 => array(
-          "title" => __("Slide Effects", "wds"),
-          "description" => __("The premium slider plugin comes with 27 transition effects including Zoom, Kaleidoscope, 3D Random, Parallel and 3D Horizontal.", "wds"),
-          "logo" => WD_S_URL . "/images/overview/SLD2.svg"
+          "title" => __("SEO Friendly", "wds"),
+          "description" => __("Slider WD has developed the best practices in SEO field. The plugin supports all functions necessary for top-rankings.", "wds"),
         ),
         2 => array(
-          "title" => __("Social sharing buttons", "wds"),
-          "description" => __("Add slides with sharing buttons to popular social networks like Google+, Tumblr, Twitter, Pinterest and Facebook.", "wds"),
-          "logo" => WD_S_URL . "/images/overview/SLD3.svg"
+          "title" => __("Drag & Drop Back-End Interface", "wds"),
+          "description" => __("Arrange each and every layer via user friendly drag and drop interface in seconds. This function guarantees fast and effective usability of the plugin without any development skills.", "wds"),
         ),
         3 => array(
-          "title" => __("Layer effects", "wds"),
-          "description" => __("Choose from an an assortment of layer transition and animation effects to make your slides stand out. Set time, position, effect and speed of each layer.", "wds"),
-          "logo" => WD_S_URL . "/images/overview/SLD4.svg"
+          "title" => __("Touch Swipe Navigation", "wds"),
+          "description" => __("Touch the surface of your mobile devices and experience smooth finger navigation. In desktop devices you can experience the same navigation using mouse dragging.", "wds"),
         ),
         4 => array(
-          "title" => __("Custom Navigation buttons", "wds"),
+          "title" => __("Navigation Custom Buttons", "wds"),
           "description" => __("You can choose among variety of navigation button designs included in the plugin or upload and use your custom ones, based on preferences.", "wds"),
-          "logo" => WD_S_URL . "/images/overview/SLD5.svg"
+        )
+      ),
+      // user guide from web-dorado.com
+      "user_guide" => array(
+        0 => array(
+          "main_title" => __("Installing the Slider WD", "wds"),
+          "url" => "https://web-dorado.com/wordpress-slider-wd/installing.html",
+          "titles" => array()
+        ),
+        1 => array(
+          "main_title" => __("Adding Images to Sliders", "wds"),
+          "url" => "https://web-dorado.com/wordpress-slider-wd/adding-images.html",
+          "titles" => array()
+        ),
+        2 => array(
+          "main_title" => __("Adding Layers to The Slide", "wds"),
+          "url" => "https://web-dorado.com/wordpress-slider-wd/adding-layers.html",
+          "titles" => array()
+        ),
+        3 => array(
+          "main_title" => __("Changing/Modifying Slider Settings", "wds"),
+          "url" => "https://web-dorado.com/wordpress-slider-wd/changing-settings.html",
+          "titles" => array()
+        ),
+        4 => array(
+          "main_title" => __("Publishing the Created Slider", "wds"),
+          "url" => "https://web-dorado.com/wordpress-slider-wd/publishing-slider.html",
+          "titles" => array()
         ),
         5 => array(
-          "title" => __("Parallax slider", "wds"),
-          "description" => __("Choose to display your sliders with the Parallax effect, which responds to the mouse hover and moves multiple layers, creating attractive 3D effects.", "wds"),
-          "logo" => WD_S_URL . "/images/overview/SLD6.svg"
+          "main_title" => __("Importing/Exporting Sliders", "wds"),
+          "url" => "https://web-dorado.com/wordpress-slider-wd/import-export.html",
+          "titles" => array()
         ),
       ),
       "video_youtube_id" => "xebpM_-GwG0",  // e.g. https://www.youtube.com/watch?v=acaexefeP7o youtube id is the acaexefeP7o
-      "plugin_wd_url" => "https://10web.io/plugins/wordpress-slider/",
-      "plugin_wd_demo_link" => "https://demo.10web.io/slider/",
-      "plugin_wd_docs_link" => "http://docs.10web.io/docs/slider-wd/",
+      "plugin_wd_url" => "https://web-dorado.com/products/wordpress-slider-plugin.html",
+      "plugin_wd_demo_link" => "http://wpdemo.web-dorado.com/slider/",
       "plugin_wd_addons_link" => "",
       "after_subscribe" => admin_url('admin.php?page=sliders_wds'), // this can be plagin overview page or set up page
       "plugin_wizard_link" => '',
@@ -721,21 +760,17 @@ function wds_overview() {
       "menu_position" => null,
     );
 
-    ten_web_init($wds_options);
-
-    if (isset($_GET["page"]) && $_GET["page"] == "overview_wds") {
-      set_transient(WD_S_PREFIX . '_overview_visited', 1, '', 'no');
-    }
+    dorado_web_init($wds_options);
   }
 }
-if ( WD_S_FREE ) {
-  add_action('init', 'wds_overview', 9);
-}
+add_action('init', 'wds_overview', 9);
 
 function wds_topic() {
   $page = isset($_GET['page']) ? $_GET['page'] : '';
-  $user_guide_link = 'http://docs.10web.io/docs/slider-wd/';
+  $user_guide_link = 'https://web-dorado.com/wordpress-slider-wd/';
   $support_forum_link = 'https://wordpress.org/support/plugin/slider-wd';
+  $pro_link = 'https://web-dorado.com/files/fromslider.php';
+  $pro_icon = WD_S_URL . '/images/wd_logo.png';
   $support_icon = WD_S_URL . '/images/support.png';
   $prefix = 'wds';
   switch ($page) {
@@ -749,15 +784,17 @@ function wds_topic() {
       $user_guide_link .= 'adding-images.html';
       break;
     }
+    case 'licensing_wds': {
+      $help_text = '';
+      $user_guide_link .= 'adding-images.html';
+      break;
+    }
     default: {
       return '';
       break;
     }
   }
   ob_start();
-  if ( WD_S_FREE ) {
-    wds_upgrade_pro();
-  }
   ?>
   <style>
     .wd_topic {
@@ -833,6 +870,17 @@ function wds_topic() {
       <?php
     }
     if ( WD_S_FREE ) {
+      $text = strtoupper(__('Upgrade to paid version', $prefix));
+      ?>
+      <div class="wd_pro">
+        <a target="_blank" href="<?php echo $pro_link; ?>">
+          <img alt="web-dorado.com" title="<?php echo $text; ?>" src="<?php echo $pro_icon; ?>" />
+          <span><?php echo $text; ?></span>
+        </a>
+      </div>
+      <?php
+    }
+    if (FALSE) {
       ?>
       <span class="wd_support">
       <a target="_blank" href="<?php echo $support_forum_link; ?>">
@@ -848,39 +896,6 @@ function wds_topic() {
   echo ob_get_clean();
 }
 add_action('admin_notices', 'wds_topic', 11);
-
-function wds_upgrade_pro() {
-  ?>
-  <div class="tenweb_banner wd-clear">
-    <div class="tenweb_banner-left">
-      <div class="tenweb_plugin_logo"></div>
-      <div class="tenweb_plugin_name"><?php _e("Premium Slider WD", 'wds'); ?></div>
-    </div>
-    <div class="tenweb_and"> & </div>
-    <div class="tenweb_desc">
-      <h3 class="tenweb_desc_h3 screen"><?php _e("Other solutions essential for your WordPress site", 'wds'); ?></h3>
-    </div>
-    <div class="tenweb_banner-center wd-clear">
-      <div class="tenweb_services">
-        <h3 class="tenweb_desc_h3 screen"><?php _e("Other solutions essential for your WordPress site", 'wds'); ?></h3>
-        <h3 class="tenweb_desc_h3 mobile"><?php _e("And other solutions essential for your WordPress site", 'wds'); ?></h3>
-        <div><span class="dashboard"><?php _e("Unified Dashboard", 'wds'); ?></span><span
-            class="pro-plugins"><?php _e("60+ Plugins/Add-ons", 'wds'); ?></span><span
-            class="backup"><?php _e("Backup", 'wds'); ?></span><span
-            class="optimizer"><?php _e("Image Optimizer", 'wds'); ?></span><span
-            class="seo"><?php _e("SEO", 'wds'); ?></span><span
-            class="themes"><?php _e("Premium WP Themes", 'wds'); ?></span></div>
-      </div>
-    </div>
-    <div class="tenweb_banner-right">
-      <div class="tenweb_banner_logo"></div>
-      <a href="https://10web.io/plugins/wordpress-slider/" target="_blank"
-         class="button"><?php _e("Get free for 14 days", 'wds'); ?></a>
-    </div>
-  </div>
-
-  <?php
-}
 
 /**
  * Show notice to install Image Optimization plugin
@@ -1041,7 +1056,6 @@ function wds_custom_media_uploader_tabs( $strings ) {
     $strings_to_remove = array(
       'createVideoPlaylistTitle',
       'createGalleryTitle',
-      'insertFromUrlTitle',
       'createPlaylistTitle'
     );
     foreach ($strings_to_remove as $string) {

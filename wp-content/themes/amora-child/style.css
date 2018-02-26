@@ -43,31 +43,47 @@
 
 /*barre de menu*/
 #site-navigation { 
- background: purple !important;
+ background: purple ;
 }
 
 /*texte menu pas survolé*/
 #site-navigation ul li a {
- color: black;
- font-size: 13px;
+ /*color: black;*/
+ font-size: 15px;
 }
 
 /*couleur menu survolé*/
 #site-navigation ul li a:hover {
- background: rgba(126,16,153,0.5);
+ background: rgba(128,0,128,0.5);
  text-decoration: none;
 }
 
 /*couleur menu actif*/
 #site-navigation ul .current-menu-item>a,
 #site-navigation ul .current_page_item>a {
- background: purple;
+ background: rgba(128,0,128,0.5);
 }
 
 #site-navigation ul li a {
  color: white;
 }
 
+#site-navigation ul li:hover a {
+   background: purple; 
+}
+
+#site-navigation ul li ul.sub-menu{
+ background-color: #A3479B;
+}
+
+#site-navigation ul li .menu-item{
+ width: 100%;
+}
+
+#site-navigation ul li ul.children li:nth-child(odd),
+#site-navigation ul li ul.sub-menu li:nth-child(odd) {
+    background: rgba(0, 0, 0, 0.35);
+}
 
 .main-navigation ul ul a {
     width: 220px;
@@ -81,10 +97,11 @@
 #footer-sidebar {
  padding-top: 0px;
  margin-top: 0px; 
+ background-color: purple;
 } 
 
 .footer-column col-md-3 col-sm-3 {
- background: rgba(126,16,153,0.5);
+ background: red;
  padding: 55px;
 
 }

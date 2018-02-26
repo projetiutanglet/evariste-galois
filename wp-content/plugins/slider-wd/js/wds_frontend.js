@@ -1968,8 +1968,8 @@ function wds_resize_slider( wds ) {
       slide_orig_height = jQuery(window).height();
     }
     else { 
-      slide_orig_height = wds_params[wds].image_height + wds_params[wds].filmstrip_height * slide_orig_width / wds_params[wds].image_width;
-    
+      //slide_orig_height = wds_params[wds].image_height + wds_params[wds].filmstrip_height * slide_orig_width / wds_params[wds].image_width;
+      slide_orig_height = (wds_params[wds].filmstrip_height + wds_params[wds].image_height) * ratio;
     }
     slide_width = jQuery(window).width();
     wds_full_width( wds );

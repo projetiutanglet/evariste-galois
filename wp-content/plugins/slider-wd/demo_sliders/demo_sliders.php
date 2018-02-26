@@ -231,7 +231,7 @@ function spider_demo_sliders() {
                             ?>
                             <li class="<?php echo $key; ?>">
                                 <div class="product"></div>
-                                <a target="_blank" href="https://demo.10web.io/<?php echo $key; ?>" class="download"><span><?php _e('DOWNLOAD', 'wds');?> <?php echo $demo_slider; ?></span></a>
+                                <a target="_blank" href="http://wpdemo.web-dorado.com/<?php echo $key; ?>" class="download"><span><?php _e('DOWNLOAD', 'wds');?> <?php echo $demo_slider; ?></span></a>
                             </li>
                             <?php
                         }

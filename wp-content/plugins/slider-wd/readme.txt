@@ -1,10 +1,10 @@
 === Slider by WD - Responsive Slider ===
-Contributors: webdorado
+Contributors: webdorado,10web
 Tags: responsive slider, slider, slideshow, wordpress slider, image slider, gallery slider, images slider, Photo Slider, post slider,  slider plugin
 Requires at least: 3.4
 Tested up to: 4.9
 Requires PHP: 5.2
-Stable tag: 1.2.4
+Stable tag: 1.2.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,18 +13,19 @@ Slider WD plugin is the perfect slider solution for Wordpress. Create a great re
 == Description ==
 
 = Slider WD =   
+[Special offer: Try Slider WD premium and 60+ other plugins for free at 10Web](https://10web.io/plugins/wordpress-slider/)  
+10Web is a new platform from WebDorado
 
 https://www.youtube.com/watch?v=xebpM_-GwG0&index=1&list=PLnxWPiY5tLFWQf5XaEYYPZj0gdggUrVxP
 
 Slider WD WordPress Plugin
 
 Create responsive, highly configurable wordpress sliders with various effects for your WordPress site. Download for FREE!  
-
-[Special Offer for all Premium Plugins](https://10web.io/pricing/)  
-[WordPress Slider Plugin](https://10web.io/plugins/wordpress-slider/)  
-[Demo](https://demo.10web.io/slider/)  
-[User Manual](http://docs.10web.io/docs/slider-wd/adding-images.html)  
-[Support Forum](https://wordpress.org/support/plugin/slider-wd)  
+ 
+[WordPress Slider Plugin](https://web-dorado.com/products/wordpress-slider-plugin.html)  
+[Demo](http://wpdemo.web-dorado.com/slider/)  
+[User Manual](https://web-dorado.com/wordpress-slider-wd-guide-step-1.html)  
+[Support Forum](https://wordpress.org/support/plugin/slider-wd)   
 [How to change and modify Slider WD Settings](https://www.youtube.com/watch?v=Peny_dkHaMo&list=PLnxWPiY5tLFWQf5XaEYYPZj0gdggUrVxP&index=3)  
 
 Slider WD is an effective tool for adding responsive slider to your website. The WordPress slider plugin can be added both as a widget and plugin, as well as be included in the theme for displaying the slider within the theme using PHP function. Slider WD allows adding both images and videos (currently supporting YouTube and Vimeo to be displayed as slider slides). The numerous transition effects and layer support enhance the functionality of the WordPress slider plugin.
@@ -58,7 +59,7 @@ The number of the slides for each slider is not limited. Various layers can be a
 *   Fixed background slider      
 *   Slider widget    
 
-Upgrade to [WordPress Slider Pro](https://10web.io/plugins/wordpress-slider/) to add features:
+Upgrade to [WordPress Slider Pro](https://web-dorado.com/products/wordpress-slider-plugin.html) to add features:
 
 *   26 transition effects for Slider   
 *   38 layer effects   
@@ -90,7 +91,7 @@ If you don’t want to limit yourself with one of these types of sliders, then y
 
 
 ###IMPORTANT:    
-If you think you found a bug in Slider WD or have any problem/question concerning the plugin, please check out [WordPress Slider Support Forum](https://wordpress.org/support/plugin/slider-wd) in our website. If you do not find a solution here, do not hesitate to [click here to contact us](https://10web.io/contact-us/).
+If you think you found a bug in Slider WD or have any problem/question concerning the plugin, please check out [WordPress Slider Support Forum](https://wordpress.org/support/plugin/slider-wd) in our website. If you do not find a solution here, do not hesitate to [click here to contact us](https://web-dorado.com/support/contact-us.html).
 
  *If you need language of Slider WD which is not included in this list, please contact us and we will do the translation of Slider WD within 3 days. If you find any mistakes in the translation, please contact us and we will make relevant corrections within 3 days.  *  
  
@@ -115,7 +116,7 @@ After downloading the ZIP file of the slider plugin,
 *Go to your Downloads folder and locate the folder with the Slider WD. Right-click on the folder and select Compress. Now you have a newly created .zip file which can be installed as described here.*     
 4. Click "Install Now" button.     
 5. Click "Activate Plugin" button for activating the Slider WD.    
-6. If the installation does not succeed, please [click here to contact us](https://10web.io/contact-us/).
+6. If the installation does not succeed, please [click here to contact us](https://web-dorado.com/support/contact-us.html).
 
 
 == Screenshots ==
@@ -128,6 +129,12 @@ After downloading the ZIP file of the slider plugin,
 
 
 == Changelog ==
+
+= 1.2.5 =
+* Added: Insert slide image from URL.  
+* Fixed: Full width slider height.   
+* Fixed: Bug on PHP 7.2.0 version.  
+* Changed: Overview page.   
 
 = 1.2.4 =
 * Removed: Notification   
@@ -809,7 +816,7 @@ For Mac Users
 Go to your Downloads folder and locate the folder with the Slider WD. Right-click on the folder and select Compress. This will create a .zip file which can be installed as described below:
 Click "Upload & Install" button.
 Click "Activate Plugin" button for activating the plugin.
-If any problem occurs with installation of Slider WD, please let us know using ["Contact Us"](https://10web.io/contact-us/) form. 
+If any problem occurs with installation of Slider WD, please let us know using ["Contact Us"](https://web-dorado.com/support/contact-us.html) form. 
 
 = Step 2:  Adding images to Sliders. =
 Go to Slider WD > select Sliders > click Add New
@@ -1047,17 +1054,17 @@ Importing Slider
 Select the file of the content slider/image slider to import and press Import button. The slider will be added automatically.
 
 Try demo sliders
-[DOWNLOAD LAYER SLIDER](https://demo.10web.io/layer-slider)         
-[DOWNLOAD LAYER SLIDER 2](https://demo.10web.io/slider-pro-2)         
-[DOWNLOAD MULTY LAYER SLIDER](https://demo.10web.io/slide1)         
-[DOWNLOAD NEWS SITE OR BLOG SLIDER](https://demo.10web.io/news-site-or-blog)         
-[DOWNLOAD POST FEED DEMO SLIDER](https://demo.10web.io/post-feed-demo)         
-[DOWNLOAD ONLINE STORE SLIDER](https://demo.10web.io/online-store)         
-[DOWNLOAD PORTFOLIO SLIDER](https://demo.10web.io/portfolio)         
-[DOWNLOAD 3D FULL-WIDTH SLIDER](https://demo.10web.io/slide2)         
-[DOWNLOAD FILMSTRIP SLIDER](https://demo.10web.io/slide3)         
-[DOWNLOAD ZOOM EFFECT SLIDER](https://demo.10web.io/slide4)       
-[DOWNLOAD CAROUSEL SLIDER](https://demo.10web.io/wordpress-slider-wd-carusel)         
-[DOWNLOAD PARALLAX SLIDER](https://demo.10web.io/parallax)       
-[DOWNLOAD HOTSPOT SLIDER](https://demo.10web.io/hotspot)       
-[DOWNLOAD VIDEO SLIDER SLIDER](https://demo.10web.io/video-slider)     
+[DOWNLOAD LAYER SLIDER](http://wpdemo.web-dorado.com/layer-slider)         
+[DOWNLOAD LAYER SLIDER 2](http://wpdemo.web-dorado.com/slider-pro-2)         
+[DOWNLOAD MULTY LAYER SLIDER](http://wpdemo.web-dorado.com/slide1)         
+[DOWNLOAD NEWS SITE OR BLOG SLIDER](http://wpdemo.web-dorado.com/news-site-or-blog)         
+[DOWNLOAD POST FEED DEMO SLIDER](http://wpdemo.web-dorado.com/post-feed-demo)         
+[DOWNLOAD ONLINE STORE SLIDER](http://wpdemo.web-dorado.com/online-store)         
+[DOWNLOAD PORTFOLIO SLIDER](http://wpdemo.web-dorado.com/portfolio)         
+[DOWNLOAD 3D FULL-WIDTH SLIDER](http://wpdemo.web-dorado.com/slide2)         
+[DOWNLOAD FILMSTRIP SLIDER](http://wpdemo.web-dorado.com/slide3)         
+[DOWNLOAD ZOOM EFFECT SLIDER](http://wpdemo.web-dorado.com/slide4)       
+[DOWNLOAD CAROUSEL SLIDER](http://wpdemo.web-dorado.com/wordpress-slider-wd-carusel)         
+[DOWNLOAD PARALLAX SLIDER](http://wpdemo.web-dorado.com/parallax)       
+[DOWNLOAD HOTSPOT SLIDER](http://wpdemo.web-dorado.com/hotspot)       
+[DOWNLOAD VIDEO SLIDER SLIDER](http://wpdemo.web-dorado.com/video-slider)     
