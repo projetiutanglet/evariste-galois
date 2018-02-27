@@ -13,3 +13,36 @@
 [31-Jan-2018 15:57:32 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:37
 [31-Jan-2018 15:57:32 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:92
 [31-Jan-2018 15:57:32 UTC] PHP   6. require() /home/ubuntu/workspace/wp-settings.php:98
+[27-Feb-2018 13:56:15 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/ubuntu/workspace/wp-includes/functions.php on line 5869
+[27-Feb-2018 13:56:15 UTC] PHP Stack trace:
+[27-Feb-2018 13:56:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[27-Feb-2018 13:56:15 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/admin-ajax.php:44
+[27-Feb-2018 13:56:15 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[27-Feb-2018 13:56:15 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[27-Feb-2018 13:56:15 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[27-Feb-2018 13:56:15 UTC] PHP   6. disable_admin_bar() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[27-Feb-2018 13:56:15 UTC] PHP   7. in_array() /home/ubuntu/workspace/wp-includes/functions.php:5869
+[27-Feb-2018 14:00:17 UTC] PHP Parse error:  syntax error, unexpected 'show_admin_bar' (T_STRING) in /home/ubuntu/workspace/wp-includes/functions.php on line 5874
+[27-Feb-2018 14:00:17 UTC] PHP Stack trace:
+[27-Feb-2018 14:00:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[27-Feb-2018 14:00:17 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[27-Feb-2018 14:00:17 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[27-Feb-2018 14:00:17 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:92
+[27-Feb-2018 15:12:41 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/ubuntu/workspace/wp-content/themes/amora-child/functions.php on line 8
+[27-Feb-2018 15:12:41 UTC] PHP Stack trace:
+[27-Feb-2018 15:12:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[27-Feb-2018 15:12:41 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[27-Feb-2018 15:12:41 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[27-Feb-2018 15:12:41 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:92
+[27-Feb-2018 15:13:35 UTC] PHP Parse error:  syntax error, unexpected '2' (T_LNUMBER) in /home/ubuntu/workspace/wp-content/themes/amora-child/functions.php on line 9
+[27-Feb-2018 15:13:35 UTC] PHP Stack trace:
+[27-Feb-2018 15:13:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[27-Feb-2018 15:13:35 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[27-Feb-2018 15:13:35 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[27-Feb-2018 15:13:35 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:92
+[27-Feb-2018 15:13:38 UTC] PHP Parse error:  syntax error, unexpected '2' (T_LNUMBER) in /home/ubuntu/workspace/wp-content/themes/amora-child/functions.php on line 9
+[27-Feb-2018 15:13:38 UTC] PHP Stack trace:
+[27-Feb-2018 15:13:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[27-Feb-2018 15:13:38 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[27-Feb-2018 15:13:38 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[27-Feb-2018 15:13:38 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:92

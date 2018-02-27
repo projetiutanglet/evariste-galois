@@ -5816,3 +5816,43 @@ All at ###SITENAME###
 		$site_name
 	), $email_change_email['message'], $email_change_email['headers'] );
 }
+
+
+// On définit la fonction
+function egalois_add_role() {
+    add_role( 'parent', 'Parent',			 // son identifiant et son nom visible
+             array( 
+                  'read',
+                  'read_private_pages'		 // On liste les droits à donner
+
+                  )	    );
+}
+add_action( 'init', 'egalois_add_role' );	// On lance la création de notre fonction
+
+
+function tml_action_url( $url, $action, $instance ) {
+	if ( 'register' == $action )
+		$url =(isset($_SERVER['HTTPS']) ? "https" : "http") . "://".$_SERVER["HTTP_HOST"]."/connexion/";
+	return $url;
+}
+add_filter( 'tml_action_url', 'tml_action_url', 10, 3 );
+
+//Redirect user after successful login.
+
+function my_login_redirect( $redirect_to, $request, $user ) {
+	//is there a user to check?
+	if ( isset( $user->roles ) && is_array( $user->roles ) ) {
+		//check for admins
+		if ( in_array( 'administrator', $user->roles ) ) {
+			// redirect them to the default place
+			return $redirect_to;
+		} else {
+			$url =(isset($_SERVER['HTTPS']) ? "https" : "http") . "://".$_SERVER["HTTP_HOST"]."/le-coin-des-parents/";
+			return $url;
+		}
+	} else {
+		return $redirect_to;
+	}
+}
+
+add_filter( 'login_redirect', 'my_login_redirect', 10, 3 );

@@ -12,6 +12,12 @@
 
 get_header(); ?>
 
+	<?php
+		if(!is_user_logged_in() && $_SERVER['REQUEST_URI'] == "/le-coin-des-parents/") {
+		
+			$adresse = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]/connexion/";
+			wp_redirect( $adresse, 302 );
+		}?>
 	<div id="primary-mono" class="content-area <?php do_action('amora_primary-width') ?> page">
 		<main id="main" class="site-main" role="main">
 
@@ -33,6 +39,6 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
+	
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
