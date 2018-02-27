@@ -21,13 +21,13 @@ class WDSViewSlider {
   }
 
   public function display( $id, $from_shortcode = 0, $wds = 0 ) {
-	require_once(WD_S_DIR . '/framework/WDW_S_Library.php');
-    if ( !WD_S_FREE ) {
-      require_once(WD_S_DIR . '/framework/WDW_S_LibraryEmbed.php');
+	require_once(WDS()->plugin_dir . '/framework/WDW_S_Library.php');
+    if ( !WDS()->is_free ) {
+      require_once(WDS()->plugin_dir . '/framework/WDW_S_LibraryEmbed.php');
     }
     $slider_row = $this->model->get_slider_row_data($id);
     if ( !$slider_row ) {
-      echo WDW_S_Library::message(__('There is no slider selected or the slider was deleted.', 'wds'), 'wd_error');
+      echo WDW_S_Library::message(__('There is no slider selected or the slider was deleted.', WDS()->prefix), 'wd_error');
       return;
     }
     if ( !$slider_row->published ) {
@@ -40,11 +40,11 @@ class WDSViewSlider {
     $order_dir = isset($slider_row->order_dir) ? $slider_row->order_dir : 'asc';
     $slide_rows = $this->model->get_slide_rows_data( $id, $order_dir );
     if (!$slide_rows) {
-      echo WDW_S_Library::message(__('There are no slides in this slider.', 'wds'), 'wd_error');
+      echo WDW_S_Library::message(__('There are no slides in this slider.', WDS()->prefix), 'wd_error');
       return;
     }
 
-	$no_video_image = WD_S_URL . '/images/no-video.png';
+	$no_video_image = WDS()->plugin_url . '/images/no-video.png';
     $image_width = $slider_row->width;
     $image_height = $slider_row->height;
     $slides_count = count($slide_rows);
@@ -281,7 +281,7 @@ class WDSViewSlider {
                              data-image-key="<?php echo $key; ?>">
                           <?php
                         }
-                        elseif ($is_video == 'video' && !WD_S_FREE) {
+                        elseif ($is_video == 'video' && !WDS()->is_free) {
                           $thumb_url = is_numeric($slide_row->thumb_url) ? (wp_get_attachment_url(get_post_thumbnail_id($slide_row->thumb_url)) ? wp_get_attachment_url(get_post_thumbnail_id($slide_row->thumb_url)) : '' ): $slide_row->thumb_url;
 						?>
                         <span data-img-id="wds_slideshow_image<?php echo $image_div_num; ?>_<?php echo $wds; ?>"
@@ -291,12 +291,12 @@ class WDSViewSlider {
                           <span style="display:<?php echo ($slide_row->link)?'block':'none'; ?> " class="wds_play_btn_cont" onclick="wds_video_play_pause(<?php echo $wds; ?>, wds_slide_<?php echo $wds; ?>_<?php echo $slide_row->id; ?>)" >
                               <span class="wds_bigplay_<?php echo $wds; ?> <?php echo ($slide_row->target_attr_slide)? 'wds_hide':'' ?>"></span>
                           </span>
-                          <video poster="<?php echo WD_S_URL . '/images/blank.gif' ?>" style="background-image: url('<?php echo !empty($thumb_url) ? $thumb_url : $no_video_image ?>');" <?php echo isset($slide_row->video_loop) && $slide_row->video_loop == 1 ? 'loop' : ''; ?> <?php echo $slide_row->link == '1' ? "controls": ""; ?> id="wds_slide_<?php echo $wds; ?>_<?php echo $slide_row->id; ?>">
+                          <video poster="<?php echo WDS()->plugin_url . '/images/blank.gif' ?>" style="background-image: url('<?php echo !empty($thumb_url) ? $thumb_url : $no_video_image ?>');" <?php echo isset($slide_row->video_loop) && $slide_row->video_loop == 1 ? 'loop' : ''; ?> <?php echo $slide_row->link == '1' ? "controls": ""; ?> id="wds_slide_<?php echo $wds; ?>_<?php echo $slide_row->id; ?>">
                             <source src="<?php echo $slide_row->image_url; ?>" type="video/mp4" id="wds_source<?php echo $slide_row->id; ?>">
                           </video>
                           <?php
                         }
-                        elseif ( !WD_S_FREE ) {
+                        elseif ( !WDS()->is_free ) {
                           $is_embed_instagram_post = preg_match('/INSTAGRAM_POST/', $slide_row->type) == 1 ? TRUE : FALSE;
                           if ($is_embed_instagram_post) {
                             $post_width = $image_width - ($filmstrip_direction == 'vertical' ? $filmstrip_width : 0);
@@ -369,7 +369,7 @@ class WDSViewSlider {
                                   break;
                                 }
                                 case 'image': {
-                                  if ( WD_S_FREE ) {
+                                  if ( WDS()->is_free ) {
                                     break;
                                   }
                                   ?>
@@ -395,7 +395,7 @@ class WDSViewSlider {
                                   break;
                                 }
                                 case 'video': {
-                                  if ( WD_S_FREE ) {
+                                  if ( WDS()->is_free ) {
                                     break;
                                   }
                                   $is_embed_instagram_post = preg_match('/INSTAGRAM_POST/', $layer->alt) == 1 ? TRUE :FALSE;
@@ -431,7 +431,7 @@ class WDSViewSlider {
                                   break;
                                 }
                                 case 'upvideo': {
-                                  if ( WD_S_FREE ) {
+                                  if ( WDS()->is_free ) {
                                     break;
                                   }
                                   $layer_image_url = wp_get_attachment_url(get_post_thumbnail_id($layer->image_url)) ? wp_get_attachment_url(get_post_thumbnail_id($layer->image_url)) : '';
@@ -450,7 +450,7 @@ class WDSViewSlider {
 								   <span style="display:<?php echo ($layer->target_attr_layer) ? 'block' : 'none'; ?> " class="wds_play_btn_cont" onclick="wds_video_play_pause_layer(event,<?php echo  $wds ; ?>,<?php echo $slide_row->id ; ?>,<?php echo  $layer->id; ?>)">
 								   <span style="display:<?php echo ($layer->image_scale == 'on') ? 'none' : 'block'; ?> " class="wds_bigplay_layer" id="wds_bigplay_layer_<?php echo $wds . '_' . $slide_row->id . '_layer_' . $layer->id; ?>" onclick="wds_video_play_pause_layer(event,<?php echo  $wds ; ?>,<?php echo $slide_row->id ; ?>,<?php echo  $layer->id; ?>)"></span>
 								   </span>
-                                  <video poster="<?php echo WD_S_URL . '/images/blank.gif' ?>"
+                                  <video poster="<?php echo WDS()->plugin_url . '/images/blank.gif' ?>"
                                     style="background-image: url('<?php echo $layer->image_scale != 'on' ? $layer_image_url : ''; ?>'); -webkit-background-size: cover; -moz-background-size: cover;  -o-background-size: cover; background-size: cover;"
                                     <?php echo $layer->layer_video_loop ? "loop": ""; ?>
                                     <?php echo $layer->target_attr_layer == '1' ? "controls ": ""; ?>
@@ -462,7 +462,7 @@ class WDSViewSlider {
                                   break;
                                 }
                                 case 'social': {
-                                  if ( WD_S_FREE ) {
+                                  if ( WDS()->is_free ) {
                                     break;
                                   }
                                   ?>
@@ -470,31 +470,31 @@ class WDSViewSlider {
                                   switch ($layer->social_button) {
                                     case 'facebook': {
                                       ?>
-                                  <a class="wds_share_a" onclick="event.stopPropagation();" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode($share_url); ?>" target="_blank" title="<?php echo __('Share on Facebook', 'wds'); ?>">
+                                  <a class="wds_share_a" onclick="event.stopPropagation();" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode($share_url); ?>" target="_blank" title="<?php echo __('Share on Facebook', WDS()->prefix); ?>">
                                       <?php
                                       break;
                                     }
                                     case 'twitter': {
                                       ?>
-                                  <a class="wds_share_a" onclick="event.stopPropagation();" href="https://twitter.com/share?url=<?php echo urlencode($share_url); ?>" target="_blank" title="<?php echo __('Share on Twitter', 'wds'); ?>">
+                                  <a class="wds_share_a" onclick="event.stopPropagation();" href="https://twitter.com/share?url=<?php echo urlencode($share_url); ?>" target="_blank" title="<?php echo __('Share on Twitter', WDS()->prefix); ?>">
                                       <?php
                                       break;
                                     }
                                     case 'google-plus': {
                                       ?>
-                                  <a class="wds_share_a" onclick="event.stopPropagation();" href="https://plus.google.com/share?url=<?php echo urlencode($share_url); ?>" target="_blank" title="<?php echo __('Share on Google+', 'wds'); ?>">
+                                  <a class="wds_share_a" onclick="event.stopPropagation();" href="https://plus.google.com/share?url=<?php echo urlencode($share_url); ?>" target="_blank" title="<?php echo __('Share on Google+', WDS()->prefix); ?>">
                                       <?php
                                       break;
                                     }
                                     case 'pinterest': {
                                       ?>
-                                  <a class="wds_share_a" onclick="event.stopPropagation();" href="http://pinterest.com/pin/create/button/?s=100&url=<?php echo urlencode($share_url); ?>&media=<?php echo $share_image_url; ?>&description=<?php echo urlencode($slide_row->title); ?>" target="_blank" title="<?php echo __('Share on Pinterest', 'wds'); ?>">
+                                  <a class="wds_share_a" onclick="event.stopPropagation();" href="http://pinterest.com/pin/create/button/?s=100&url=<?php echo urlencode($share_url); ?>&media=<?php echo $share_image_url; ?>&description=<?php echo urlencode($slide_row->title); ?>" target="_blank" title="<?php echo __('Share on Pinterest', WDS()->prefix); ?>">
                                       <?php
                                       break;
                                     }
                                     case 'tumblr': {
                                       ?>
-                                  <a class="wds_share_a" onclick="event.stopPropagation();" href="https://www.tumblr.com/share/photo?source=<?php echo $share_image_url; ?>&caption=<?php echo urlencode($slide_row->title); ?>&clickthru=<?php echo urlencode($share_url); ?>" target="_blank" title="<?php echo __('Share on Tumblr', 'wds'); ?>">
+                                  <a class="wds_share_a" onclick="event.stopPropagation();" href="https://www.tumblr.com/share/photo?source=<?php echo $share_image_url; ?>&caption=<?php echo urlencode($slide_row->title); ?>&clickthru=<?php echo urlencode($share_url); ?>" target="_blank" title="<?php echo __('Share on Tumblr', WDS()->prefix); ?>">
                                       <?php
                                       break;
                                     }
@@ -517,7 +517,7 @@ class WDSViewSlider {
                                   break;
                                 }
                                 case 'hotspots': {
-                                  if ( WD_S_FREE ) {
+                                  if ( WDS()->is_free ) {
                                     break;
                                   }
                                   ?>

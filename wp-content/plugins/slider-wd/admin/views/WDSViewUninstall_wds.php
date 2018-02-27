@@ -30,28 +30,28 @@ class WDSViewUninstall_wds {
       <?php wp_nonce_field('nonce_wd', 'nonce_wd'); ?>
       <div class="wrap">
         <span class="uninstall_icon"></span>
-        <h2><?php _e('Uninstall Slider WD', 'wds');?></h2>
+        <h2><?php _e('Uninstall Slider WD', WDS()->prefix);?></h2>
         <div class="goodbye-text">
           <?php
-          $support_team = '<a href="https://web-dorado.com/support/contact-us.html?source=slider-wd" target="_blank">' . __('support team', 'wds') . '</a>';
-          $contact_us = '<a href="https://web-dorado.com/support/contact-us.html?source=slider-wd" target="_blank">' . __('Contact us', 'wds') . '</a>';
+          $support_team = '<a href="https://web-dorado.com/support/contact-us.html?source=slider-wd" target="_blank">' . __('support team', WDS()->prefix) . '</a>';
+          $contact_us = '<a href="https://web-dorado.com/support/contact-us.html?source=slider-wd" target="_blank">' . __('Contact us', WDS()->prefix) . '</a>';
           echo sprintf(__("Before uninstalling the plugin, please Contact our %s. We'll do our best to help you out with your issue. We value each and every user and value what's right for our users in everything we do.<br />
           However, if anyway you have made a decision to uninstall the plugin, please take a minute to %s and tell what you didn't like for our plugins further improvement and development. Thank you !!!", "wds"), $support_team, $contact_us); ?>
         </div>
-        <p><?php _e('Deactivating Slider WD plugin does not remove any data that may have been created. To completely remove this plugin, you can uninstall it here.', 'wds');?>          
+        <p><?php _e('Deactivating Slider WD plugin does not remove any data that may have been created. To completely remove this plugin, you can uninstall it here.', WDS()->prefix);?>          
         </p>
         <p style="color: red;">
-          <strong> <?php _e('WARNING:', 'wds');?></strong>
-		  <?php _e('Once uninstalled, this can&rsquo;t be undone. You should use a Database Backup plugin of WordPress to back up all the data first.', 'wds');?>  
+          <strong> <?php _e('WARNING:', WDS()->prefix);?></strong>
+		  <?php _e('Once uninstalled, this can&rsquo;t be undone. You should use a Database Backup plugin of WordPress to back up all the data first.', WDS()->prefix);?>  
          
         </p>
         <p style="color: red">
-          <strong><?php _e('The following Database Tables will be deleted:', 'wds');?></strong>
+          <strong><?php _e('The following Database Tables will be deleted:', WDS()->prefix);?></strong>
         </p>
         <table class="widefat">
           <thead>
             <tr>
-              <th><?php _e('Database Tables', 'wds');?></th>
+              <th><?php _e('Database Tables', WDS()->prefix);?></th>
             </tr>
           </thead>
           <tr>
@@ -64,13 +64,13 @@ class WDSViewUninstall_wds {
             </td>
           </tr>
         </table>
-        <p style="text-align: center;"><?php _e('Do you really want to uninstall Slider WD plugin?', 'wds');?></p>
+        <p style="text-align: center;"><?php _e('Do you really want to uninstall Slider WD plugin?', WDS()->prefix);?></p>
         <p style="text-align: center;">
-          <input type="checkbox" name="<?php _e('Slider WD', 'wds'); ?>" id="check_yes" value="yes" />&nbsp;<label for="check_yes"><?php _e('Yes', 'wds');?></label>
+          <input type="checkbox" name="<?php _e('Slider WD', WDS()->prefix); ?>" id="check_yes" value="yes" />&nbsp;<label for="check_yes"><?php _e('Yes', WDS()->prefix);?></label>
         </p>
         <p style="text-align: center;">
-          <input type="submit" value="<?php _e('UNINSTALL', 'wds');?>" class="button-primary" onclick="if (check_yes.checked) { 
-                                                                                    if (confirm('<?php _e("You are About to Uninstall Slider WD plugin from WordPress.", 'wds');?>\n<?php _e("This Action Is Not Reversible.", 'wds');?>')) {
+          <input type="submit" value="<?php _e('UNINSTALL', WDS()->prefix);?>" class="button-primary" onclick="if (check_yes.checked) { 
+                                                                                    if (confirm('<?php _e("You are About to Uninstall Slider WD plugin from WordPress.", WDS()->prefix);?>\n<?php _e("This Action Is Not Reversible.", WDS()->prefix);?>')) {
                                                                                         spider_set_input_value('task', 'uninstall');
                                                                                     } else {
                                                                                         return false;
@@ -91,20 +91,20 @@ class WDSViewUninstall_wds {
     global $wpdb;
     $this->model->delete_db_tables();
     $prefix = $wpdb->prefix;
-    $deactivate_url = add_query_arg(array('action' => 'deactivate', 'plugin' => WD_S_NAME . '/slider-wd.php'), admin_url('plugins.php'));
-    $deactivate_url = wp_nonce_url($deactivate_url, 'deactivate-plugin_' . WD_S_NAME . '/slider-wd.php');
+    $deactivate_url = add_query_arg(array('action' => 'deactivate', 'plugin' => WDS()->main_file . '/slider-wd.php'), admin_url('plugins.php'));
+    $deactivate_url = wp_nonce_url($deactivate_url, 'deactivate-plugin_' . WDS()->main_file . '/slider-wd.php');
     ?>
     <div id="message" class="wd_updated fade">
-      <p><?php _e('The following Database Tables successfully deleted:', 'wds');?></p>
+      <p><?php _e('The following Database Tables successfully deleted:', WDS()->prefix);?></p>
       <p><?php echo $prefix; ?>wdsslider,</p>
       <p><?php echo $prefix; ?>wdsslide,</p>
       <p><?php echo $prefix; ?>wdslayer.</p>
     </div>
     <div class="wrap">
-      <h2><?php _e('Uninstall Slider WD', 'wds');?></h2>
+      <h2><?php _e('Uninstall Slider WD', WDS()->prefix);?></h2>
       <p><strong> 
 		<?php 
-		$deactivate_html  = '<a href="'. $deactivate_url .'" class="wds_deactivate_link" data-uninstall="1">' . __('Click Here', 'wds') . '</a>';
+		$deactivate_html  = '<a href="'. $deactivate_url .'" class="wds_deactivate_link" data-uninstall="1">' . __('Click Here', WDS()->prefix) . '</a>';
 		echo sprintf(__("%s To Finish the Uninstallation and Slider WD will be Deactivated Automatically.", "wds"), $deactivate_html); 
 		?>
 	   </strong></p>

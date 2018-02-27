@@ -19,9 +19,7 @@
     padding-top: 0px;
     margin-top:0px;
 }
-.mega-container {
- margin-top:-20px;
-}
+
 
 /*---------------------HEADER------------------------*/
  /*barre de recherche*/
@@ -31,14 +29,21 @@
 
 /*logo*/
 #masthead .site-branding { 
- padding: 10px 0; 
- margin-top: 0px; 
+ display: inline-block;
 }
 
 /*header*/
 #masthead { 
  min-height: 0px;
  height: 270px;
+}
+
+.custom-logo-link{
+ left:0px;
+}
+
+.site-branding{
+ display:inline-block;
 }
 
 /*barre de menu*/

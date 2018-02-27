@@ -19,10 +19,10 @@ class WDSControllerGoptions_wds {
   }
 
   public function display() {
-    require_once WD_S_DIR . "/admin/models/WDSModelGoptions_wds.php";
+    require_once WDS()->plugin_dir . "/admin/models/WDSModelGoptions_wds.php";
     $model = new WDSModelGoptions_wds();
 
-    require_once WD_S_DIR . "/admin/views/WDSViewGoptions_wds.php";
+    require_once WDS()->plugin_dir . "/admin/views/WDSViewGoptions_wds.php";
     $view = new WDSViewGoptions_wds($model);
     $view->display($this->get_sliders());
   }
@@ -149,12 +149,12 @@ class WDSControllerGoptions_wds {
     if ($sliders) {
       $sliders[0] = new stdclass();
       $sliders[0]->id = '';
-      $sliders[0]->name = __('All sliders', 'wds');
+      $sliders[0]->name = __('All sliders', WDS()->prefix);
     }
     else {
       $sliders[0] = new stdclass();
       $sliders[0]->id = 0;
-      $sliders[0]->name = __('-Select-', 'wds');
+      $sliders[0]->name = __('-Select-', WDS()->prefix);
     }
 
     ksort($sliders);

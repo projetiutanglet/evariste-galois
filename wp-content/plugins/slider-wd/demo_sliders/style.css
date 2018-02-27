@@ -69,3 +69,7 @@
   background: #23282D url("images/down_hover.png") no-repeat 6px center;
   color: #DDDEDE;
 }
+
+div.wd-notice-margin {
+  margin: 5px 0;
+}

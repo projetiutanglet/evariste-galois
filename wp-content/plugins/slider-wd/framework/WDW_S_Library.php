@@ -4,20 +4,48 @@ class WDW_S_Library {
   public function __construct() {
   }
 
-  public static function get($key, $default_value = '') {
+  /**
+   * Get request value.
+   *
+   * @param string $key
+   * @param string $default_value
+   * @param bool $esc_html
+   *
+   * @return string|array
+   */
+  public static function get($key, $default_value = '', $esc_html = true) {
     if (isset($_GET[$key])) {
       $value = $_GET[$key];
     }
     elseif (isset($_POST[$key])) {
       $value = $_POST[$key];
     }
-    else {
-      $value = '';
+    elseif (isset($_REQUEST[$key])) {
+      $value = $_REQUEST[$key];
     }
-    if (!$value) {
+    else {
       $value = $default_value;
     }
-    return esc_html($value);
+    if (is_array($value)) {
+      array_walk_recursive($value, array('self', 'validate_data'), $esc_html);
+    }
+    else {
+      self::validate_data($value, $esc_html);
+    }
+    return $value;
+  }
+
+   /**
+   * Validate data.
+   *
+   * @param $value
+   * @param $esc_html
+   */
+  private static function validate_data(&$value, $esc_html) {
+    $value = stripslashes($value);
+    if ($esc_html) {
+      $value = esc_html($value);
+    }
   }
 
   /**
@@ -33,127 +61,142 @@ class WDW_S_Library {
     if ($message_id) {
       switch ( $message_id ) {
         case 1: {
-          $message = __('Item Succesfully Saved.', 'wds');
+          $message = __('Item Succesfully Saved.', WDS()->prefix);
           $type = 'wd_updated';
           break;
         }
         case 2: {
-          $message = __('Error. Please install plugin again.', 'wds');
+          $message = __('Error. Please install plugin again.', WDS()->prefix);
           $type = 'wd_error';
           break;
         }
         case 3: {
-          $message = __('Item Succesfully Deleted.', 'wds');
+          $message = __('Item Succesfully Deleted.', WDS()->prefix);
           $type = 'wd_updated';
           break;
         }
         case 4: {
-          $message = __("You can't delete default theme", 'wds');
+          $message = __("You can't delete default theme", WDS()->prefix);
           $type = 'wd_error';
           break;
         }
         case 5: {
-          $message = __('Items Succesfully Deleted.', 'wds');
+          $message = __('Items Succesfully Deleted.', WDS()->prefix);
           $type = 'wd_updated';
           break;
         }
         case 6: {
-          $message = __('You must select at least one item.', 'wds');
+          $message = __('You must select at least one item.', WDS()->prefix);
           $type = 'wd_error';
           break;
         }
         case 7: {
-          $message = __('The item is successfully set as default.', 'wds');
+          $message = __('The item is successfully set as default.', WDS()->prefix);
           $type = 'wd_updated';
           break;
         }
         case 8: {
-          $message = __('Options Succesfully Saved.', 'wds');
+          $message = __('Options Succesfully Saved.', WDS()->prefix);
           $type = 'wd_updated';
           break;
         }
         case 9: {
-          $message = __('Item Succesfully Published.', 'wds');
+          $message = __('Item Succesfully Published.', WDS()->prefix);
           $type = 'wd_updated';
           break;
         }
         case 10: {
-          $message = __('Items Succesfully Published.', 'wds');
+          $message = __('Items Succesfully Published.', WDS()->prefix);
           $type = 'wd_updated';
           break;
         }
         case 11: {
-          $message = __('Item Succesfully Unpublished.', 'wds');
+          $message = __('Item Succesfully Unpublished.', WDS()->prefix);
           $type = 'wd_updated';
           break;
         }
         case 12: {
-          $message = __('Items Succesfully Unpublished.', 'wds');
+          $message = __('Items Succesfully Unpublished.', WDS()->prefix);
           $type = 'wd_updated';
           break;
         }
         case 13: {
-          $message = __('Ordering Succesfully Saved.', 'wds');
+          $message = __('Ordering Succesfully Saved.', WDS()->prefix);
           $type = 'wd_updated';
           break;
         }
         case 14: {
-          $message = __('A term with the name provided already exists.', 'wds');
+          $message = __('A term with the name provided already exists.', WDS()->prefix);
           $type = 'wd_error';
           break;
         }
         case 15: {
-          $message = __('Name field is required.', 'wds');
+          $message = __('Name field is required.', WDS()->prefix);
           $type = 'wd_error';
           break;
         }
         case 16: {
-          $message = __('The slug must be unique.', 'wds');
+          $message = __('The slug must be unique.', WDS()->prefix);
           $type = 'wd_error';
           break;
         }
         case 17: {
-          $message = __('Changes must be saved.', 'wds');
+          $message = __('Changes must be saved.', WDS()->prefix);
           $type = 'wd_error';
           break;
         }
         case 18: {
-          $message = __('You must set watermark type.', 'wds');
+          $message = __('You must set watermark type.', WDS()->prefix);
           $type = 'wd_error';
           break;
         }
         case 19: {
-          $message = __('Watermark Succesfully Set.', 'wds');
+          $message = __('Watermark Succesfully Set.', WDS()->prefix);
           $type = 'wd_updated';
           break;
         }
         case 20: {
-          $message = __('Watermark Succesfully Reset.', 'wds');
+          $message = __('Watermark Succesfully Reset.', WDS()->prefix);
           $type = 'wd_updated';
           break;
         }
         case 21: {
-          $message = __('Settings Succesfully Reset.', 'wds');
+          $message = __('Settings Succesfully Reset.', WDS()->prefix);
           $type = 'wd_updated';
           break;
         }
         case 22: {
-          $message = __('Items Succesfully Set.', 'wds');
+          $message = __('Items Succesfully Set.', WDS()->prefix);
           $type = 'wd_updated';
           break;
         }
         case 23: {
-          $message = __('Slider successfully imported.', 'wds');
+          $message = __('Slider successfully imported.', WDS()->prefix);
           $type = 'wd_updated';
           break;
         }
         case 24: {
-          $message = __('Unexpected error occurred.', 'wds');
+          $message = __('Unexpected error occurred.', WDS()->prefix);
           $type = 'wd_error';
           break;
         }
         case 25: {
-          $message = __('You can include only posts with featured image.', 'wds');
+          $message = __('You can include only posts with featured image.', WDS()->prefix);
+          $type = 'wd_updated';
+          break;
+        }
+		case 26: {
+          $message = __('Item Succesfully Duplicated.', WDS()->prefix);
+          $type = 'wd_updated';
+          break;
+        }
+		case 27: {
+          $message = __('You should select at least 2 sliders to merge them.', WDS()->prefix);
+          $type = 'wd_error';
+          break;
+        }
+		case 28: {
+          $message = __('The selected items are merged as a new slider.', WDS()->prefix);
           $type = 'wd_updated';
           break;
         }
@@ -181,6 +224,38 @@ class WDW_S_Library {
     return '<div style="width: 99%" class="spider_message"><div class="' . $type . '"><p><strong>'. $message .'</strong></p></div></div>';
   }
 
+  /**
+   * Ordering.
+   *
+   * @param        $id
+   * @param        $orderby
+   * @param        $order
+   * @param        $text
+   * @param        $page_url
+   * @param string $additional_class
+   *
+   * @return string
+   */
+  public static function ordering($id, $orderby, $order, $text, $page_url, $additional_class = '') {
+    $class = array(
+      ($orderby == $id ? 'sorted': 'sortable'),
+      $order,
+      $additional_class,
+      'col_' . $id,
+    );
+    $order = (($orderby == $id) && ($order == 'asc')) ? 'desc' : 'asc';
+    ob_start();
+    ?>
+    <th id="order-<?php echo $id; ?>" class="<?php echo implode(' ', $class); ?>">
+      <a href="<?php echo add_query_arg( array('orderby' => $id, 'order' => $order), $page_url ); ?>"
+         title="<?php _e('Click to sort by this item', WDS()->prefix); ?>">
+        <span><?php echo $text; ?></span><span class="sorting-indicator"></span>
+      </a>
+    </th>
+    <?php
+    return ob_get_clean();
+  }
+// TODO. old version.
   public static function search($search_by, $search_value, $form_id) {
     $search_position = ($form_id == 'posts_form') ? 'alignleft' : 'alignright';
     ?>
@@ -221,7 +296,7 @@ class WDW_S_Library {
                name="search_value"
                value="<?php echo esc_html($search_value); ?>"
                onkeypress="spider_search(event)" />
-        <input type="button" value="<?php _e('Search', 'wds'); ?>" onclick="spider_search()" class="button" />
+        <input type="button" value="<?php _e('Search', WDS()->prefix); ?>" onclick="spider_search()" class="button" />
       </div>
     </div>
     <?php
@@ -317,8 +392,8 @@ class WDW_S_Library {
         <?php
         if ($count_items != 0) {
           echo $count_items;
-          _e(' item', 'wds');
-          echo (($count_items == 1) ? '' : __('s', 'wds'));
+          _e(' item', WDS()->prefix);
+          echo (($count_items == 1) ? '' : __('s', WDS()->prefix));
         }
         ?>
       </span>
@@ -342,8 +417,8 @@ class WDW_S_Library {
         }
       ?>
       <span class="pagination-links">
-        <a class="<?php echo $first_page; ?>" title="<?php _e('Go to the first page', 'wds'); ?>" href="javascript:spider_page(<?php echo $page_number; ?>,-2);">«</a>
-        <a class="<?php echo $prev_page; ?>" title="<?php _e('Go to the previous page', 'wds'); ?>" href="javascript:spider_page(<?php echo $page_number; ?>,-1);">‹</a>
+        <a class="<?php echo $first_page; ?>" title="<?php _e('Go to the first page', WDS()->prefix); ?>" href="javascript:spider_page(<?php echo $page_number; ?>,-2);">«</a>
+        <a class="<?php echo $prev_page; ?>" title="<?php _e('Go to the previous page', WDS()->prefix); ?>" href="javascript:spider_page(<?php echo $page_number; ?>,-1);">‹</a>
         <span class="paging-input">
           <span class="total-pages">
           <input class="current_page" id="current_page" name="current_page" value="<?php echo $page_number; ?>" onkeypress="return check_enter_key(event)" title="Go to the page" type="text" size="1" />
@@ -352,8 +427,8 @@ class WDW_S_Library {
             <?php echo $items_county; ?>
           </span>
         </span>
-        <a class="<?php echo $next_page ?>" title="<?php _e('Go to the next page', 'wds'); ?>" href="javascript:spider_page(<?php echo $page_number; ?>,1);">›</a>
-        <a class="<?php echo $last_page ?>" title="<?php _e('Go to the last page', 'wds'); ?>" href="javascript:spider_page(<?php echo $page_number; ?>,2);">»</a>
+        <a class="<?php echo $next_page ?>" title="<?php _e('Go to the next page', WDS()->prefix); ?>" href="javascript:spider_page(<?php echo $page_number; ?>,1);">›</a>
+        <a class="<?php echo $last_page ?>" title="<?php _e('Go to the last page', WDS()->prefix); ?>" href="javascript:spider_page(<?php echo $page_number; ?>,2);">»</a>
         <?php
       }
       ?>
@@ -427,8 +502,8 @@ class WDW_S_Library {
         <?php
         if ($count_items != 0) {
             echo $count_items;
-            _e('item', 'wds');
-            echo (($count_items == 1) ? '' : __('s', 'wds'));
+            _e('item', WDS()->prefix);
+            echo (($count_items == 1) ? '' : __('s', WDS()->prefix));
        }
         ?>
       </span>
@@ -452,8 +527,8 @@ class WDW_S_Library {
         }
       ?>
       <span class="pagination-links">
-        <a class="<?php echo $first_page; ?>" title="<?php _e('Go to the first page', 'wds'); ?>" onclick="spider_page(<?php echo $page_number; ?>,-2)">«</a>
-        <a class="<?php echo $prev_page; ?>" title="<?php _e('Go to the previous page', 'wds'); ?>" onclick="spider_page(<?php echo $page_number; ?>,-1)">‹</a>
+        <a class="<?php echo $first_page; ?>" title="<?php _e('Go to the first page', WDS()->prefix); ?>" onclick="spider_page(<?php echo $page_number; ?>,-2)">«</a>
+        <a class="<?php echo $prev_page; ?>" title="<?php _e('Go to the previous page', WDS()->prefix); ?>" onclick="spider_page(<?php echo $page_number; ?>,-1)">‹</a>
         <span class="paging-input">
           <span class="total-pages">
           <input class="current_page" id="current_page" name="current_page" value="<?php echo $page_number; ?>" onkeypress="return check_enter_key(event)" title="Go to the page" type="text" size="1" />
@@ -462,8 +537,8 @@ class WDW_S_Library {
             <?php echo $items_county; ?>
           </span>
         </span>
-        <a class="<?php echo $next_page ?>" title="<?php _e('Go to the next page', 'wds'); ?>" onclick="spider_page(<?php echo $page_number; ?>,1)">›</a>
-        <a class="<?php echo $last_page ?>" title="<?php _e('Go to the last page', 'wds'); ?>" onclick="spider_page(<?php echo $page_number; ?>,2)">»</a>
+        <a class="<?php echo $next_page ?>" title="<?php _e('Go to the next page', WDS()->prefix); ?>" onclick="spider_page(<?php echo $page_number; ?>,1)">›</a>
+        <a class="<?php echo $last_page ?>" title="<?php _e('Go to the last page', WDS()->prefix); ?>" onclick="spider_page(<?php echo $page_number; ?>,2)">»</a>
         <?php
       }
       ?>
@@ -511,7 +586,7 @@ class WDW_S_Library {
     $b = hexdec($b);
     return 'rgba(' . $r . ', ' . $g . ', ' . $b . ', ' . number_format($transparent, 2, ".", "") . ')';
   }
-
+// TODO remove this and rename all to redirect.
   public static function spider_redirect($url) {
     $url = html_entity_decode(wp_nonce_url($url, 'nonce_wd', 'nonce_wd'));
     ?>
@@ -548,14 +623,20 @@ class WDW_S_Library {
     return $google_fonts;
   }
 
-  public static function no_items($title) {
+ /**
+   * No items.
+   *
+   * @param $title
+   * @param $number
+   *
+   * @return string
+   */
+  public static function no_items($title, $colspan_count = 0) {
     $title = ($title != '') ? strtolower($title) : 'items';
     ob_start();
-    ?>
-    <tr class="no-items">
-      <td class="colspanchange" colspan="0"><?php echo sprintf(__('No %s found.', 'wds'), $title); ?></td>
-    </tr>
-    <?php
+    ?><tr class="no-items">
+    <td class="colspanchange" <?php echo $colspan_count ? 'colspan="' . $colspan_count . '"' : ''?>><?php echo sprintf(__('No %s found.', WDS()->prefix), $title); ?></td>
+    </tr><?php
     return ob_get_clean();
   }
 
@@ -650,205 +731,212 @@ class WDW_S_Library {
   public static function get_values() {
     $values = array();
     $values['aligns'] = array(
-      'left' => __('Left', 'wds'),
-      'center' => __('Center', 'wds'),
-      'right' => __('Right', 'wds'),
+      'left' => __('Left', WDS()->prefix),
+      'center' => __('Center', WDS()->prefix),
+      'right' => __('Right', WDS()->prefix),
     );
     $values['border_styles'] = array(
-      'none' => __('None', 'wds'),
-      'solid' => __('Solid', 'wds'),
-      'dotted' => __('Dotted', 'wds'),
-      'dashed' => __('Dashed', 'wds'),
-      'double' => __('Double', 'wds'),
-      'groove' => __('Groove', 'wds'),
-      'ridge' => __('Ridge', 'wds'),
-      'inset' => __('Inset', 'wds'),
-      'outset' => __('Outset', 'wds'),
+      'none' => __('None', WDS()->prefix),
+      'solid' => __('Solid', WDS()->prefix),
+      'dotted' => __('Dotted', WDS()->prefix),
+      'dashed' => __('Dashed', WDS()->prefix),
+      'double' => __('Double', WDS()->prefix),
+      'groove' => __('Groove', WDS()->prefix),
+      'ridge' => __('Ridge', WDS()->prefix),
+      'inset' => __('Inset', WDS()->prefix),
+      'outset' => __('Outset', WDS()->prefix),
     );
     $values['button_styles'] = array(
-      'fa-chevron' => __('Chevron', 'wds'),
-      'fa-angle' => __('Angle', 'wds'),
-      'fa-angle-double' => __('Double', 'wds'),
+      'fa-chevron' => __('Chevron', WDS()->prefix),
+      'fa-angle' => __('Angle', WDS()->prefix),
+      'fa-angle-double' => __('Double', WDS()->prefix),
     );
     $values['bull_styles'] = array(
-      'fa-circle-o' => __('Circle O', 'wds'),
-      'fa-circle' => __('Circle', 'wds'),
-      'fa-minus' => __('Minus', 'wds'),
-      'fa-square-o' => __('Square O', 'wds'),
-      'fa-square' => __('Square', 'wds'),
+      'fa-circle-o' => __('Circle O', WDS()->prefix),
+      'fa-circle' => __('Circle', WDS()->prefix),
+      'fa-minus' => __('Minus', WDS()->prefix),
+      'fa-square-o' => __('Square O', WDS()->prefix),
+      'fa-square' => __('Square', WDS()->prefix),
     );
     $values['font_families'] = WDW_S_Library::get_font_families();
     $values['google_fonts'] = WDW_S_Library::get_google_fonts();
     $values['font_weights'] = array(
-      'lighter' => __('Lighter', 'wds'),
-      'normal' => __('Normal', 'wds'),
-      'bold' => __('Bold', 'wds'),
+      'lighter' => __('Lighter', WDS()->prefix),
+      'normal' => __('Normal', WDS()->prefix),
+      'bold' => __('Bold', WDS()->prefix),
     );
     $values['social_buttons'] = array(
-      'facebook' => __('Facebook', 'wds'),
-      'google-plus' => __('Google+', 'wds'),
-      'twitter' => __('Twitter', 'wds'),
-      'pinterest' => __('Pinterest', 'wds'),
-      'tumblr' => __('Tumblr', 'wds'),
+      'facebook' => __('Facebook', WDS()->prefix),
+      'google-plus' => __('Google+', WDS()->prefix),
+      'twitter' => __('Twitter', WDS()->prefix),
+      'pinterest' => __('Pinterest', WDS()->prefix),
+      'tumblr' => __('Tumblr', WDS()->prefix),
     );
     $values['effects'] = array(
-      'none' => __('None', 'wds'),
-      'zoomFade' => __('Zoom Fade', 'wds'),
-      'parallelSlideH' => __('Parallel Slide Horizontal', 'wds'),
-      'parallelSlideV' => __('Parallel Slide Vertical', 'wds'),
-      'slic3DH' => __('Slice 3D Horizontal', 'wds'),
-      'slic3DV' => __('Slice 3D Vertical', 'wds'),
-      'slicR3DH' => __('Slice 3D Horizontal Random', 'wds'),
-      'slicR3DV' => __('Slice 3D Vertical Random', 'wds'),
-      'blindR' => __('Blind', 'wds'),
-      'tilesR' => __('Tiles', 'wds'),
-      'blockScaleR' => __('Block Scale Random', 'wds'),
-      'cubeH' => __('Cube Horizontal', 'wds'),
-      'cubeV' => __('Cube Vertical', 'wds'),
-      'cubeR' => __('Cube Random', 'wds'),
-      'fade' => __('Fade', 'wds'),
-      'sliceH' => __('Slice Horizontal', 'wds'),
-      'sliceV' => __('Slice Vertical', 'wds'),
-      'slideH' => __('Slide Horizontal', 'wds'),
-      'slideV' => __('Slide Vertical', 'wds'),
-      'scaleOut' => __('Scale Out', 'wds'),
-      'scaleIn' => __('Scale In', 'wds'),
-      'blockScale' => __('Block Scale', 'wds'),
-      'kaleidoscope' => __('Kaleidoscope', 'wds'),
-      'fan' => __('Fan', 'wds'),
-      'blindH' => __('Blind Horizontal', 'wds'),
-      'blindV' => __('Blind Vertical', 'wds'),
-      'random' => __('Random', 'wds'),
-      '3Drandom' => __('3D Random', 'wds'),
+      'none' => __('None', WDS()->prefix),
+      'zoomFade' => __('Zoom Fade', WDS()->prefix),
+      'parallelSlideH' => __('Parallel Slide Horizontal', WDS()->prefix),
+      'parallelSlideV' => __('Parallel Slide Vertical', WDS()->prefix),
+      'slic3DH' => __('Slice 3D Horizontal', WDS()->prefix),
+      'slic3DV' => __('Slice 3D Vertical', WDS()->prefix),
+      'slicR3DH' => __('Slice 3D Horizontal Random', WDS()->prefix),
+      'slicR3DV' => __('Slice 3D Vertical Random', WDS()->prefix),
+      'blindR' => __('Blind', WDS()->prefix),
+      'tilesR' => __('Tiles', WDS()->prefix),
+      'blockScaleR' => __('Block Scale Random', WDS()->prefix),
+      'cubeH' => __('Cube Horizontal', WDS()->prefix),
+      'cubeV' => __('Cube Vertical', WDS()->prefix),
+      'cubeR' => __('Cube Random', WDS()->prefix),
+      'fade' => __('Fade', WDS()->prefix),
+      'sliceH' => __('Slice Horizontal', WDS()->prefix),
+      'sliceV' => __('Slice Vertical', WDS()->prefix),
+      'slideH' => __('Slide Horizontal', WDS()->prefix),
+      'slideV' => __('Slide Vertical', WDS()->prefix),
+      'scaleOut' => __('Scale Out', WDS()->prefix),
+      'scaleIn' => __('Scale In', WDS()->prefix),
+      'blockScale' => __('Block Scale', WDS()->prefix),
+      'kaleidoscope' => __('Kaleidoscope', WDS()->prefix),
+      'fan' => __('Fan', WDS()->prefix),
+      'blindH' => __('Blind Horizontal', WDS()->prefix),
+      'blindV' => __('Blind Vertical', WDS()->prefix),
+      'random' => __('Random', WDS()->prefix),
+      '3Drandom' => __('3D Random', WDS()->prefix),
     );
     $values['layer_effects_in'] = array(
-      'none' => __('None', 'wds'),
-      'bounce' => __('Bounce', 'wds'),
-      'flash' => __('Flash', 'wds'),
-      'pulse' => __('Pulse', 'wds'),
-      'rubberBand' => __('RubberBand', 'wds'),
-      'shake' => __('Shake', 'wds'),
-      'swing' => __('Swing', 'wds'),
-      'tada' => __('Tada', 'wds'),
-      'wobble' => __('Wobble', 'wds'),
-      'hinge' => __('Hinge', 'wds'),
+      'none' => __('None', WDS()->prefix),
+      'bounce' => __('Bounce', WDS()->prefix),
+      'flash' => __('Flash', WDS()->prefix),
+      'pulse' => __('Pulse', WDS()->prefix),
+      'rubberBand' => __('RubberBand', WDS()->prefix),
+      'shake' => __('Shake', WDS()->prefix),
+      'swing' => __('Swing', WDS()->prefix),
+      'tada' => __('Tada', WDS()->prefix),
+      'wobble' => __('Wobble', WDS()->prefix),
+      'hinge' => __('Hinge', WDS()->prefix),
 
-      'lightSpeedIn' => __('LightSpeedIn', 'wds'),
-      'rollIn' => __('RollIn', 'wds'),
+      'lightSpeedIn' => __('LightSpeedIn', WDS()->prefix),
+      'rollIn' => __('RollIn', WDS()->prefix),
 
-      'bounceIn' => __('BounceIn', 'wds'),
-      'bounceInDown' => __('BounceInDown', 'wds'),
-      'bounceInLeft' => __('BounceInLeft', 'wds'),
-      'bounceInRight' => __('BounceInRight', 'wds'),
-      'bounceInUp' => __('BounceInUp', 'wds'),
+      'bounceIn' => __('BounceIn', WDS()->prefix),
+      'bounceInDown' => __('BounceInDown', WDS()->prefix),
+      'bounceInLeft' => __('BounceInLeft', WDS()->prefix),
+      'bounceInRight' => __('BounceInRight', WDS()->prefix),
+      'bounceInUp' => __('BounceInUp', WDS()->prefix),
 
-      'fadeIn' => __('FadeIn', 'wds'),
-      'fadeInDown' => __('FadeInDown', 'wds'),
-      'fadeInDownBig' => __('FadeInDownBig', 'wds'),
-      'fadeInLeft' => __('FadeInLeft', 'wds'),
-      'fadeInLeftBig' => __('FadeInLeftBig', 'wds'),
-      'fadeInRight' => __('FadeInRight', 'wds'),
-      'fadeInRightBig' => __('FadeInRightBig', 'wds'),
-      'fadeInUp' => __('FadeInUp', 'wds'),
-      'fadeInUpBig' => __('FadeInUpBig', 'wds'),
+      'fadeIn' => __('FadeIn', WDS()->prefix),
+      'fadeInDown' => __('FadeInDown', WDS()->prefix),
+      'fadeInDownBig' => __('FadeInDownBig', WDS()->prefix),
+      'fadeInLeft' => __('FadeInLeft', WDS()->prefix),
+      'fadeInLeftBig' => __('FadeInLeftBig', WDS()->prefix),
+      'fadeInRight' => __('FadeInRight', WDS()->prefix),
+      'fadeInRightBig' => __('FadeInRightBig', WDS()->prefix),
+      'fadeInUp' => __('FadeInUp', WDS()->prefix),
+      'fadeInUpBig' => __('FadeInUpBig', WDS()->prefix),
 
-      'flip' => __('Flip', 'wds'),
-      'flipInX' => __('FlipInX', 'wds'),
-      'flipInY' => __('FlipInY', 'wds'),
+      'flip' => __('Flip', WDS()->prefix),
+      'flipInX' => __('FlipInX', WDS()->prefix),
+      'flipInY' => __('FlipInY', WDS()->prefix),
 
-      'rotateIn' => __('RotateIn', 'wds'),
-      'rotateInDownLeft' => __('RotateInDownLeft', 'wds'),
-      'rotateInDownRight' => __('RotateInDownRight', 'wds'),
-      'rotateInUpLeft' => __('RotateInUpLeft', 'wds'),
-      'rotateInUpRight' => __('RotateInUpRight', 'wds'),
+      'rotateIn' => __('RotateIn', WDS()->prefix),
+      'rotateInDownLeft' => __('RotateInDownLeft', WDS()->prefix),
+      'rotateInDownRight' => __('RotateInDownRight', WDS()->prefix),
+      'rotateInUpLeft' => __('RotateInUpLeft', WDS()->prefix),
+      'rotateInUpRight' => __('RotateInUpRight', WDS()->prefix),
 
-      'zoomIn' => __('ZoomIn', 'wds'),
-      'zoomInDown' => __('ZoomInDown', 'wds'),
-      'zoomInLeft' => __('ZoomInLeft', 'wds'),
-      'zoomInRight' => __('ZoomInRight', 'wds'),
-      'zoomInUp' => __('ZoomInUp', 'wds'),
+      'zoomIn' => __('ZoomIn', WDS()->prefix),
+      'zoomInDown' => __('ZoomInDown', WDS()->prefix),
+      'zoomInLeft' => __('ZoomInLeft', WDS()->prefix),
+      'zoomInRight' => __('ZoomInRight', WDS()->prefix),
+      'zoomInUp' => __('ZoomInUp', WDS()->prefix),
     );
     $values['layer_effects_out'] = array(
-      'none' => __('None', 'wds'),
-      'bounce' => __('Bounce', 'wds'),
-      'flash' => __('Flash', 'wds'),
-      'pulse' => __('Pulse', 'wds'),
-      'rubberBand' => __('RubberBand', 'wds'),
-      'shake' => __('Shake', 'wds'),
-      'swing' => __('Swing', 'wds'),
-      'tada' => __('Tada', 'wds'),
-      'wobble' => __('Wobble', 'wds'),
-      'hinge' => __('Hinge', 'wds'),
+      'none' => __('None', WDS()->prefix),
+      'bounce' => __('Bounce', WDS()->prefix),
+      'flash' => __('Flash', WDS()->prefix),
+      'pulse' => __('Pulse', WDS()->prefix),
+      'rubberBand' => __('RubberBand', WDS()->prefix),
+      'shake' => __('Shake', WDS()->prefix),
+      'swing' => __('Swing', WDS()->prefix),
+      'tada' => __('Tada', WDS()->prefix),
+      'wobble' => __('Wobble', WDS()->prefix),
+      'hinge' => __('Hinge', WDS()->prefix),
 
-      'lightSpeedOut' => __('LightSpeedOut', 'wds'),
-      'rollOut' => __('RollOut', 'wds'),
+      'lightSpeedOut' => __('LightSpeedOut', WDS()->prefix),
+      'rollOut' => __('RollOut', WDS()->prefix),
 
-      'bounceOut' => __('BounceOut', 'wds'),
-      'bounceOutDown' => __('BounceOutDown', 'wds'),
-      'bounceOutLeft' => __('BounceOutLeft', 'wds'),
-      'bounceOutRight' => __('BounceOutRight', 'wds'),
-      'bounceOutUp' => __('BounceOutUp', 'wds'),
+      'bounceOut' => __('BounceOut', WDS()->prefix),
+      'bounceOutDown' => __('BounceOutDown', WDS()->prefix),
+      'bounceOutLeft' => __('BounceOutLeft', WDS()->prefix),
+      'bounceOutRight' => __('BounceOutRight', WDS()->prefix),
+      'bounceOutUp' => __('BounceOutUp', WDS()->prefix),
 
-      'fadeOut' => __('FadeOut', 'wds'),
-      'fadeOutDown' => __('FadeOutDown', 'wds'),
-      'fadeOutDownBig' => __('FadeOutDownBig', 'wds'),
-      'fadeOutLeft' => __('FadeOutLeft', 'wds'),
-      'fadeOutLeftBig' => __('FadeOutLeftBig', 'wds'),
-      'fadeOutRight' => __('FadeOutRight', 'wds'),
-      'fadeOutRightBig' => __('FadeOutRightBig', 'wds'),
-      'fadeOutUp' => __('FadeOutUp', 'wds'),
-      'fadeOutUpBig' => __('FadeOutUpBig', 'wds'),
+      'fadeOut' => __('FadeOut', WDS()->prefix),
+      'fadeOutDown' => __('FadeOutDown', WDS()->prefix),
+      'fadeOutDownBig' => __('FadeOutDownBig', WDS()->prefix),
+      'fadeOutLeft' => __('FadeOutLeft', WDS()->prefix),
+      'fadeOutLeftBig' => __('FadeOutLeftBig', WDS()->prefix),
+      'fadeOutRight' => __('FadeOutRight', WDS()->prefix),
+      'fadeOutRightBig' => __('FadeOutRightBig', WDS()->prefix),
+      'fadeOutUp' => __('FadeOutUp', WDS()->prefix),
+      'fadeOutUpBig' => __('FadeOutUpBig', WDS()->prefix),
 
-      'flip' => __('Flip', 'wds'),
-      'flipOutX' => __('FlipOutX', 'wds'),
-      'flipOutY' => __('FlipOutY', 'wds'),
+      'flip' => __('Flip', WDS()->prefix),
+      'flipOutX' => __('FlipOutX', WDS()->prefix),
+      'flipOutY' => __('FlipOutY', WDS()->prefix),
 
-      'rotateOut' => __('RotateOut', 'wds'),
-      'rotateOutDownLeft' => __('RotateOutDownLeft', 'wds'),
-      'rotateOutDownRight' => __('RotateOutDownRight', 'wds'),
-      'rotateOutUpLeft' => __('RotateOutUpLeft', 'wds'),
-      'rotateOutUpRight' => __('RotateOutUpRight', 'wds'),
+      'rotateOut' => __('RotateOut', WDS()->prefix),
+      'rotateOutDownLeft' => __('RotateOutDownLeft', WDS()->prefix),
+      'rotateOutDownRight' => __('RotateOutDownRight', WDS()->prefix),
+      'rotateOutUpLeft' => __('RotateOutUpLeft', WDS()->prefix),
+      'rotateOutUpRight' => __('RotateOutUpRight', WDS()->prefix),
 
-      'zoomOut' => __('ZoomOut', 'wds'),
-      'zoomOutDown' => __('ZoomOutDown', 'wds'),
-      'zoomOutLeft' => __('ZoomOutLeft', 'wds'),
-      'zoomOutRight' => __('ZoomOutRight', 'wds'),
-      'zoomOutUp' => __('ZoomOutUp', 'wds'),
+      'zoomOut' => __('ZoomOut', WDS()->prefix),
+      'zoomOutDown' => __('ZoomOutDown', WDS()->prefix),
+      'zoomOutLeft' => __('ZoomOutLeft', WDS()->prefix),
+      'zoomOutRight' => __('ZoomOutRight', WDS()->prefix),
+      'zoomOutUp' => __('ZoomOutUp', WDS()->prefix),
     );
     $values['hotp_text_positions'] = array(
-      'top' => __('Top', 'wds'),
-      'left' => __('Left', 'wds'),
-      'bottom' => __('Bottom', 'wds'),
-      'right' => __('Right', 'wds'),
+      'top' => __('Top', WDS()->prefix),
+      'left' => __('Left', WDS()->prefix),
+      'bottom' => __('Bottom', WDS()->prefix),
+      'right' => __('Right', WDS()->prefix),
     );
     $values['slider_callbacks'] = array(
-      'onSliderI' => __('On slider Init', 'wds'),
-      'onSliderCS' => __('On slide change start', 'wds'),
-      'onSliderCE' => __('On slide change end', 'wds'),
-      'onSliderPlay' => __('On slide play', 'wds'),
-      'onSliderPause' => __('On slide pause', 'wds'),
-      'onSliderHover' => __('On slide hover', 'wds'),
-      'onSliderBlur' => __('On slide blur', 'wds'),
-      'onSliderR' => __('On slider resize', 'wds'),
-      'onSwipeS' => __('On swipe start', 'wds'),
+      'onSliderI' => __('On slider Init', WDS()->prefix),
+      'onSliderCS' => __('On slide change start', WDS()->prefix),
+      'onSliderCE' => __('On slide change end', WDS()->prefix),
+      'onSliderPlay' => __('On slide play', WDS()->prefix),
+      'onSliderPause' => __('On slide pause', WDS()->prefix),
+      'onSliderHover' => __('On slide hover', WDS()->prefix),
+      'onSliderBlur' => __('On slide blur', WDS()->prefix),
+      'onSliderR' => __('On slider resize', WDS()->prefix),
+      'onSwipeS' => __('On swipe start', WDS()->prefix),
     );
     $values['layer_callbacks'] = array(
-      '' => __('Select action', 'wds'),
-      'SlidePlay' => __('Play', 'wds'),
-      'SlidePause' => __('Pause', 'wds'),
-      'SlidePlayPause' => __('Play/Pause', 'wds'),
-      'SlideNext' => __('Next slide', 'wds'),
-      'SlidePrevious' => __('Previous slide', 'wds'),
-      'SlideLink' => __('Link to slide', 'wds'),
-      'PlayMusic' => __('Play music', 'wds'),
+      '' => __('Select action', WDS()->prefix),
+      'SlidePlay' => __('Play', WDS()->prefix),
+      'SlidePause' => __('Pause', WDS()->prefix),
+      'SlidePlayPause' => __('Play/Pause', WDS()->prefix),
+      'SlideNext' => __('Next slide', WDS()->prefix),
+      'SlidePrevious' => __('Previous slide', WDS()->prefix),
+      'SlideLink' => __('Link to slide', WDS()->prefix),
+      'PlayMusic' => __('Play music', WDS()->prefix),
     );
     $values['text_alignments'] = array(
-      'left' => __('Left', 'wds'),
-      'center' => __('Center', 'wds'),
-      'right' => __('Right', 'wds')
+      'left' => __('Left', WDS()->prefix),
+      'center' => __('Center', WDS()->prefix),
+      'right' => __('Right', WDS()->prefix)
     );
+	$values['slider_fillmode_option'] = array(
+		'fill' => __('Fill', WDS()->prefix),
+		'fit' => __('Fit', WDS()->prefix),
+		'stretch' => __('Stretch', WDS()->prefix),
+		'center' => __('Center', WDS()->prefix),
+		'tile' => __('Tile', WDS()->prefix)
+	);
     $values['built_in_watermark_fonts'] = array();
-    foreach (scandir(path_join(WD_S_DIR, 'fonts')) as $filename) {
+    foreach (scandir(path_join(WDS()->plugin_dir, 'fonts')) as $filename) {
       if (strpos($filename, '.') === 0) {
         continue;
       }
@@ -867,7 +955,7 @@ class WDW_S_Library {
    * @return object   $slider
    */
 	public static function get_slider_by_id( $id ) {
-		require_once WD_S_DIR . "/frontend/models/WDSModelSlider.php";
+		require_once WDS()->plugin_dir . "/frontend/models/WDSModelSlider.php";
 		$model = new WDSModelSlider();
 		$slider = $model->get_slider_row_data( $id );
 		return $slider;
@@ -881,7 +969,7 @@ class WDW_S_Library {
 	* @return object   $slides
     */
 	public static function get_slides_by_slider_id( $id , $order) {
-		require_once WD_S_DIR . "/frontend/models/WDSModelSlider.php";
+		require_once WDS()->plugin_dir . "/frontend/models/WDSModelSlider.php";
 		$model = new WDSModelSlider();
 		$slider = $model->get_slide_rows_data( $id , $order );
 		return $slider;
@@ -895,7 +983,7 @@ class WDW_S_Library {
 	* @return object   $layers
     */
 	public static function get_layers_by_slider_id_slide_ids( $slider_id, $slide_ids ) {
-		require_once WD_S_DIR . "/frontend/models/WDSModelSlider.php";
+		require_once WDS()->plugin_dir . "/frontend/models/WDSModelSlider.php";
 		$model = new WDSModelSlider();
 		$layers = $model->get_layers_by_slider_id_slide_ids( $slider_id, $slide_ids );
 		return $layers;
@@ -1085,7 +1173,7 @@ class WDW_S_Library {
       wds_data_<?php echo $wds; ?>["<?php echo $key; ?>"]["width"] = "<?php echo $slide_row->att_width; ?>";
       wds_data_<?php echo $wds; ?>["<?php echo $key; ?>"]["height"] = "<?php echo $slide_row->att_height; ?>";
       wds_data_<?php echo $wds; ?>["<?php echo $key; ?>"]["fillmode"] = "<?php echo $slide_row->fillmode; ?>";
-      wds_data_<?php echo $wds; ?>["<?php echo $key; ?>"]["image_thumb_url"] = "<?php echo is_numeric($slide_row->thumb_url) ? (wp_get_attachment_url(get_post_thumbnail_id($slide_row->thumb_url)) ? wp_get_attachment_url(get_post_thumbnail_id($slide_row->thumb_url)) : WD_S_URL . '/images/no-video.png' ): htmlspecialchars_decode($slide_row->thumb_url,ENT_QUOTES) ?>";
+      wds_data_<?php echo $wds; ?>["<?php echo $key; ?>"]["image_thumb_url"] = "<?php echo is_numeric($slide_row->thumb_url) ? (wp_get_attachment_url(get_post_thumbnail_id($slide_row->thumb_url)) ? wp_get_attachment_url(get_post_thumbnail_id($slide_row->thumb_url)) : WDS()->plugin_url . '/images/no-video.png' ): htmlspecialchars_decode($slide_row->thumb_url,ENT_QUOTES) ?>";
       <?php
       if (isset($layers_rows[$slide_row->id]) && !empty($layers_rows[$slide_row->id])) {
         foreach ($layers_rows[$slide_row->id] as $layer_key => $layer) {
@@ -1223,6 +1311,9 @@ class WDW_S_Library {
         iframe_message_received : 'iframe_message_received_<?php echo $wds; ?>',
         video_is_playing : video_is_playing_<?php echo $wds; ?>,
         mouse_wheel_nav : <?php echo $mouse_wheel_nav; ?>,
+        mouse_swipe_nav : <?php echo $mouse_swipe_nav; ?>,
+        touch_swipe_nav : <?php echo $touch_swipe_nav; ?>,
+        keyboard_nav : <?php echo $keyboard_nav; ?>,
         start_slide_num : <?php echo $start_slide_num; ?>,
         start_slide_num_car : <?php echo $slider->start_slide_num; ?>,
         wds_duration_for_clear_effects : wds_duration_for_clear_effects_<?php echo $wds; ?>,
@@ -1433,7 +1524,7 @@ class WDW_S_Library {
           position: absolute;
           width: <?php echo $media_pp_butt_size; ?>px;
           height: <?php echo $media_pp_butt_size; ?>px;
-          background-image: url('<?php echo WD_S_URL ?>/images/button/button3/2/1.png');
+          background-image: url('<?php echo WDS()->plugin_url ?>/images/button/button3/2/1.png');
           background-position: center center;
           background-repeat: no-repeat;
           background-size: cover;
@@ -1449,7 +1540,7 @@ class WDW_S_Library {
         }
         .wds_bigplay_<?php echo $wds; ?>:hover,
         .wds_bigplay_layer:hover {
-          background: url('<?php echo WD_S_URL ?>/images/button/button3/2/2.png') no-repeat;
+          background: url('<?php echo WDS()->plugin_url ?>/images/button/button3/2/2.png') no-repeat;
           width: <?php echo $media_pp_butt_size; ?>px;
           height: <?php echo $media_pp_butt_size; ?>px;
           background-position: center center;
@@ -2080,7 +2171,7 @@ class WDW_S_Library {
         overflow: hidden;
       }
       #wds_container1_<?php echo $wds; ?> .wds_loading_img {
-        background-image: url('<?php echo WD_S_URL ?>/images/loading/<?php echo $loading_gif; ?>.gif');
+        background-image: url('<?php echo WDS()->plugin_url ?>/images/loading/<?php echo $loading_gif; ?>.gif');
       }
       <?php
       if ($hide_on_mobile) {
@@ -2246,6 +2337,56 @@ class WDW_S_Library {
 
     return $css_content;
   }
+
+  public static function global_options_defults() {
+    $global_options = array(
+      'default_layer_fweight'          => 'normal',
+      'default_layer_start'            => 1000,
+      'default_layer_effect_in'        => 'none',
+      'default_layer_duration_eff_in'  => 1000,
+      'default_layer_infinite_in'      => 1,
+      'default_layer_end'              => 3000,
+      'default_layer_effect_out'       => 'none',
+      'default_layer_duration_eff_out' => 1000,
+      'default_layer_infinite_out'     => 1,
+      'default_layer_add_class'        => '',
+      'default_layer_ffamily'          => 'arial',
+      'default_layer_google_fonts'     => 0,
+      'loading_gif'                    => 0,
+      'register_scripts'               => 0,
+      'spider_uploader'                => 0,
+      'possib_add_ffamily'             => '',
+      'possib_add_ffamily_google'      => '',
+    );
+    return $global_options;
+  }
+
+  /**
+   * Redirect.
+   *
+   * @param $url
+   */
+  public static function redirect($url) {
+    $url = html_entity_decode(wp_nonce_url($url, WDS()->nonce, WDS()->nonce));
+    ?>
+    <script>
+		window.location = "<?php echo $url; ?>";
+    </script>
+    <?php
+    exit();
+  }
+
+  /**
+	* Clean page prefix.
+	*
+	* @param  string $str
+	* @return string $str
+	*/
+	public static function clean_page_prefix( $str = '' ) {
+		$str = str_replace('_' . WDS()->prefix, '', $str);
+		$str = ucfirst($str);
+		return $str;
+	}
 }
 
 /*

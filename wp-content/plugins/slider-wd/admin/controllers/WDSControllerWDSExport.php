@@ -25,10 +25,10 @@ class WDSControllerWDSExport {
   }
 
   public function display() {
-    require_once WD_S_DIR . "/admin/models/WDSModelWDSExport.php";
+    require_once WDS()->plugin_dir . "/admin/models/WDSModelWDSExport.php";
     $model = new WDSModelWDSExport();
 
-    require_once WD_S_DIR . "/admin/views/WDSViewWDSExport.php";
+    require_once WDS()->plugin_dir . "/admin/views/WDSViewWDSExport.php";
     $view = new WDSViewWDSExport($model);
     $slider_id = WDW_S_Library::get('current_id');
     $view->display($slider_id);

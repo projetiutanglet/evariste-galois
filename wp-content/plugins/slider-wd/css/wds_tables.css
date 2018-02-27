@@ -14,7 +14,7 @@
   margin: 0;
 }
 
-#sliders_form table thead th {
+#wds_sliders_form table thead th {
   line-height: 1;
 }
 
@@ -1968,11 +1968,11 @@ th.sorted a span {
   padding: 0;
 }
 
-#sliders_form .wd-group label {
+#wds_sliders_form .wd-group label {
   margin-right: 5px;
 }
 
-#sliders_form .wd-group input[type=radio] {
+#wds_sliders_form .wd-group input[type=radio] {
   margin: 0px;
 }
 
@@ -2179,4 +2179,12 @@ input[name="embed_url"]:-ms-input-placeholder {
 .media-embed .embed-media-settings .setting,
 .media-embed .embed-link-settings {
   display: none;
+}
+
+div.wd-notice-margin {
+  margin: 5px 0;
+}
+.wd-form .wd-check-all {
+    float: left;
+    margin: 1px 6px 0 0;
 }

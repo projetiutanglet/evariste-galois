@@ -18,16 +18,16 @@ class WDSControllerWidgetSlideshow extends WP_Widget {
   public function __construct() {
     $widget_ops = array(
       'classname' => 'wdslider',
-      'description' => __('Add Slider to Your widget area.', 'wds'),
+      'description' => __('Add Slider to Your widget area.', WDS()->prefix),
     );
     // Widget Control Settings.
     $control_ops = array('id_base' => 'wdslider');
     // Create the widget.
-    parent::__construct('wdslider', __('Slider WD', 'wds'), $widget_ops, $control_ops);
-    require_once WD_S_DIR . "/admin/models/WDSModelWidgetSlideshow.php";
+    parent::__construct('wdslider', __('Slider WD', WDS()->prefix), $widget_ops, $control_ops);
+    require_once WDS()->plugin_dir . "/admin/models/WDSModelWidgetSlideshow.php";
     $this->model = new WDSModelWidgetSlideshow();
 
-    require_once WD_S_DIR . "/admin/views/WDSViewWidgetSlideshow.php";
+    require_once WDS()->plugin_dir . "/admin/views/WDSViewWidgetSlideshow.php";
     $this->view = new WDSViewWidgetSlideshow($this->model);
   }
   ////////////////////////////////////////////////////////////////////////////////////////

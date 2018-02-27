@@ -35,7 +35,7 @@ class WDSViewWidgetSlideshow {
       echo $before_title . $title . $after_title;
     }
     // Widget output.
-    require_once(WD_S_DIR . '/frontend/controllers/WDSControllerSlider.php');
+    require_once(WDS()->plugin_dir . '/frontend/controllers/WDSControllerSlider.php');
     $controller_class = 'WDSControllerSlider';
     $controller = new $controller_class();
     global $wds;
@@ -49,19 +49,19 @@ class WDSViewWidgetSlideshow {
   // Widget Control Panel.
   function form($instance, $id_title, $name_title, $id_gallery_id, $name_gallery_id) {
     $defaults = array(
-      'title' => __('Slider', 'wds'),
+      'title' => __('Slider', WDS()->prefix),
       'id' => 0,
     );
     $instance = wp_parse_args((array) $instance, $defaults);
     $slider_rows = $this->model->get_slider_rows_data();
     ?>
     <p>
-      <label for="<?php echo $id_title; ?>"><?php _e('Title:', 'wds');?></label>
+      <label for="<?php echo $id_title; ?>"><?php _e('Title:', WDS()->prefix);?></label>
       <input class="widefat" id="<?php echo $id_title; ?>" name="<?php echo $name_title; ?>" type="text" value="<?php echo $instance['title']; ?>" />
     </p>    
     <p>
       <select name="<?php echo $name_gallery_id; ?>" id="<?php echo $id_gallery_id; ?>" class="widefat">
-        <option value="0"><?php _e('Select Slider', 'wds');?></option>
+        <option value="0"><?php _e('Select Slider', WDS()->prefix);?></option>
         <?php
         foreach ($slider_rows as $slider_row) {
           ?>

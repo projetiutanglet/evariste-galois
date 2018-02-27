@@ -202,10 +202,10 @@ function wds_insert() {
     PRIMARY KEY (`id`)
   ) DEFAULT CHARSET=utf8;";
   $wpdb->query($wdslayer);
-  $global_options = json_encode(wds_global_options_defults());
+  $global_options = json_encode(WDW_S_Library::global_options_defults());
   update_option('wds_global_options', $global_options);
 
-  if ( WD_S_FREE ) {
+  if ( WDS()->is_free ) {
     if ( !$wpdb->get_var("SELECT * FROM " . $wpdb->prefix . "wdsslider") ) {
       $wpdb->insert($wpdb->prefix . 'wdsslider', array(
         'id' => 1,
@@ -268,7 +268,7 @@ function wds_insert() {
         'built_in_watermark_type' => 'none',
         'built_in_watermark_position' => 'middle-center',
         'built_in_watermark_size' => 15,
-        'built_in_watermark_url' => WD_S_URL . '/images/watermark.png',
+        'built_in_watermark_url' => WDS()->plugin_url . '/images/watermark.png',
         'built_in_watermark_text' => 'web-dorado.com',
         'built_in_watermark_font_size' => 20,
         'built_in_watermark_font' => '',
@@ -277,18 +277,18 @@ function wds_insert() {
         'css' => '',
         'stop_animation' => 0,
         'spider_uploader' => 0,
-        'right_butt_url' => WD_S_URL . '/images/arrow/arrow11/1/2.png',
-        'left_butt_url' => WD_S_URL . '/images/arrow/arrow11/1/1.png',
-        'right_butt_hov_url' => WD_S_URL . '/images/arrow/arrow11/1/4.png',
-        'left_butt_hov_url' => WD_S_URL . '/images/arrow/arrow11/1/3.png',
+        'right_butt_url' => WDS()->plugin_url . '/images/arrow/arrow11/1/2.png',
+        'left_butt_url' => WDS()->plugin_url . '/images/arrow/arrow11/1/1.png',
+        'right_butt_hov_url' => WDS()->plugin_url . '/images/arrow/arrow11/1/4.png',
+        'left_butt_hov_url' => WDS()->plugin_url . '/images/arrow/arrow11/1/3.png',
         'rl_butt_img_or_not' => 'style',
-        'bullets_img_main_url' => WD_S_URL . '/images/bullet/bullet1/1/1.png',
-        'bullets_img_hov_url' => WD_S_URL . '/images/bullet/bullet1/1/2.png',
+        'bullets_img_main_url' => WDS()->plugin_url . '/images/bullet/bullet1/1/1.png',
+        'bullets_img_hov_url' => WDS()->plugin_url . '/images/bullet/bullet1/1/2.png',
         'bull_butt_img_or_not' => 'style',
-        'play_butt_url' => WD_S_URL . '/images/button/button4/1/1.png',
-        'paus_butt_url' => WD_S_URL . '/images/button/button4/1/3.png',
-        'play_butt_hov_url' => WD_S_URL . '/images/button/button4/1/2.png',
-        'paus_butt_hov_url' => WD_S_URL . '/images/button/button4/1/4.png',
+        'play_butt_url' => WDS()->plugin_url . '/images/button/button4/1/1.png',
+        'paus_butt_url' => WDS()->plugin_url . '/images/button/button4/1/3.png',
+        'play_butt_hov_url' => WDS()->plugin_url . '/images/button/button4/1/2.png',
+        'paus_butt_hov_url' => WDS()->plugin_url . '/images/button/button4/1/4.png',
         'play_paus_butt_img_or_not' => 'style',
         'start_slide_num' => 1,
         'effect_duration' => 800,
@@ -326,9 +326,9 @@ function wds_insert() {
       ));
     }
     if ( !$wpdb->get_var("SELECT * FROM " . $wpdb->prefix . "wdsslide") ) {
-      $wpdb->query('INSERT INTO `' . $wpdb->prefix . 'wdsslide` VALUES(1, 1, "Slide 1", "image", "' . WD_S_URL . '/demo/1.jpg", "' . WD_S_URL . '/demo/1-150x150.jpg", 1, "", 1, 0, 0, 0, "fill")');
-      $wpdb->query('INSERT INTO `' . $wpdb->prefix . 'wdsslide` VALUES(2, 1, "Slide 2", "image", "' . WD_S_URL . '/demo/2.jpg", "' . WD_S_URL . '/demo/2-150x150.jpg", 1, "", 2, 0, 0, 0, "fill")');
-      $wpdb->query('INSERT INTO `' . $wpdb->prefix . 'wdsslide` VALUES(3, 1, "Slide 3", "image", "' . WD_S_URL . '/demo/3.jpg", "' . WD_S_URL . '/demo/3-150x150.jpg", 1, "", 3, 0, 0, 0, "fill")');
+      $wpdb->query('INSERT INTO `' . $wpdb->prefix . 'wdsslide` VALUES(1, 1, "Slide 1", "image", "' . WDS()->plugin_url . '/demo/1.jpg", "' . WDS()->plugin_url . '/demo/1-150x150.jpg", 1, "", 1, 0, 0, 0, "fill")');
+      $wpdb->query('INSERT INTO `' . $wpdb->prefix . 'wdsslide` VALUES(2, 1, "Slide 2", "image", "' . WDS()->plugin_url . '/demo/2.jpg", "' . WDS()->plugin_url . '/demo/2-150x150.jpg", 1, "", 2, 0, 0, 0, "fill")');
+      $wpdb->query('INSERT INTO `' . $wpdb->prefix . 'wdsslide` VALUES(3, 1, "Slide 3", "image", "' . WDS()->plugin_url . '/demo/3.jpg", "' . WDS()->plugin_url . '/demo/3-150x150.jpg", 1, "", 3, 0, 0, 0, "fill")');
     }
   }
 

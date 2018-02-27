@@ -25,10 +25,10 @@ class WDSViewWDSShortcode {
       <div id="display_panel" class="panel current" style="height: 90px !important;">
         <table>
           <tr>
-            <td style="vertical-align: middle; text-align: left;"><?php _e('Select a Slider', 'wds');?></td>
+            <td style="vertical-align: middle; text-align: left;"><?php _e('Select a Slider', WDS()->prefix);?></td>
             <td style="vertical-align: middle; text-align: left;">
               <select name="wds_id" id="wds_id" style="width: 230px; text-align: left;">
-                <option value="0" selected="selected"><?php _e('- Select a Slider -', 'wds');?></option>
+                <option value="0" selected="selected"><?php _e('- Select a Slider -', WDS()->prefix);?></option>
                 <?php
                 foreach ($rows as $row) {
                   ?>
@@ -44,10 +44,10 @@ class WDSViewWDSShortcode {
     </div>
     <div class="mceActionPanel">
       <div style="float: left;">
-        <input type="button" id="cancel" name="cancel" value="<?php _e('Cancel', 'wds');?>" onClick="window.parent.tb_remove();" />
+        <input type="button" id="cancel" name="cancel" value="<?php _e('Cancel', WDS()->prefix);?>" onClick="window.parent.tb_remove();" />
       </div>
       <div style="float: right;">
-        <input type="submit" id="insert" name="insert" value="<?php _e('Insert', 'wds');?>" onClick="wds_insert_shortcode();" />
+        <input type="submit" id="insert" name="insert" value="<?php _e('Insert', WDS()->prefix);?>" onClick="wds_insert_shortcode();" />
       </div>
     </div>
     <script type="text/javascript">
