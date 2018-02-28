@@ -311,12 +311,13 @@ class AdminView_bwg {
         <?php
         foreach ( $filters as $filter_key => $filter_values ) {
           $filter_by_key = 'filter-by-' . $filter_key;
+          $filter_by = WDW_S_Library::get($filter_by_key, '');
           ?>
           <label for="filter-by-<?php echo $filter_key ?>" class="screen-reader-text"><?php echo $filter_values['label']; ?></label>
           <select class="wd-filter" name="filter[filter-by-<?php echo $filter_key ?>]" id="filter-by-<?php echo $filter_key ?>">
             <?php
             foreach ( $filter_values['items'] as $item_key => $item_value ) {
-              $selected = !empty(WDW_S_Library::get($filter_by_key, '') == $item_key) ? 'selected' : '';
+              $selected = ($filter_by == $item_key ? 'selected' : '');
               ?>
               <option <?php echo $selected; ?> value="<?php echo $item_key ?>"><?php echo $item_value ?></option>
               <?php

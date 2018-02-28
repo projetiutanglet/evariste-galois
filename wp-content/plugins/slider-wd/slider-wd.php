@@ -4,7 +4,7 @@
  * Plugin Name: Slider WD
  * Plugin URI: https://web-dorado.com/products/wordpress-slider-plugin.html
  * Description: This is a responsive plugin, which allows adding sliders to your posts/pages and to custom location. It uses large number of transition effects and supports various types of layers.
- * Version: 1.2.6
+ * Version: 1.2.7
  * Author: WebDorado
  * Author URI: https://web-dorado.com/wordpress-plugins-bundle.html
  * License: GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -79,8 +79,8 @@ final class WDS {
     $this->plugin_dir = WP_PLUGIN_DIR . "/" . plugin_basename(dirname(__FILE__));
     $this->plugin_url = plugins_url(plugin_basename(dirname(__FILE__)));
     $this->main_file = plugin_basename(__FILE__);
-    $this->plugin_version = '1.2.6';
-    $this->db_version = '1.2.6';
+    $this->plugin_version = '1.2.7';
+    $this->db_version = '1.2.7';
     $this->prefix = 'wds';
     $this->nicename = __('Slider WD', $this->prefix);
     $this->use_home_url();
@@ -116,8 +116,8 @@ final class WDS {
    * Add actions.
    */
   private function add_actions() {
-    register_activation_hook(__FILE__, array($this, 'activate'));
     add_action('init', array($this, 'init'), 9);
+    register_activation_hook(__FILE__, array($this, 'activate'));
     add_action('admin_menu', array( $this, 'admin_menu' ) );
 
     add_action('admin_notices', array($this, 'topic'), 11);
@@ -157,11 +157,11 @@ final class WDS {
     if ( !$this->is_free ) {
       add_action('wp_ajax_wds_addEmbed', array($this, 'add_embed_ajax'));
     }
-	// Register scripts/styles.
+    // Register scripts/styles.
     add_action('wp_enqueue_scripts', array($this, 'front_end_scripts'));
     add_action('admin_enqueue_scripts', array($this, 'register_admin_scripts'));
 
-	add_filter('set-screen-option', array($this, 'set_option_sliders'), 10, 3);
+    add_filter('set-screen-option', array($this, 'set_option_sliders'), 10, 3);
 
     add_action('admin_notices', array($this, 'topic'), 11);
     add_filter( 'media_upload_tabs', array($this, 'custom_media_upload_tab_name') );
@@ -180,8 +180,8 @@ final class WDS {
    */
   public function init() {
     ob_start();
+    $this->wds_overview();
     add_action('init', array($this, 'language_load'));
-    add_action('init', array($this, 'overview'), 9);
     add_action('init', array($this, 'register_post_types'));
   }
 
@@ -198,7 +198,7 @@ final class WDS {
     $sliders_page = add_submenu_page($parent_slug, __('Sliders', $this->prefix), __('Sliders', $this->prefix), 'manage_options', 'sliders_'. $this->prefix, array($this, 'admin_pages_new'));
     add_action('admin_print_styles-' . $sliders_page, array($this, 'admin_styles'));
     add_action('admin_print_scripts-' . $sliders_page, array($this, 'admin_scripts'));
-	add_action('load-' . $sliders_page, array($this, 'sliders_per_page_option'));
+    add_action('load-' . $sliders_page, array($this, 'sliders_per_page_option'));
 
     $global_options_page = add_submenu_page($parent_slug, __('Options', $this->prefix), __('Options', $this->prefix), 'manage_options', 'goptions_wds', array($this, 'admin_pages'));
     add_action('admin_print_styles-' . $global_options_page, array($this, 'admin_styles'));
@@ -220,13 +220,13 @@ final class WDS {
   /**
    * Admin pages.
    */
-   public function admin_pages_new() {
+  public function admin_pages_new() {
     $allowed_pages = array(
       'sliders_' . $this->prefix,
     );
     $page = WDW_S_Library::get('page');
     if ( !empty($page) && in_array($page, $allowed_pages) ) {
-	  $page = WDW_S_Library::clean_page_prefix($page);
+      $page = WDW_S_Library::clean_page_prefix($page);
       $controller_page = $this->plugin_dir . '/admin/controllers/' . $page . '.php';
       $model_page = $this->plugin_dir . '/admin/models/' . $page . '.php';
       $view_page = $this->plugin_dir . '/admin/views/' . $page . '.php';
@@ -253,21 +253,21 @@ final class WDS {
         echo wp_sprintf(__('The %s class not exist.', $this->prefix), '"<b>' . $controller_class . '</b>"');
         return FALSE;
       }
-	  $Model = new stdClass();
+      $Model = new stdClass();
       if ( class_exists($view_class) ) {
-		$Model = new $model_class();
-	  }
-	  $View = new stdClass();
+        $Model = new $model_class();
+      }
+      $View = new stdClass();
       if ( class_exists($view_class) ) {
-		$View =  new $view_class();
+        $View =  new $view_class();
       } else {
         echo wp_sprintf(__('The %s class not exist.', $this->prefix), '"<b>' . $view_class . '</b>"');
         return FALSE;
-	  }
+      }
       $controller = new $controller_class( array(
-							'model' => $Model,
-							'view' => $View
-						));
+                                             'model' => $Model,
+                                             'view' => $View
+                                           ));
       $controller->execute();
     }
   }
@@ -290,24 +290,24 @@ final class WDS {
     }
   }
 
-	/**
-	* Add pagination to sliders admin pages.
-	*/
-	public function sliders_per_page_option() {
-		$option = 'per_page';
-		$args = array(
-		  'default' => 20,
-		  'option' => 'wds_sliders_per_page',
-		);
-		add_screen_option($option, $args);
-	}
+  /**
+   * Add pagination to sliders admin pages.
+   */
+  public function sliders_per_page_option() {
+    $option = 'per_page';
+    $args = array(
+      'default' => 20,
+      'option' => 'wds_sliders_per_page',
+    );
+    add_screen_option($option, $args);
+  }
 
-	public function set_option_sliders( $status, $option, $value ) {
-		if ( 'wds_sliders_per_page' == $option ) {
-		  return $value;
-		}
-		return $status;
-	  }
+  public function set_option_sliders( $status, $option, $value ) {
+    if ( 'wds_sliders_per_page' == $option ) {
+      return $value;
+    }
+    return $status;
+  }
   /**
    * Licensing page.
    */
@@ -459,7 +459,7 @@ final class WDS {
     $page = WDW_S_Library::get('action');
     $tab = WDW_S_Library::get('tab');
 
-//  $query_url = wp_nonce_url($query_url, 'addImage', $this->nonce);
+    //  $query_url = wp_nonce_url($query_url, 'addImage', $this->nonce);
     if ( (($page != '') && (($page == 'addImage') || ($page == 'addMusic')))
       || $tab == 'wds_custom_uploader' ) {
       if ( $tab != 'wds_custom_uploader' ) {
@@ -850,7 +850,7 @@ final class WDS {
     register_post_type('wds-slider', $args);
   }
 
-  function overview() {
+  public function wds_overview() {
     if (is_admin() && !isset($_REQUEST['ajax'])) {
       if (!class_exists("DoradoWeb")) {
         require_once($this->plugin_dir . '/wd/start.php');

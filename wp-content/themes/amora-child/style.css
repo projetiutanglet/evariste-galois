@@ -16,8 +16,8 @@
 
 /*slider collé au menu*/
 #content {
-    padding-top: 0px;
-    margin-top:0px;
+ padding-top: 0px;
+ margin-top:0px;
 }
 
 
@@ -99,7 +99,7 @@
 
 /*couleur menu survolé*/
 #site-navigation ul li a:hover {
- background: rgba(128,0,128,0.5);
+ /*background: rgba(128,0,128,0.5);*/
  text-decoration: none;
 }
 
@@ -107,6 +107,7 @@
 #site-navigation ul .current-menu-item>a,
 #site-navigation ul .current_page_item>a {
  background: rgba(128,0,128,0.5);
+ 
 }
 
 #site-navigation ul li a {
@@ -114,11 +115,11 @@
 }
 
 #site-navigation ul li:hover a {
-   background: purple; 
+  background: purple; 
 }
 
 #site-navigation ul li ul.sub-menu{
- background-color: #A3479B;
+ background-color: white;
 }
 
 #site-navigation ul li .menu-item{
