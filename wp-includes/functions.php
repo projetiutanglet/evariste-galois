@@ -5818,7 +5818,7 @@ All at ###SITENAME###
 }
 
 
-// On définit la fonction
+// Ajout d'un role
 function egalois_add_role() {
     add_role( 'parent', 'Parent',			 // son identifiant et son nom visible
              array( 
@@ -5830,6 +5830,7 @@ function egalois_add_role() {
 add_action( 'init', 'egalois_add_role' );	// On lance la création de notre fonction
 
 
+//si l'utilisateur veut s'enregistrer, il est redirigé
 function tml_action_url( $url, $action, $instance ) {
 	if ( 'register' == $action )
 		$url =(isset($_SERVER['HTTPS']) ? "https" : "http") . "://".$_SERVER["HTTP_HOST"]."/connexion/";
@@ -5837,8 +5838,9 @@ function tml_action_url( $url, $action, $instance ) {
 }
 add_filter( 'tml_action_url', 'tml_action_url', 10, 3 );
 
-//Redirect user after successful login.
 
+
+//Rediriger les utilisateurs après une connexion réussi.
 function my_login_redirect( $redirect_to, $request, $user ) {
 	//is there a user to check?
 	if ( isset( $user->roles ) && is_array( $user->roles ) ) {
@@ -5854,5 +5856,4 @@ function my_login_redirect( $redirect_to, $request, $user ) {
 		return $redirect_to;
 	}
 }
-
 add_filter( 'login_redirect', 'my_login_redirect', 10, 3 );

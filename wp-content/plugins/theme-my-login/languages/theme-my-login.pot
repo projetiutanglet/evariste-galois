@@ -1218,7 +1218,7 @@ msgstr ""
 #: templates/login-form.php:14 templates/profile-form.php:36
 #: templates/register-form.php:13
 msgid "Username"
-msgstr ""
+msgstr "cest le test"
 
 #: templates/login-form.php:34
 msgid "Remember Me"
