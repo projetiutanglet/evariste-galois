@@ -1,4 +1,4 @@
-RewriteRule ^adminegalois$ https://projet-evariste-galois-lbarbe.c9users.io/wp-login.php [NC,L]
+RewriteRule ^admingalois$ https://projet-evariste-galois-lbarbe.c9users.io/wp-login.php [NC,L]
 
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
