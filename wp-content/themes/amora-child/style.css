@@ -119,7 +119,7 @@
 }
 
 #site-navigation ul li ul.sub-menu{
- background-color: white;
+ background-color: #540054;
 }
 
 #site-navigation ul li .menu-item{
@@ -128,14 +128,20 @@
 
 #site-navigation ul li ul.children li:nth-child(odd),
 #site-navigation ul li ul.sub-menu li:nth-child(odd) {
-    background: rgba(0, 0, 0, 0.35);
-}
-
-.main-navigation ul ul a {
-    width: 220px;
+    background: none;
 }
 
 
+.featposts{
+ display: none;
+}
+
+
+/*---------------------Page de login------------------------*/
+
+.tml-user-login-wrap{
+ display:none;
+}
 
 
 /*---------------------FOOTER------------------------*/
