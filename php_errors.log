@@ -46,3 +46,4 @@
 [27-Feb-2018 15:13:38 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
 [27-Feb-2018 15:13:38 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
 [27-Feb-2018 15:13:38 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:92
+[05-Mar-2018 07:42:59 UTC] Erreur de la base de données WordPress Table 'c9.egalois_totalsoft_cal_types' doesn't exist pour la requête SELECT * FROM egalois_totalsoft_cal_types WHERE id > 0 faite par activate_plugin, do_action('activate_calendar-event/index.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, TotalSoftCalInstall, require_once('/plugins/calendar-event/Includes/Total-Soft-Calendar-Install.php')

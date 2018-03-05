@@ -1,9 +1,7 @@
 /*
  Theme Name:   amora-child
- Theme URI:    http://example.com/amora-child/
  Description:  Amora Child Theme
  Author:       Projet IUT Anglet
- Author URI:   http://example.com
  Template:     amora
  Version:      1.0.0
 */
@@ -11,13 +9,11 @@
 /*---------------------GENERAL----------------------*/
 
 /* titre de la page*/
-
 .entry-header {
  display: none;
 }
 
 /*slider collé au menu*/
-
 #content {
  padding-top: 0px;
  margin-top: 0px;
@@ -27,12 +23,23 @@
 /*---------------------HEADER------------------------*/
 
 /*barre de recherche*/
-
 .top-bar {
  display: none;
 }
 
 /*logo*/
+.amora-logo {
+ width: 20%;
+ display: inline-block;
+ text-align: left;
+}
+
+
+/*en tête*/
+#masthead {
+ min-height: 0px;
+ height: 270px;
+}
 
 #masthead .site-branding {
  display: inline-block;
@@ -42,20 +49,16 @@
  padding-top: 0px;
 }
 
-/*header*/
-
-#masthead {
- min-height: 0px;
- height: 270px;
-}
-
+/*titre*/
 #masthead h1.site-title {
  text-align: center;
  width: auto;
+ display: inline-block;
 }
 
 #masthead h1.site-title a {
  color: black;
+ text-decoration: none;
 }
 
 #masthead>.container {
@@ -81,68 +84,49 @@
  float: none;
 }
 
-.site-title title-font {
- display: inline-block;
- width: auto;
- text-align: center;
-}
-
-.amora-logo {
- width: 20%;
- display: inline-block;
- text-align: left;
-}
+/* -------------------------MENU ---------------------*/
 
 /*barre de menu*/
-
 #site-navigation {
  background: purple;
 }
 
 /*texte menu pas survolé*/
-
-#site-navigation ul li a {
- /*color: black;*/
+#site-navigation ul.menu li a {
  font-size: 15px;
+ background-color: purple;
 }
 
 /*couleur menu survolé*/
-
 #site-navigation ul li a:hover {
- /*background: rgba(128,0,128,0.5);*/
+ background-color: rgba(128, 0, 128, 0.5);
  text-decoration: none;
 }
 
 /*couleur menu actif*/
-
-#site-navigation ul .current-menu-item>a,
-#site-navigation ul .current_page_item>a {
- background: rgba(128, 0, 128, 0.5);
-
+#site-navigation ul.menu .current-menu-item>a,
+#site-navigation ul.menu .current_page_item>a,
+#site-navigation ul.menu .current-menu-parent >a{
+ background-color: rgba(0,0,0,0.5);
 }
 
-#site-navigation ul li a {
- color: white;
-}
-
-#site-navigation ul li:hover a {
- background: purple;
-}
-
+/*couleur sous-menu*/
 #site-navigation ul li ul.sub-menu {
- background-color: #540054;
+ background-color: rgba(128, 0, 128, 0.7);
 }
 
-#site-navigation ul li .menu-item {
+#site-navigation ul li .menu-item,
+#site-navigation ul> li> .sub-menu> .menu-item >a{
  width: 100%;
 }
 
+/*couleur de fond des sous menu-impairs*/
 #site-navigation ul li ul.children li:nth-child(odd),
 #site-navigation ul li ul.sub-menu li:nth-child(odd) {
  background: none;
 }
 
-
+/*les zones de menu non cliquable*/
 #menu-item-68>a,
 #menu-item-70>a,
 #menu-item-167>a {
@@ -177,21 +161,19 @@
 
 /*---------------------FOOTER------------------------*/
 
-/*couleur de fond du pied de page*/
-
+/*pied de page*/
 #footer-sidebar {
  padding-top: 0px;
- margin-top: 0px;
+ margin-top: 5px;
  background-color: purple;
 }
 
-.footer-column col-md-3 col-sm-3 {
- background: red;
- padding: 55px;
-
+/*barre de recherche*/
+.search-form .search-field{
+ width: 100%;
 }
 
-
+/*site info*/
 #colophon {
  display: none;
 }
