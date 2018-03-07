@@ -47,3 +47,206 @@
 [27-Feb-2018 15:13:38 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
 [27-Feb-2018 15:13:38 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:92
 [05-Mar-2018 07:42:59 UTC] Erreur de la base de données WordPress Table 'c9.egalois_totalsoft_cal_types' doesn't exist pour la requête SELECT * FROM egalois_totalsoft_cal_types WHERE id > 0 faite par activate_plugin, do_action('activate_calendar-event/index.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, TotalSoftCalInstall, require_once('/plugins/calendar-event/Includes/Total-Soft-Calendar-Install.php')
+[06-Mar-2018 09:52:06 UTC] PHP Parse error:  syntax error, unexpected 'us' (T_STRING) in /home/ubuntu/workspace/wp-includes/functions.php on line 5991
+[06-Mar-2018 09:52:06 UTC] PHP Stack trace:
+[06-Mar-2018 09:52:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[06-Mar-2018 09:52:06 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[06-Mar-2018 09:52:06 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 09:52:06 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 09:52:08 UTC] PHP Parse error:  syntax error, unexpected 'us' (T_STRING) in /home/ubuntu/workspace/wp-includes/functions.php on line 5991
+[06-Mar-2018 09:52:08 UTC] PHP Stack trace:
+[06-Mar-2018 09:52:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[06-Mar-2018 09:52:08 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[06-Mar-2018 09:52:08 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 09:52:08 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 09:52:22 UTC] PHP Parse error:  syntax error, unexpected 'us' (T_STRING) in /home/ubuntu/workspace/wp-includes/functions.php on line 5991
+[06-Mar-2018 09:52:22 UTC] PHP Stack trace:
+[06-Mar-2018 09:52:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[06-Mar-2018 09:52:22 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[06-Mar-2018 09:52:22 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 09:52:22 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 09:52:37 UTC] PHP Parse error:  syntax error, unexpected 'us' (T_STRING) in /home/ubuntu/workspace/wp-includes/functions.php on line 5991
+[06-Mar-2018 09:52:37 UTC] PHP Stack trace:
+[06-Mar-2018 09:52:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[06-Mar-2018 09:52:37 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[06-Mar-2018 09:52:37 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 09:52:37 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 09:52:52 UTC] PHP Parse error:  syntax error, unexpected 'us' (T_STRING) in /home/ubuntu/workspace/wp-includes/functions.php on line 5991
+[06-Mar-2018 09:52:52 UTC] PHP Stack trace:
+[06-Mar-2018 09:52:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[06-Mar-2018 09:52:52 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[06-Mar-2018 09:52:52 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 09:52:52 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 09:53:06 UTC] PHP Parse error:  syntax error, unexpected 'us' (T_STRING) in /home/ubuntu/workspace/wp-includes/functions.php on line 5991
+[06-Mar-2018 09:53:06 UTC] PHP Stack trace:
+[06-Mar-2018 09:53:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[06-Mar-2018 09:53:06 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[06-Mar-2018 09:53:06 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 09:53:06 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 09:53:21 UTC] PHP Parse error:  syntax error, unexpected 'us' (T_STRING) in /home/ubuntu/workspace/wp-includes/functions.php on line 5991
+[06-Mar-2018 09:53:21 UTC] PHP Stack trace:
+[06-Mar-2018 09:53:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[06-Mar-2018 09:53:21 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[06-Mar-2018 09:53:21 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 09:53:21 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 09:53:37 UTC] PHP Parse error:  syntax error, unexpected 'us' (T_STRING) in /home/ubuntu/workspace/wp-includes/functions.php on line 5991
+[06-Mar-2018 09:53:37 UTC] PHP Stack trace:
+[06-Mar-2018 09:53:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[06-Mar-2018 09:53:37 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[06-Mar-2018 09:53:37 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 09:53:37 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 09:53:52 UTC] PHP Parse error:  syntax error, unexpected 'us' (T_STRING) in /home/ubuntu/workspace/wp-includes/functions.php on line 5991
+[06-Mar-2018 09:53:52 UTC] PHP Stack trace:
+[06-Mar-2018 09:53:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[06-Mar-2018 09:53:52 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[06-Mar-2018 09:53:52 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 09:53:52 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 09:53:53 UTC] PHP Parse error:  syntax error, unexpected 'us' (T_STRING) in /home/ubuntu/workspace/wp-includes/functions.php on line 5991
+[06-Mar-2018 09:53:53 UTC] PHP Stack trace:
+[06-Mar-2018 09:53:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[06-Mar-2018 09:53:53 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[06-Mar-2018 09:53:53 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 09:53:53 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 09:54:07 UTC] PHP Parse error:  syntax error, unexpected 'us' (T_STRING) in /home/ubuntu/workspace/wp-includes/functions.php on line 5991
+[06-Mar-2018 09:54:07 UTC] PHP Stack trace:
+[06-Mar-2018 09:54:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[06-Mar-2018 09:54:07 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[06-Mar-2018 09:54:07 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 09:54:07 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 09:54:09 UTC] PHP Parse error:  syntax error, unexpected 'us' (T_STRING) in /home/ubuntu/workspace/wp-includes/functions.php on line 5991
+[06-Mar-2018 09:54:09 UTC] PHP Stack trace:
+[06-Mar-2018 09:54:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[06-Mar-2018 09:54:09 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[06-Mar-2018 09:54:09 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 09:54:09 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 09:54:09 UTC] PHP Parse error:  syntax error, unexpected 'us' (T_STRING) in /home/ubuntu/workspace/wp-includes/functions.php on line 5991
+[06-Mar-2018 09:54:09 UTC] PHP Stack trace:
+[06-Mar-2018 09:54:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[06-Mar-2018 09:54:09 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[06-Mar-2018 09:54:09 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 09:54:09 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 09:54:22 UTC] PHP Parse error:  syntax error, unexpected 'us' (T_STRING) in /home/ubuntu/workspace/wp-includes/functions.php on line 5991
+[06-Mar-2018 09:54:22 UTC] PHP Stack trace:
+[06-Mar-2018 09:54:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[06-Mar-2018 09:54:22 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[06-Mar-2018 09:54:22 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 09:54:22 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 09:54:32 UTC] PHP Parse error:  syntax error, unexpected 'us' (T_STRING) in /home/ubuntu/workspace/wp-includes/functions.php on line 5991
+[06-Mar-2018 09:54:32 UTC] PHP Stack trace:
+[06-Mar-2018 09:54:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[06-Mar-2018 09:54:32 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[06-Mar-2018 09:54:32 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 09:54:32 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 09:54:36 UTC] PHP Parse error:  syntax error, unexpected 'us' (T_STRING) in /home/ubuntu/workspace/wp-includes/functions.php on line 5991
+[06-Mar-2018 09:54:36 UTC] PHP Stack trace:
+[06-Mar-2018 09:54:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[06-Mar-2018 09:54:36 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[06-Mar-2018 09:54:36 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 09:54:36 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 09:54:37 UTC] PHP Parse error:  syntax error, unexpected 'us' (T_STRING) in /home/ubuntu/workspace/wp-includes/functions.php on line 5991
+[06-Mar-2018 09:54:37 UTC] PHP Stack trace:
+[06-Mar-2018 09:54:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[06-Mar-2018 09:54:37 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[06-Mar-2018 09:54:37 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 09:54:37 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 09:54:38 UTC] PHP Parse error:  syntax error, unexpected 'us' (T_STRING) in /home/ubuntu/workspace/wp-includes/functions.php on line 5991
+[06-Mar-2018 09:54:38 UTC] PHP Stack trace:
+[06-Mar-2018 09:54:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[06-Mar-2018 09:54:38 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[06-Mar-2018 09:54:38 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 09:54:38 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 09:54:38 UTC] PHP Parse error:  syntax error, unexpected 'us' (T_STRING) in /home/ubuntu/workspace/wp-includes/functions.php on line 5991
+[06-Mar-2018 09:54:38 UTC] PHP Stack trace:
+[06-Mar-2018 09:54:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[06-Mar-2018 09:54:38 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/post.php:12
+[06-Mar-2018 09:54:38 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/admin.php:31
+[06-Mar-2018 09:54:38 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 09:54:38 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 09:54:49 UTC] PHP Parse error:  syntax error, unexpected 'us' (T_STRING) in /home/ubuntu/workspace/wp-includes/functions.php on line 5991
+[06-Mar-2018 09:54:49 UTC] PHP Stack trace:
+[06-Mar-2018 09:54:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[06-Mar-2018 09:54:49 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/post.php:12
+[06-Mar-2018 09:54:49 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/admin.php:31
+[06-Mar-2018 09:54:49 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 09:54:49 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 09:54:51 UTC] PHP Parse error:  syntax error, unexpected 'us' (T_STRING) in /home/ubuntu/workspace/wp-includes/functions.php on line 5991
+[06-Mar-2018 09:54:51 UTC] PHP Stack trace:
+[06-Mar-2018 09:54:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[06-Mar-2018 09:54:51 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/post.php:12
+[06-Mar-2018 09:54:51 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/admin.php:31
+[06-Mar-2018 09:54:51 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 09:54:51 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 10:54:56 UTC] PHP Parse error:  syntax error, unexpected ',', expecting '&' or variable (T_VARIABLE) in /home/ubuntu/workspace/wp-content/themes/amora-child/functions.php on line 9
+[06-Mar-2018 10:54:56 UTC] PHP Stack trace:
+[06-Mar-2018 10:54:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[06-Mar-2018 10:54:56 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[06-Mar-2018 10:54:56 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 10:54:56 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 10:54:56 UTC] PHP Parse error:  syntax error, unexpected ',', expecting '&' or variable (T_VARIABLE) in /home/ubuntu/workspace/wp-content/themes/amora-child/functions.php on line 9
+[06-Mar-2018 10:54:56 UTC] PHP Stack trace:
+[06-Mar-2018 10:54:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[06-Mar-2018 10:54:56 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[06-Mar-2018 10:54:56 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 10:54:56 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 10:54:59 UTC] PHP Parse error:  syntax error, unexpected ',', expecting '&' or variable (T_VARIABLE) in /home/ubuntu/workspace/wp-content/themes/amora-child/functions.php on line 9
+[06-Mar-2018 10:54:59 UTC] PHP Stack trace:
+[06-Mar-2018 10:54:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[06-Mar-2018 10:54:59 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[06-Mar-2018 10:54:59 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 10:54:59 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 10:55:14 UTC] PHP Parse error:  syntax error, unexpected ',', expecting '&' or variable (T_VARIABLE) in /home/ubuntu/workspace/wp-content/themes/amora-child/functions.php on line 9
+[06-Mar-2018 10:55:14 UTC] PHP Stack trace:
+[06-Mar-2018 10:55:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[06-Mar-2018 10:55:14 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[06-Mar-2018 10:55:14 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 10:55:14 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 10:55:29 UTC] PHP Parse error:  syntax error, unexpected ',', expecting '&' or variable (T_VARIABLE) in /home/ubuntu/workspace/wp-content/themes/amora-child/functions.php on line 9
+[06-Mar-2018 10:55:29 UTC] PHP Stack trace:
+[06-Mar-2018 10:55:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[06-Mar-2018 10:55:29 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[06-Mar-2018 10:55:29 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 10:55:29 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 10:55:41 UTC] PHP Parse error:  syntax error, unexpected ',', expecting '&' or variable (T_VARIABLE) in /home/ubuntu/workspace/wp-content/themes/amora-child/functions.php on line 9
+[06-Mar-2018 10:55:41 UTC] PHP Stack trace:
+[06-Mar-2018 10:55:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[06-Mar-2018 10:55:41 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/post.php:12
+[06-Mar-2018 10:55:41 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/admin.php:31
+[06-Mar-2018 10:55:41 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 10:55:41 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 10:55:41 UTC] PHP Parse error:  syntax error, unexpected ',', expecting '&' or variable (T_VARIABLE) in /home/ubuntu/workspace/wp-content/themes/amora-child/functions.php on line 9
+[06-Mar-2018 10:55:41 UTC] PHP Stack trace:
+[06-Mar-2018 10:55:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[06-Mar-2018 10:55:41 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[06-Mar-2018 10:55:41 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 10:55:41 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 10:55:53 UTC] PHP Parse error:  syntax error, unexpected ',', expecting '&' or variable (T_VARIABLE) in /home/ubuntu/workspace/wp-content/themes/amora-child/functions.php on line 9
+[06-Mar-2018 10:55:53 UTC] PHP Stack trace:
+[06-Mar-2018 10:55:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/index.php:0
+[06-Mar-2018 10:55:53 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/index.php:10
+[06-Mar-2018 10:55:53 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/admin.php:31
+[06-Mar-2018 10:55:53 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 10:55:53 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 14:53:19 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/wp-content/themes/amora-child/functions.php on line 46
+[06-Mar-2018 14:53:19 UTC] PHP Stack trace:
+[06-Mar-2018 14:53:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[06-Mar-2018 14:53:19 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[06-Mar-2018 14:53:19 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 14:53:19 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 14:55:20 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/wp-content/themes/amora-child/functions.php on line 46
+[06-Mar-2018 14:55:20 UTC] PHP Stack trace:
+[06-Mar-2018 14:55:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[06-Mar-2018 14:55:20 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[06-Mar-2018 14:55:20 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 14:55:20 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 15:06:00 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/ubuntu/workspace/wp-content/themes/amora-child/functions.php on line 11
+[06-Mar-2018 15:06:00 UTC] PHP Stack trace:
+[06-Mar-2018 15:06:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[06-Mar-2018 15:06:00 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[06-Mar-2018 15:06:00 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 15:06:00 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91
+[06-Mar-2018 15:28:19 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/ubuntu/workspace/wp-includes/functions.php on line 5937
+[06-Mar-2018 15:28:19 UTC] PHP Stack trace:
+[06-Mar-2018 15:28:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[06-Mar-2018 15:28:19 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[06-Mar-2018 15:28:19 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[06-Mar-2018 15:28:19 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91

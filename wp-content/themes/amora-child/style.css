@@ -20,6 +20,54 @@
 }
 
 
+body{
+ font-family : "quicksand_book", sans-serif !important;
+}
+
+ul
+{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul > li
+{
+  list-style-image: url('./puces/main.png');
+}
+
+
+h1{
+ color: black;
+ text-decoration: none;
+ font-family : "chalkduster", sans-serif !important;
+}
+
+h2{
+ text-align: center;
+ color: purple;
+ height: 50px;
+ width: 100%;
+ font-family : "chalkduster", sans-serif !important;
+}
+
+.entry-content h3 {
+ font-family : "schoolboy_samregular", sans-serif !important;
+ font-size: 25px;
+ color:#82C46C;
+}
+
+.entry-content h4{
+ font-family : "quicksand_bold", sans-serif !important;
+ font-size: 15px;
+
+}
+
+a{
+ text-decoration:underline;
+}
+
+
 /*---------------------HEADER------------------------*/
 
 /*barre de recherche*/
@@ -59,6 +107,17 @@
 #masthead h1.site-title a {
  color: black;
  text-decoration: none;
+ font-family : "chalkduster", sans-serif !important;
+}
+
+
+/*description sous titre*/
+#masthead .container h2.site-description {
+ color: purple;
+ font-style: italic;
+ text-align: right;
+ font-family : "schoolboy_samregular", sans-serif !important;
+ font-size: 20px;                                                                                                                                                                                                          px;
 }
 
 #masthead>.container {
@@ -152,12 +211,74 @@
  width: auto;
 }
 
-/*---------------------Page de login------------------------*/
 
-.tml-user-login-wrap {
- display: none;
+/*---------------------Page coin des parents------------------------*/
+.grille-ligne{
+ display: inline-block;
+ width: 100%;
 }
 
+.grille-ligne-item{
+ display: inline-block;
+}
+/*PORTE*/
+.porte,
+.porte img{
+ max-width: 100%;
+ height: 240px;
+ width:auto;
+}
+
+.text-porte{
+ margin-top: 10px;
+ text-align: center;
+ font-size: 14pt;
+}
+
+#div-orange{
+ color: #F37A20;
+}
+#div-vert-deau{
+ color: #65C08F;
+}
+#div-verte{
+ color: #13DC21;
+}
+#div-bleue{
+ color: #2BA2D6;
+}
+#div-jaune{
+ color: #B7B222;
+}
+
+
+/*calendrier*/
+#div-calendrier{
+ width: 29%;
+ margin-top: 10px;
+}
+
+/*activité*/
+#div-activite{
+ width: 70%;
+ margin-top : 10px;
+}
+
+/*-------------------CONNEXION------------------------*/
+
+.tml-login {
+ display: inline;
+}
+
+#post-615 {
+ text-align: center;
+}
+
+/*zone de texte*/
+#loginform1 input {
+ border-color: #82C46C;
+  text-align: center;
+}
 
 /*---------------------FOOTER------------------------*/
 
@@ -176,4 +297,123 @@
 /*site info*/
 #colophon {
  display: none;
+}
+
+
+
+/*------------------------POLICES------------------------*/
+@font-face {
+    font-family:"schoolboy_samregular";
+    src: url(".eot");
+    src: url("./fonts/schoolboy_folder/schoolboy_sam-webfont.eot?#iefix") format("embedded-opentype"),
+         url("./fonts/schoolboy_folder/schoolboy_sam-webfont.woff2") format("woff2"),
+         url("./fonts/schoolboy_folder/schoolboy_sam-webfont.woff") format("woff"),
+         url("./fonts/schoolboy_folder/schoolboy_sam-webfont.ttf") format("truetype"),
+         url("./fonts/schoolboy_folder/schoolboy_sam-webfont.svg#schoolboy_samregular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family:"quicksand_bold";
+    src: url(".eot");
+    src: url("./fonts/quicksand_folder/quicksand_bold-webfont.eot?#iefix") format("embedded-opentype"),
+         url("./fonts/quicksand_folder/quicksand_bold-webfont.woff2") format("woff2"),
+         url("./fonts/quicksand_folder/quicksand_bold-webfont.woff") format("woff"),
+         url("./fonts/quicksand_folder/quicksand_bold-webfont.ttf") format("truetype"),
+         url("./fonts/quicksand_folder/quicksand_bold-webfont.svg#quicksand_bold") format("svg");
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family:"quicksand_light";
+    src: url(".eot");
+    src: url("./fonts/quicksand_folder/quicksand_light-webfont.eot?#iefix") format("embedded-opentype"),
+         url("./fonts/quicksand_folder/quicksand_light-webfont.woff2") format("woff2"),
+         url("./fonts/quicksand_folder/quicksand_light-webfont.woff") format("woff"),
+         url("./fonts/quicksand_folder/quicksand_light-webfont.ttf") format("truetype"),
+         url("./fonts/quicksand_folder/quicksand_light-webfont.svg#quicksand_bold") format("svg");
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family:"quicksand_book";
+    src: url(".eot");
+    src: url("./fonts/quicksand_folder/quicksand_book-webfont.eot?#iefix") format("embedded-opentype"),
+         url("./fonts/quicksand_folder/quicksand_book-webfont.woff2") format("woff2"),
+         url("./fonts/quicksand_folder/quicksand_book-webfont.woff") format("woff"),
+         url("./fonts/quicksand_folder/quicksand_book-webfont.ttf") format("truetype"),
+         url("./fonts/quicksand_folder/quicksand_book-webfont.svg#quicksand_bold") format("svg");
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family:"chalkduster";
+    src: url(".eot");
+    src: url("./fonts/chalkduster_folder/chalkduster.eot?#iefix") format("embedded-opentype"),
+         url("./fonts/chalkduster_folder/chalkduster.woff2") format("woff2"),
+         url("./fonts/chalkduster_folder/chalkduster.woff") format("woff"),
+         url("./fonts/chalkduster_folder/chalkduster.ttf") format("truetype"),
+         url("./fonts/qchalkduster_folder/chalkduster.svg#quicksand_bold") format("svg");
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/*---------------------------ANIMATIONS--------------------*/
+/* Float Shadow */
+.hvr-float-shadow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-float-shadow:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, transparent 80%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, transparent 80%);
+  /* W3C */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform, opacity;
+  transition-property: transform, opacity;
+}
+.hvr-float-shadow:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  /* move the element up by 5px */
+}
+.hvr-float-shadow:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
+  opacity: 1;
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+  /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+}
+
+/*------------------------FIL D'ARIANE------------------------*/
+.fil_d_ariane{
+ color : #800080;
+ display :inline-block;
 }

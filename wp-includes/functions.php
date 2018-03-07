@@ -5821,7 +5821,7 @@ All at ###SITENAME###
 // Ajout d'un role
 function egalois_add_role() {
     add_role( 'parent', 'Parent',			 // son identifiant et son nom visible
-             array( 
+             array(
                   'read',
                   'read_private_pages'		 // On liste les droits à donner
 
@@ -5839,16 +5839,17 @@ function tml_action_url( $url, $action, $instance ) {
 add_filter( 'tml_action_url', 'tml_action_url', 10, 3 );
 
 
-
+/******************** Redirection *************************/
 //Rediriger les utilisateurs après une connexion réussi.
 function my_login_redirect( $redirect_to, $request, $user ) {
 	//is there a user to check?
 	if ( isset( $user->roles ) && is_array( $user->roles ) ) {
 		//check for admins
 		if ( in_array( 'administrator', $user->roles ) ) {
-			// redirect them to the default place
-			return $redirect_to;
-		} else {
+			$url =(isset($_SERVER['HTTPS']) ? "https" : "http") . "://".$_SERVER["HTTP_HOST"];
+			return $url;
+		}
+		if ( in_array( 'Parent', $user->roles ) ) {
 			$url =(isset($_SERVER['HTTPS']) ? "https" : "http") . "://".$_SERVER["HTTP_HOST"]."/le-coin-des-parents/";
 			return $url;
 		}
@@ -5857,3 +5858,89 @@ function my_login_redirect( $redirect_to, $request, $user ) {
 	}
 }
 add_filter( 'login_redirect', 'my_login_redirect', 10, 3 );
+
+/******************** fil d'ariane *************************/
+function page_breadcrumb(){
+  global $post;
+
+  echo "<div class='fil_d_ariane'>";
+
+   // Navigation
+	 if (is_page() && !is_front_page() || is_single() || is_category()) {
+
+	 echo ' <a title="Accueil" rel="nofollow" href="'.get_option('siteurl').'">Accueil</a> - ';
+
+	 if (is_page()) {
+	 $ancestors = get_post_ancestors($post);
+
+	 if ($ancestors) {
+    	 $ancestors = array_reverse($ancestors);
+
+        	 foreach ($ancestors as $crumb) {
+        	    echo ' <a href="'.get_permalink($crumb).'">'.get_the_title($crumb).'</a> - ';
+        	 }
+    	 }
+	 }
+
+	 // Page actuelle
+	 if (is_page() || is_single()) {
+	 echo get_the_title();
+	 }
+
+	 } elseif (is_front_page()) {
+	 // Page d'accueil
+
+	 echo '<a title="Accueil" rel="nofollow" href="'.get_option('siteurl').'">Accueil</a>';
+
+	 }
+ echo "</div>";
+}
+
+
+/******************* Calendrier *************************/
+/*
+// when the init hook fires
+add_action( 'init', 'remove_that_filter' );
+
+function remove_that_filter() {
+    // remove the filter
+    remove_filter( 'day_link', 'get_day_link' );
+}
+
+
+function get_my_day_link($year, $month, $day) {
+    global $wp_rewrite;
+    if ( !$year )
+        $year = gmdate('Y', current_time('timestamp'));
+    if ( !$month )
+        $month = gmdate('m', current_time('timestamp'));
+    if ( !$day )
+        $day = gmdate('j', current_time('timestamp'));
+
+    $daylink = $wp_rewrite->get_day_permastruct();
+    if ( !empty($daylink) ) {
+        $daylink = str_replace('%year%', $year, $daylink);
+        $daylink = str_replace('%monthnum%', zeroise(intval($month), 2), $daylink);
+        $daylink = str_replace('%day%', zeroise(intval($day), 2), $daylink);
+        $daylink = home_url( user_trailingslashit( $daylink, 'day' ) );
+    } else {
+        $daylink = home_url( '?m=' . $year . zeroise( $month, 2 ) . zeroise( $day, 2 ) );
+    }
+
+    $daylink = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://".$_SERVER["HTTP_HOST"];
+
+    /**
+     * Filters the day archive permalink.
+     *
+     * @since 1.5.0
+     *
+     * @param string $daylink Permalink for the day archive.
+     * @param int    $year    Year for the archive.
+     * @param int    $month   Month for the archive.
+     * @param int    $day     The day for the archive.
+     * /
+    return apply_filters( 'day_link', $daylink, $year, $month, $day );
+}
+
+add_filter( 'day_link', 'get_my_day_link', 10, 3 ); // Where $priority is 10, $accepted_args is 3. */
+
