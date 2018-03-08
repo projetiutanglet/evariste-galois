@@ -21,6 +21,7 @@ get_header(); ?>
 			<h2>
 				<?php	echo get_the_title();?>
 			</h2>
+
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'modules/content/content', 'page' ); ?>
@@ -39,5 +40,5 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

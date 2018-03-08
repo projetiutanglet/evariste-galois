@@ -5898,49 +5898,20 @@ function page_breadcrumb(){
 
 
 /******************* Calendrier *************************/
-/*
-// when the init hook fires
-add_action( 'init', 'remove_that_filter' );
 
-function remove_that_filter() {
-    // remove the filter
-    remove_filter( 'day_link', 'get_day_link' );
-}
+function get_my_day_link($daylink,$year, $month, $day) {
 
-
-function get_my_day_link($year, $month, $day) {
-    global $wp_rewrite;
-    if ( !$year )
+	if ( !$year )
         $year = gmdate('Y', current_time('timestamp'));
     if ( !$month )
         $month = gmdate('m', current_time('timestamp'));
     if ( !$day )
         $day = gmdate('j', current_time('timestamp'));
 
-    $daylink = $wp_rewrite->get_day_permastruct();
-    if ( !empty($daylink) ) {
-        $daylink = str_replace('%year%', $year, $daylink);
-        $daylink = str_replace('%monthnum%', zeroise(intval($month), 2), $daylink);
-        $daylink = str_replace('%day%', zeroise(intval($day), 2), $daylink);
-        $daylink = home_url( user_trailingslashit( $daylink, 'day' ) );
-    } else {
-        $daylink = home_url( '?m=' . $year . zeroise( $month, 2 ) . zeroise( $day, 2 ) );
-    }
-
     $daylink = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://".$_SERVER["HTTP_HOST"];
+    $daylink .= esc_url( add_query_arg( array('Y' => $year, 'M' =>$month, 'D' => $day) ) );
+	return $daylink;
 
-    /**
-     * Filters the day archive permalink.
-     *
-     * @since 1.5.0
-     *
-     * @param string $daylink Permalink for the day archive.
-     * @param int    $year    Year for the archive.
-     * @param int    $month   Month for the archive.
-     * @param int    $day     The day for the archive.
-     * /
-    return apply_filters( 'day_link', $daylink, $year, $month, $day );
 }
 
-add_filter( 'day_link', 'get_my_day_link', 10, 3 ); // Where $priority is 10, $accepted_args is 3. */
-
+add_filter( 'day_link', 'get_my_day_link', 1, 4 ); // Where $priority is 10, $accepted_args is 3.

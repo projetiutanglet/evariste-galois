@@ -250,3 +250,29 @@
 [06-Mar-2018 15:28:19 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
 [06-Mar-2018 15:28:19 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
 [06-Mar-2018 15:28:19 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91
+[08-Mar-2018 08:00:03 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'categoryPostsuninstall' not found or invalid function name in /home/ubuntu/workspace/wp-includes/class-wp-hook.php on line 286
+[08-Mar-2018 08:00:03 UTC] PHP Stack trace:
+[08-Mar-2018 08:00:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[08-Mar-2018 08:00:03 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/admin-ajax.php:97
+[08-Mar-2018 08:00:03 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[08-Mar-2018 08:00:03 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[08-Mar-2018 08:00:03 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[08-Mar-2018 08:00:03 UTC] PHP   6. wp_ajax_delete_plugin() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[08-Mar-2018 08:00:03 UTC] PHP   7. delete_plugins() /home/ubuntu/workspace/wp-admin/includes/ajax-actions.php:3899
+[08-Mar-2018 08:00:03 UTC] PHP   8. uninstall_plugin() /home/ubuntu/workspace/wp-admin/includes/plugin.php:831
+[08-Mar-2018 08:00:03 UTC] PHP   9. do_action() /home/ubuntu/workspace/wp-admin/includes/plugin.php:1042
+[08-Mar-2018 08:00:03 UTC] PHP  10. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[08-Mar-2018 08:00:03 UTC] PHP  11. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[08-Mar-2018 08:00:03 UTC] PHP  12. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[08-Mar-2018 09:44:49 UTC] PHP Parse error:  syntax error, unexpected '{', expecting '(' in /home/ubuntu/workspace/wp-content/themes/amora-child/functions.php on line 16
+[08-Mar-2018 09:44:49 UTC] PHP Stack trace:
+[08-Mar-2018 09:44:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[08-Mar-2018 09:44:49 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[08-Mar-2018 09:44:49 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[08-Mar-2018 09:44:49 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91
+[08-Mar-2018 09:45:10 UTC] PHP Parse error:  syntax error, unexpected '{', expecting '(' in /home/ubuntu/workspace/wp-content/themes/amora-child/functions.php on line 16
+[08-Mar-2018 09:45:10 UTC] PHP Stack trace:
+[08-Mar-2018 09:45:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[08-Mar-2018 09:45:10 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[08-Mar-2018 09:45:10 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[08-Mar-2018 09:45:10 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91

@@ -14,19 +14,21 @@ get_header(); ?>
 
 	<?php
 		if(!is_user_logged_in() && $_SERVER['REQUEST_URI'] == "/le-coin-des-parents/") {
-		
+
 			$adresse = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]/connexion/";
 			wp_redirect( $adresse, 302 );
 		}?>
 	<div id="primary-mono" class="content-area <?php do_action('amora_primary-width') ?> page">
 		<main id="main" class="site-main" role="main">
-			
+
 			<!-- Slider -->
 			<?php wd_slider(1); ?>
+			<!--Fil d'ariane -->
+			 <?php page_breadcrumb(); ?>
 			<!-- Le titre -->
-			<h3>
-				Le coin des parents
-			</h3>
+			<h2>
+				<?php	echo get_the_title();?>
+			</h2>
 			<!-- Les portes -->
 			<div id="zone-des-portes"  class="grille-ligne" >
 				<div id="div-orange"  class="grille-ligne-item" >
@@ -75,36 +77,10 @@ get_header(); ?>
 					</div>
 				</div>
 			</div>
-			<div class="grille-ligne">
-				<!-- Le calendrier -->
-				<div id="div-calendrier" class="grille-ligne-item">
-					<h4>Calendrier d'activité</h4>
-					<?php get_calendar(); ?>
 
-				</div>
-				<!-- L'activité -->
-				<div id="div-activite" class="grille-ligne-item">
-					<?php
-			        // Récupération du dernier article de la catégorie coin des parents
-			        $the_query = new WP_Query(array(
-			            'category_name' => 'Coin des parents',
-			            'post_status' => 'publish',
-			            'posts_per_page' => 1,
-			        ));
-			        ?>
-			
-			        <?php if ($the_query->have_posts()) : ?>
-			            <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-			               <h4><?php the_title(); ?></h4>
-			               <?php the_content(); ?>
-			            <?php endwhile; ?>
-			            <?php wp_reset_postdata(); ?>
-			        <?php endif; ?>
-				</div>
-					
-			</div>
+			<?php get_calendar_activity() ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-	
+
 <?php get_footer(); ?>

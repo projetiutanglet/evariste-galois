@@ -31,21 +31,28 @@ ul
   margin: 0;
 }
 
-ul > li
-{
-  list-style-image: url('./puces/main.png');
+ul > li {
+ list-style-image: url('./puces/main.png');
+}
+
+ol {
+ list-style-image: url('./puces/hold.png');
 }
 
 
-h1{
+h1 {
  color: black;
+ /*color: purple;*/
+ /*color: #82C46C;*/
  text-decoration: none;
  font-family : "chalkduster", sans-serif !important;
 }
 
-h2{
+#primary-mono h2 {
  text-align: center;
  color: purple;
+ /*color: black;*/
+ /*color: #82C46C;*/
  height: 50px;
  width: 100%;
  font-family : "chalkduster", sans-serif !important;
@@ -55,17 +62,40 @@ h2{
  font-family : "schoolboy_samregular", sans-serif !important;
  font-size: 25px;
  color:#82C46C;
+ /*color: purple;*/
+ /*color: black;*/
+ /*text-align: center;*/
 }
 
 .entry-content h4{
  font-family : "quicksand_bold", sans-serif !important;
  font-size: 15px;
-
+ /*text-decoration: none;*/
 }
 
-a{
- text-decoration:underline;
+
+p a {
+ text-decoration: none;
 }
+
+p a:hover {
+ color: purple;
+}
+
+
+table {
+ border-collapse: inherit;
+}
+table tbody tr {
+  border: solid 0.5px #82C46C;
+}
+
+table tbody th {
+ background-color: #82C46C;
+ color: white;
+ text-transform: uppercase;
+}
+
 
 
 /*---------------------HEADER------------------------*/
@@ -212,6 +242,11 @@ a{
 }
 
 
+/*formulaire de contact*/
+.wpcf7-form input, textarea {
+ border-color: #82C46C;
+}
+
 /*---------------------Page coin des parents------------------------*/
 .grille-ligne{
  display: inline-block;
@@ -220,7 +255,15 @@ a{
 
 .grille-ligne-item{
  display: inline-block;
+
 }
+
+.grille-ligne-item h3{
+ font-family : "schoolboy_samregular", sans-serif !important;
+ font-size: 25px;
+ color:#82C46C;
+}
+
 /*PORTE*/
 .porte,
 .porte img{
@@ -252,17 +295,7 @@ a{
 }
 
 
-/*calendrier*/
-#div-calendrier{
- width: 29%;
- margin-top: 10px;
-}
 
-/*activité*/
-#div-activite{
- width: 70%;
- margin-top : 10px;
-}
 
 /*-------------------CONNEXION------------------------*/
 
@@ -275,7 +308,7 @@ a{
 }
 
 /*zone de texte*/
-#loginform1 input {
+#loginform1 input, #loginform input {
  border-color: #82C46C;
   text-align: center;
 }
@@ -297,6 +330,10 @@ a{
 /*site info*/
 #colophon {
  display: none;
+}
+
+#footer-sidebar .footer-column h3.widget-title {
+ font-family : "quicksand_regular", sans-serif !important;
 }
 
 
@@ -416,4 +453,42 @@ a{
 .fil_d_ariane{
  color : #800080;
  display :inline-block;
+ margin-top: 10px;
+ font-size: 11px;
+}
+
+/*---------------------------CALENDRIERS--------------------*/
+.div-calendrier{
+ width: 25%;
+ margin-top: 10px;
+ vertical-align:top;
+}
+
+#calendrier-bleue td{
+ background-color : lightblue;
+}
+
+#calendrier-jaune{
+}
+
+#calendrier-verte{
+}
+
+#calendrier-orange{
+}
+
+#calendrier-vert-deau{
+
+}
+
+
+/*--------------------------------BARRE DE RECHERCHE----------------------*/
+
+
+/*---------------------------DERNIER ARTICLE DU MOMENT--------------------*/
+
+#div-activite{
+ width: 50%;
+ margin-top : 10px;
+ margin-left:30px;
 }
