@@ -47,7 +47,7 @@ Theme My Login will always look in your theme's directory first, before using th
 		<div class="tml-rememberme-submit-wrap">
 			<p class="tml-rememberme-wrap">
 				<input name="rememberme" type="checkbox" id="rememberme<?php $template->the_instance(); ?>" value="forever" />
-				<label for="rememberme<?php $template->the_instance(); ?>"><?php esc_attr_e( 'Se souvenir de moi', 'theme-my-login' ); ?></label>
+				<label for="rememberme<?php $template->the_instance(); ?>"><?php esc_attr_e( 'Se souvenir de moi ', 'theme-my-login' ); ?></label>
 			</p>
 
 			<p class="tml-submit-wrap">

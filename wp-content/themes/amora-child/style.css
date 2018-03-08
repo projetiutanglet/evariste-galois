@@ -17,6 +17,7 @@
 #content {
  padding-top: 0px;
  margin-top: 0px;
+ margin-bottom: 20px;
 }
 
 
@@ -82,12 +83,8 @@ p a:hover {
  color: purple;
 }
 
-
-table {
- border-collapse: inherit;
-}
 table tbody tr {
-  border: solid 0.5px #82C46C;
+  border: solid 0.5px white;
 }
 
 table tbody th {
@@ -247,6 +244,20 @@ table tbody th {
  border-color: #82C46C;
 }
 
+/*bouton retour arrière des classes*/
+.retour-arriere {
+ margin-top: 10px;
+}
+
+.retour-arriere a:hover {
+ color: purple;
+}
+
+/*bouton accès a la galerie photo classe*/
+.bouton-galerie {
+ border-color: #82C46C;
+}
+
 /*---------------------Page coin des parents------------------------*/
 .grille-ligne{
  display: inline-block;
@@ -310,7 +321,7 @@ table tbody th {
 /*zone de texte*/
 #loginform1 input, #loginform input {
  border-color: #82C46C;
-  text-align: center;
+ text-align: center;
 }
 
 /*---------------------FOOTER------------------------*/
@@ -458,27 +469,133 @@ table tbody th {
 }
 
 /*---------------------------CALENDRIERS--------------------*/
+
+#calendrier th {
+ background-color: purple;
+ text-align:center;
+ color: white;
+}
+
+#calendrier td {
+ background-color: #F5F5F5;
+  text-align: center;
+}
+
+#calendrier td.pad {
+ background-color: white;
+}
+
+#calendrier .day-with-post  {
+ background-color: #bb00bb;
+}
+
+#calendrier .day-with-post a {
+ color: white;
+}
+
+
 .div-calendrier{
  width: 25%;
  margin-top: 10px;
  vertical-align:top;
 }
 
-#calendrier-bleue td{
- background-color : lightblue;
+#calendrier-bleue th{
+background-color: #2BA2D6;
+text-align:center;
+color: white;
 }
 
-#calendrier-jaune{
+#calendrier-bleue tr {
+border:white 2px solid;
+margin: 10px;
 }
 
-#calendrier-verte{
+#calendrier-bleue td {
+background-color: #F5F5F5;
+text-align: center;
 }
 
-#calendrier-orange{
+#calendrier-bleue td.pad {
+ background-color: white;
 }
 
-#calendrier-vert-deau{
+#calendrier-jaune th {
+ background-color: #B7B222;
+ text-align:center;
+ color: white;
+}
+#calendrier-jaune tr {
+border:white 2px solid;
+margin: 10px;
+}
 
+#calendrier-jaune td {
+background-color: #F5F5F5;
+text-align: center;
+}
+
+#calendrier-jaune td.pad {
+ background-color: white;
+}
+
+#calendrier-verte th {
+ background-color: #13DC21;
+ text-align:center;
+ color: white;
+}
+
+#calendrier-verte tr {
+  border:white 2px solid;
+  margin: 10px;
+}
+
+#calendrier-verte td {
+  background-color: #F5F5F5;
+  text-align: center;
+}
+
+#calendrier-verte td.pad {
+ background-color: white;
+}
+
+#calendrier-orange th {
+ background-color: #F37A20;
+ text-align:center;
+ color: white;
+}
+
+#calendrier-orange tr {
+border:white 2px solid;
+margin: 10px;
+}
+
+#calendrier-orange td {
+background-color: #F5F5F5;
+text-align: center;
+}
+
+#calendrier-orange td.pad {
+ background-color: white;
+}
+
+#calendrier-vert-deau th {
+ background-color: #65C08F;
+ text-align:center;
+ color: white;
+}
+#calendrier-vert-deau tr {
+  border:white 2px solid;
+  margin: 10px;
+}
+
+#calendrier-vert-deau td {
+  background-color: #F5F5F5;
+  text-align: center;
+}
+
+#calendrier-vert-deau td.pad {
+  background-color: white;
 }
 
 
@@ -488,7 +605,9 @@ table tbody th {
 /*---------------------------DERNIER ARTICLE DU MOMENT--------------------*/
 
 #div-activite{
- width: 50%;
+ width: 69%;
  margin-top : 10px;
- margin-left:30px;
+ margin-left:5%;
 }
+
+

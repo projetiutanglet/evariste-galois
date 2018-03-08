@@ -20,36 +20,35 @@ function removePrivatePrefix($format)
 function get_calendar_activity(){
     echo '<div class="grille-ligne">';
         echo '<!-- Le calendrier -->
-                <div ';
+                <div id="calendrier';
 
 			if (strpos($_SERVER['REQUEST_URI'], '/le-coin-des-parents/') !== false) {
 				$cat = 13;
-
 				if (strpos($_SERVER['REQUEST_URI'], '/orange/') !== false) {
 					$cat = 14;
-					echo 'id="calendrier-orange"';
+					echo '-orange';
 				}
 				if (strpos($_SERVER['REQUEST_URI'], '/vert-deau/') !== false) {
 					$cat = 15;
-					echo 'id="calendrier-vert-deau"';
+					echo '-vert-deau';
 				}
 				if (strpos($_SERVER['REQUEST_URI'], '/verte/') !== false) {
 					$cat = 16;
-					echo 'id="calendrier-verte"';
+					echo '-verte';
 				}
 				if (strpos($_SERVER['REQUEST_URI'], '/bleue/') !== false) {
 					$cat = 17;
-					echo 'id="calendrier-bleue"';
+					echo '-bleue';
 				}
 				if (strpos($_SERVER['REQUEST_URI'], '/jaune/') !== false) {
 					$cat = 18;
-					echo 'id="calendrier-jaune"';
+					echo '-jaune';
 				}
 			}else{
 				$cat = 12;
 			}
 
-		echo 'class="div-calendrier grille-ligne-item">
+		echo '" class="div-calendrier grille-ligne-item">
 		        <h3>Calendrier d\'activité</h3>';
 			 calcat_get_calendar(true,true,$cat);
 
@@ -57,19 +56,6 @@ function get_calendar_activity(){
 		<!-- L\'activité -->
 		<div id="div-activite" class="grille-ligne-item">';
 
-			/*echo $_GET['Y'];
-			echo $_GET['M'];
-			echo $_GET['D'];
-			if ( !$_GET['Y'] )
-		        $year = gmdate('Y', current_time('timestamp'));
-		    if ( !$_GET['M'] )
-		        $month = gmdate('m', current_time('timestamp'));
-		    if ( !$_GET['D'] )
-		        $day = gmdate('j', current_time('timestamp'));
-
-		     echo $_GET['Y'];
-			echo $_GET['M'];
-			echo $_GET['D'];*/
 	        // Récupération du dernier article de la catégorie coin des parents
 	        $the_query = new WP_Query(array(
 	            'cat' => $cat,

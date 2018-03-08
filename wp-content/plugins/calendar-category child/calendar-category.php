@@ -1,11 +1,9 @@
 <?php
 /*
-Plugin Name: Calendar Category
-Plugin URI: http://code.garyjones.co.uk/plugins/calendar-category
-Description: Amends Calendar widget to include showing posts by categories.
-Version: 1.0.1
-Author: Gary Jones
-Author URI: http://code.garyones.co.uk
+Plugin Name: Calendar Category child
+Description: calendrier avec catégories.
+Version: 1
+Author: Barbe Loïc
 */
 
 /**
@@ -58,7 +56,7 @@ class Calcat_Widget_Calendar extends WP_Widget {
 
 /**
  * Switch which widget is used.
- * 
+ *
  * @since 1.0
  */
 function calcat_widget_init() {
@@ -116,6 +114,11 @@ function calcat_get_calendar( $initial = true, $echo = true, $category = -1 ) {
 	$week_begins = intval( get_option( 'start_of_week' ) );
 
 	// Let's figure out when we are
+	if(isset($_GET['M'])){
+		$monthnum = $_GET['M'];
+		$year = $_GET['Y'];
+	}
+
 	if ( ! empty( $monthnum ) && ! empty( $year ) ) {
 		$thismonth = '' . zeroise(intval( $monthnum ), 2);
 		$thisyear = '' . intval( $year );
@@ -289,9 +292,9 @@ function calcat_get_calendar( $initial = true, $echo = true, $category = -1 ) {
 }
 
 /**
- * 
+ *
  * Optionally return SQL for category join.
- * 
+ *
  * @since 1.0
  *
  * @global wpdb $wpdb
@@ -301,7 +304,7 @@ function calcat_get_calendar( $initial = true, $echo = true, $category = -1 ) {
 function calcat_maybe_single_category_joins( $category ) {
 	global $wpdb;
 	if ( -1 != $category ) {
-		return "wposts LEFT JOIN $wpdb->postmeta wpostmeta ON wposts.ID = wpostmeta.post_id 
+		return "wposts LEFT JOIN $wpdb->postmeta wpostmeta ON wposts.ID = wpostmeta.post_id
 			LEFT JOIN $wpdb->term_relationships ON (wposts.ID = $wpdb->term_relationships.object_id)
 			LEFT JOIN $wpdb->term_taxonomy ON ($wpdb->term_relationships.term_taxonomy_id = $wpdb->term_taxonomy.term_taxonomy_id) ";
 	}
@@ -310,7 +313,7 @@ function calcat_maybe_single_category_joins( $category ) {
 
 /**
  * Optionally return SQL to query single category.
- * 
+ *
  * @since 1.0
  *
  * @global wpdb $wpdb
@@ -328,10 +331,10 @@ function calcat_maybe_single_category_cat( $category ) {
 add_action( 'pre_get_posts', 'calcat_amend_query' );
 /**
  * Make querystring parameter available to $wp_query.
- * 
+ *
  * @since 1.0
  *
- * @global WP_Query $wp_query 
+ * @global WP_Query $wp_query
  */
 function calcat_amend_query() {
 	global $wp_query;

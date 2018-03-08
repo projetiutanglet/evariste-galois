@@ -77,7 +77,8 @@ get_header(); ?>
 					</div>
 				</div>
 			</div>
-
+			<hr width=100%>
+			<!--Le calendrier-->
 			<?php get_calendar_activity() ?>
 
 		</main><!-- #main -->

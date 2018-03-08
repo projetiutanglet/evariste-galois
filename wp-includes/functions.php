@@ -5846,10 +5846,9 @@ function my_login_redirect( $redirect_to, $request, $user ) {
 	if ( isset( $user->roles ) && is_array( $user->roles ) ) {
 		//check for admins
 		if ( in_array( 'administrator', $user->roles ) ) {
-			$url =(isset($_SERVER['HTTPS']) ? "https" : "http") . "://".$_SERVER["HTTP_HOST"];
-			return $url;
-		}
-		if ( in_array( 'Parent', $user->roles ) ) {
+				return $redirect_to;
+		}else{
+
 			$url =(isset($_SERVER['HTTPS']) ? "https" : "http") . "://".$_SERVER["HTTP_HOST"]."/le-coin-des-parents/";
 			return $url;
 		}
@@ -5877,7 +5876,11 @@ function page_breadcrumb(){
     	 $ancestors = array_reverse($ancestors);
 
         	 foreach ($ancestors as $crumb) {
+
+
+        	 	if ( !(strpos(get_the_title($crumb), 'sentation de l') !== false) && get_the_title($crumb) != "Infos pratiques"){
         	    echo ' <a href="'.get_permalink($crumb).'">'.get_the_title($crumb).'</a> - ';
+        	 	}
         	 }
     	 }
 	 }
@@ -5914,4 +5917,22 @@ function get_my_day_link($daylink,$year, $month, $day) {
 
 }
 
-add_filter( 'day_link', 'get_my_day_link', 1, 4 ); // Where $priority is 10, $accepted_args is 3.
+add_filter( 'day_link', 'get_my_day_link', 1, 4 ); // Where $priority is 1, $accepted_args is 3.
+
+
+function get_my_month_link($monthlink,$year, $month) {
+
+	if ( !$year )
+        $year = gmdate('Y', current_time('timestamp'));
+    if ( !$month )
+        $month = gmdate('m', current_time('timestamp'));
+
+    $monthlink = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://".$_SERVER["HTTP_HOST"];
+
+    $monthlink .=  add_query_arg( array('Y' => $year, 'M' =>$month) );
+	$monthlink = add_query_arg( 'D', false, $monthlink );
+	return $monthlink;
+
+}
+
+add_filter( 'month_link', 'get_my_month_link', 1, 3 ); // Where $priority is 1, $accepted_args is 3.

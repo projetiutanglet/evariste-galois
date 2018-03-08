@@ -18,9 +18,12 @@ get_header(); ?>
 				<!--Fil d'ariane -->
 			 <?php page_breadcrumb(); ?>
 				<!-- Le titre -->
+
 			<h2>
 				<?php	echo get_the_title();?>
 			</h2>
+
+
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
