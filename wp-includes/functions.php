@@ -5876,11 +5876,7 @@ function page_breadcrumb(){
     	 $ancestors = array_reverse($ancestors);
 
         	 foreach ($ancestors as $crumb) {
-
-
-        	 	if ( !(strpos(get_the_title($crumb), 'sentation de l') !== false) && get_the_title($crumb) != "Infos pratiques"){
         	    echo ' <a href="'.get_permalink($crumb).'">'.get_the_title($crumb).'</a> - ';
-        	 	}
         	 }
     	 }
 	 }

@@ -49,8 +49,14 @@ function get_calendar_activity(){
 			}
 
 		echo '" class="div-calendrier grille-ligne-item">
-		        <h3>Calendrier d\'activité</h3>';
-			 calcat_get_calendar(true,true,$cat);
+		        <h3>Calendrier d\'activités</h3>';
+		calcat_get_calendar(true,true,$cat);
+
+		if (strpos(get_the_title(), 'Classe') !== false) {
+			$classe = explode('/',$_SERVER['REQUEST_URI']);
+			$adresse = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]/$classe[1]/$classe[2]/galerie-$classe[2]/";
+			echo '<a href="'.$adresse.'"><button type="button" class="bouton-galerie">Accès à la galerie photo</button> </a>';
+		}
 
 		echo '</div>
 		<!-- L\'activité -->

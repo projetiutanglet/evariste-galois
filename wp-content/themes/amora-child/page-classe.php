@@ -21,11 +21,7 @@ get_header(); ?>
 
 			<?php get_calendar_activity() ?>
 
-			<?php
-			$classe = explode('/',$_SERVER['REQUEST_URI']);
-			$adresse = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]/$classe[1]/$classe[2]/galerie-$classe[2]/";
-			echo '<a href="'.$adresse.'"><button type="button" class="bouton-galerie">Accès à la galerie photo</button> </a>';
-			?>
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
