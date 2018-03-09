@@ -14,24 +14,24 @@ function wds_update($version) {
   }
   if (version_compare($version, '1.0.5') == -1) {
     // Add right/left button image/hover image url.
-    $wpdb->query("ALTER TABLE " . $wpdb->prefix . "wdsslider ADD `right_butt_url` varchar(255) NOT NULL DEFAULT '" . WD_S_URL . '/images/arrow/arrow11/1/2.png' . "'");
-    $wpdb->query("ALTER TABLE " . $wpdb->prefix . "wdsslider ADD `left_butt_url` varchar(255) NOT NULL DEFAULT '" . WD_S_URL . '/images/arrow/arrow11/1/1.png' . "'");
-    $wpdb->query("ALTER TABLE " . $wpdb->prefix . "wdsslider ADD `right_butt_hov_url` varchar(255) NOT NULL DEFAULT '" . WD_S_URL . '/images/arrow/arrow11/1/4.png' . "'");
-    $wpdb->query("ALTER TABLE " . $wpdb->prefix . "wdsslider ADD `left_butt_hov_url` varchar(255) NOT NULL DEFAULT '" . WD_S_URL . '/images/arrow/arrow11/1/3.png' . "'");
+    $wpdb->query("ALTER TABLE " . $wpdb->prefix . "wdsslider ADD `right_butt_url` varchar(255) NOT NULL DEFAULT '" . WDS()->plugin_url . '/images/arrow/arrow11/1/2.png' . "'");
+    $wpdb->query("ALTER TABLE " . $wpdb->prefix . "wdsslider ADD `left_butt_url` varchar(255) NOT NULL DEFAULT '" . WDS()->plugin_url . '/images/arrow/arrow11/1/1.png' . "'");
+    $wpdb->query("ALTER TABLE " . $wpdb->prefix . "wdsslider ADD `right_butt_hov_url` varchar(255) NOT NULL DEFAULT '" . WDS()->plugin_url . '/images/arrow/arrow11/1/4.png' . "'");
+    $wpdb->query("ALTER TABLE " . $wpdb->prefix . "wdsslider ADD `left_butt_hov_url` varchar(255) NOT NULL DEFAULT '" . WDS()->plugin_url . '/images/arrow/arrow11/1/3.png' . "'");
     // Whether to display right/left buttons by image or not.
     $wpdb->query("ALTER TABLE " . $wpdb->prefix . "wdsslider ADD `rl_butt_img_or_not` varchar(8) NOT NULL DEFAULT 'style'");
     // Add bullets image/hover image url.
-    $wpdb->query("ALTER TABLE " . $wpdb->prefix . "wdsslider ADD `bullets_img_main_url` varchar(255) NOT NULL DEFAULT '" . WD_S_URL . '/images/bullet/bullet1/1/1.png' . "'");
-    $wpdb->query("ALTER TABLE " . $wpdb->prefix . "wdsslider ADD `bullets_img_hov_url` varchar(255) NOT NULL DEFAULT '" . WD_S_URL . '/images/bullet/bullet1/1/2.png' . "'");
+    $wpdb->query("ALTER TABLE " . $wpdb->prefix . "wdsslider ADD `bullets_img_main_url` varchar(255) NOT NULL DEFAULT '" . WDS()->plugin_url . '/images/bullet/bullet1/1/1.png' . "'");
+    $wpdb->query("ALTER TABLE " . $wpdb->prefix . "wdsslider ADD `bullets_img_hov_url` varchar(255) NOT NULL DEFAULT '" . WDS()->plugin_url . '/images/bullet/bullet1/1/2.png' . "'");
     // Whether to display bullets by image or not.
     $wpdb->query("ALTER TABLE " . $wpdb->prefix . "wdsslider ADD `bull_butt_img_or_not` varchar(8) NOT NULL DEFAULT 'style'");
   }
   if (version_compare($version, '1.0.6') == -1) {
     // Add play/pause button image/hover image url.
-    $wpdb->query("ALTER TABLE " . $wpdb->prefix . "wdsslider ADD `play_butt_url` varchar(255) NOT NULL DEFAULT '" . WD_S_URL . '/images/button/button4/1/1.png' . "'");
-    $wpdb->query("ALTER TABLE " . $wpdb->prefix . "wdsslider ADD `paus_butt_url` varchar(255) NOT NULL DEFAULT '" . WD_S_URL . '/images/button/button4/1/3.png' . "'");
-    $wpdb->query("ALTER TABLE " . $wpdb->prefix . "wdsslider ADD `play_butt_hov_url` varchar(255) NOT NULL DEFAULT '" . WD_S_URL . '/images/button/button4/1/2.png' . "'");
-    $wpdb->query("ALTER TABLE " . $wpdb->prefix . "wdsslider ADD `paus_butt_hov_url` varchar(255) NOT NULL DEFAULT '" . WD_S_URL . '/images/button/button4/1/4.png' . "'");
+    $wpdb->query("ALTER TABLE " . $wpdb->prefix . "wdsslider ADD `play_butt_url` varchar(255) NOT NULL DEFAULT '" . WDS()->plugin_url . '/images/button/button4/1/1.png' . "'");
+    $wpdb->query("ALTER TABLE " . $wpdb->prefix . "wdsslider ADD `paus_butt_url` varchar(255) NOT NULL DEFAULT '" . WDS()->plugin_url . '/images/button/button4/1/3.png' . "'");
+    $wpdb->query("ALTER TABLE " . $wpdb->prefix . "wdsslider ADD `play_butt_hov_url` varchar(255) NOT NULL DEFAULT '" . WDS()->plugin_url . '/images/button/button4/1/2.png' . "'");
+    $wpdb->query("ALTER TABLE " . $wpdb->prefix . "wdsslider ADD `paus_butt_hov_url` varchar(255) NOT NULL DEFAULT '" . WDS()->plugin_url . '/images/button/button4/1/4.png' . "'");
     // Whether to display play/pause buttons by image or not.
     $wpdb->query("ALTER TABLE " . $wpdb->prefix . "wdsslider ADD `play_paus_butt_img_or_not` varchar(8) NOT NULL DEFAULT 'style'");
   }
@@ -194,7 +194,7 @@ function wds_update($version) {
     $font_family = implode("*WD*", $possib_add_ffamily);
     $possib_add_ffamily_google = array_unique($possib_add_ffamily_google);
     $google_font = implode("*WD*", $possib_add_ffamily_google);
-    $global_options = wds_global_options_defults();
+    $global_options = WDW_S_Library::global_options_defults();
     $global_options['loading_gif'] = $loading_gif;
     $global_options['register_scripts'] = $wds_register_scripts;
     $global_options['spider_uploader'] = $spider_uploader;

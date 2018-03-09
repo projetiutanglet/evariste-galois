@@ -11,7 +11,7 @@ get_header(); ?>
 		<header class="page-header">
 			<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'amora' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 		</header><!-- .page-header -->
-			
+
 		<main id="main" class="site-main <?php do_action('amora_masonry_class') ?>" role="main">
 
 		<?php if ( have_posts() ) : ?>
@@ -23,7 +23,7 @@ get_header(); ?>
 				/**
 				 * Run the loop for the search to output the results.
 				  */
-				do_action('amora_blog_layout'); 
+				do_action('amora_blog_layout');
 				?>
 
 			<?php endwhile; ?>
@@ -37,9 +37,9 @@ get_header(); ?>
 		<?php endif; ?>
 
 		</main><!-- #main -->
-		
+
 		<?php if ( have_posts() ) { the_posts_pagination( array( 'mid_size' => 2 ));; } ?>
-		
+
 	</section><!-- #primary -->
 
 <?php get_sidebar(); ?>

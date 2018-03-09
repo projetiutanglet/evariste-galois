@@ -52,14 +52,14 @@ class WDSViewWDSExport {
       foreach ($value as $key_slider => $value_slider) {
         if (!is_array($value_slider)) {
           if (strpos($value_slider, site_url()) !== FALSE) {
-            if (strpos($value_slider, WD_S_URL . '/images/') !== FALSE) {
-              $value_slider = str_replace(site_url(), FAKE_SITE_URL, $value_slider);
+            if (strpos($value_slider, WDS()->plugin_url . '/images/') !== FALSE) {
+              $value_slider = str_replace(site_url(), WDS()->site_url_placeholder, $value_slider);
             }
             else {
               $file_url = html_entity_decode($value_slider, ENT_QUOTES);
               $base_name = basename($file_url);
               $download_file = file_get_contents(str_replace(" ", "%20", $file_url));
-              $zip->addFromString(FAKE_SITE_URL_BTNS . $base_name, $download_file);
+              $zip->addFromString(WDS()->site_url_buttons_placeholder . $base_name, $download_file);
               if ($key_slider != "built_in_watermark_url") {
                 if ($key_slider != "music_url") {
                   // Create thumbnail url to check if it exist.
@@ -70,10 +70,10 @@ class WDSViewWDSExport {
                     // If thumbnail exist (buttons default images).
                     $download_file = file_get_contents(str_replace(" ", "%20", str_replace($base_name, 'thumb/' . $base_name, $file_url)));
                   }
-                  $zip->addFromString(FAKE_SITE_URL_BTNS . '_thumb_' . $base_name, $download_file);
+                  $zip->addFromString(WDS()->site_url_buttons_placeholder . '_thumb_' . $base_name, $download_file);
                 }
               }
-              $value_slider = FAKE_SITE_URL_BTNS . basename($value_slider);
+              $value_slider = WDS()->site_url_buttons_placeholder . basename($value_slider);
             }
           }
           $value->built_in_watermark_url = '';
@@ -89,27 +89,27 @@ class WDSViewWDSExport {
                   if (strpos($value_slides->image_url, site_url()) !== FALSE) {
                     $download_file = file_get_contents(html_entity_decode(str_replace(" ", "%20", $image_url), ENT_QUOTES));
                     $zip->addFromString(basename(html_entity_decode($image_url, ENT_QUOTES)), $download_file);
-                    $value_slides->image_url = FAKE_SITE_URL. basename($image_url);
+                    $value_slides->image_url = WDS()->site_url_placeholder. basename($image_url);
                   }
                   if (strpos($value_slides->thumb_url , site_url()) !== FALSE) {
                     $download_file = file_get_contents(html_entity_decode(str_replace(" ", "%20", $value_slides->thumb_url), ENT_QUOTES));
                     $zip->addFromString('thumb_' . basename(html_entity_decode($image_url, ENT_QUOTES)), $download_file);
-                    $value_slides->thumb_url = FAKE_SITE_URL . basename($image_url);
+                    $value_slides->thumb_url = WDS()->site_url_placeholder . basename($image_url);
                   }
                 }
                 if ($value_slides->type == 'video') {
                   if (ctype_digit($value_slides->thumb_url)) {
-                    $value_slides->thumb_url = wp_get_attachment_url(get_post_thumbnail_id($value_slides->thumb_url)) ? wp_get_attachment_url(get_post_thumbnail_id($value_slides->thumb_url)) : WD_S_URL . '/images/no-video.png';
+                    $value_slides->thumb_url = wp_get_attachment_url(get_post_thumbnail_id($value_slides->thumb_url)) ? wp_get_attachment_url(get_post_thumbnail_id($value_slides->thumb_url)) : WDS()->plugin_url . '/images/no-video.png';
                   }
                   if (strpos($value_slides->thumb_url , site_url()) !== FALSE) {
                     $download_file = file_get_contents(html_entity_decode(str_replace(" ", "%20", $value_slides->thumb_url), ENT_QUOTES));
                     $zip->addFromString('featured_' . basename(html_entity_decode($value_slides->thumb_url, ENT_QUOTES)), $download_file);
-                    $value_slides->thumb_url = FAKE_SITE_URL . basename($value_slides->thumb_url);
+                    $value_slides->thumb_url = WDS()->site_url_placeholder . basename($value_slides->thumb_url);
                   }
                   if (strpos($value_slides->image_url, site_url()) !== FALSE) {
                       $download_file = file_get_contents(html_entity_decode(str_replace(" ", "%20", $image_url), ENT_QUOTES));
                       $zip->addFromString(basename(html_entity_decode($image_url, ENT_QUOTES)), $download_file);
-                      $value_slides->image_url = FAKE_SITE_URL. basename($image_url);
+                      $value_slides->image_url = WDS()->site_url_placeholder. basename($image_url);
                   }
                 }
               }
@@ -147,7 +147,7 @@ class WDSViewWDSExport {
                         }
                         $zip->addFromString('thumb_' . $base_name, $download_file);
 
-                        $value_layers->image_url = FAKE_SITE_URL . basename($value_layers->image_url);
+                        $value_layers->image_url = WDS()->site_url_placeholder . basename($value_layers->image_url);
                       }
                     }
                     elseif (strpos($value_layers->image_url, site_url()) !== FALSE) {

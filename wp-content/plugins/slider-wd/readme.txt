@@ -1,10 +1,10 @@
 === Slider by WD - Responsive Slider ===
-Contributors: webdorado
+Contributors: webdorado,10web
 Tags: responsive slider, slider, slideshow, wordpress slider, image slider, gallery slider, images slider, Photo Slider, post slider,  slider plugin
 Requires at least: 3.4
 Tested up to: 4.9
 Requires PHP: 5.2
-Stable tag: 1.2.4
+Stable tag: 1.2.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,110 +12,386 @@ Slider WD plugin is the perfect slider solution for Wordpress. Create a great re
 
 == Description ==
 
-= Slider WD =   
+
 
 https://www.youtube.com/watch?v=xebpM_-GwG0&index=1&list=PLnxWPiY5tLFWQf5XaEYYPZj0gdggUrVxP
 
-Slider WD WordPress Plugin
-
-Create responsive, highly configurable wordpress sliders with various effects for your WordPress site. Download for FREE!  
-
-[Special Offer for all Premium Plugins](https://10web.io/pricing/)  
-[WordPress Slider Plugin](https://10web.io/plugins/wordpress-slider/)  
-[Demo](https://demo.10web.io/slider/)  
-[User Manual](http://docs.10web.io/docs/slider-wd/adding-images.html)  
-[Support Forum](https://wordpress.org/support/plugin/slider-wd)  
+[Special Offer for all Premium Plugins](https://web-dorado.com/wordpress-plugins-bundle.html)   
+[WordPress Slider Plugin](https://web-dorado.com/products/wordpress-slider-plugin.html)  
+[Demo](http://wpdemo.web-dorado.com/slider/)  
+[User Manual](https://web-dorado.com/wordpress-slider-wd-guide-step-1.html)  
+[Support Forum](https://wordpress.org/support/plugin/slider-wd)   
 [How to change and modify Slider WD Settings](https://www.youtube.com/watch?v=Peny_dkHaMo&list=PLnxWPiY5tLFWQf5XaEYYPZj0gdggUrVxP&index=3)  
 
-Slider WD is an effective tool for adding responsive slider to your website. The WordPress slider plugin can be added both as a widget and plugin, as well as be included in the theme for displaying the slider within the theme using PHP function. Slider WD allows adding both images and videos (currently supporting YouTube and Vimeo to be displayed as slider slides). The numerous transition effects and layer support enhance the functionality of the WordPress slider plugin.
 
-The number of the slides for each slider is not limited. Various layers can be applied for each individual responsive slides. There are three basic types of layers designed for the slides. Those are for sharing textual content, images and sharing buttons (Google+, Tumblr, Twitter, Pinterest and Facebook.) The slides can be used for redirection to another location. Similar feature is also available with the text and image layers of WordPress Slider plugin.
-   
+Slider WD is a versatile solution to help you add fast loading, responsive and SEO-friendly sliders to your website pages, posts, theme header or any other location. The plugin supports both images and videos on the slides, which further could be spiced up with various transition effects. Filmstrip, carousel and parallax effects of Premium version will have your slides look even better. You can create multi-functional sliders in Premium version, by applying text, image, video, hotspot and social media button layers to the slides. Every feature of the slides, from text size, navigation buttons to slide loading icon, can be customized, giving you a myriad of options to experiment with style and design. It’s by far the easiest solution to create beautiful sliders, which you can add to your website with a shortcode, by inserting into the theme using the PHP function or through widget. Slider WD supports swipe control to make sure your slides look great on touchscreen devices. If you’re looking for power-packed slider plugin which is also user-friendly, go ahead, download it and test the plugin yourself. 
 
-*   Responsiveness
-*   Possibility of adding unlimited sliders and unlimited slides for each slider
-*   Three options for adding images (from Media Library, by Slider WD Media Upload option or by using image URL)  
-*   Full-width slider support
-*   5 transition effects for sliders
-*   Autoplay
-*   Shuffle
-*   Shortcode for easy insert of the slider into post/pages   
-*   Possibility of changing the slide orders (using drag and drop feature)   
-*   Possibility to provide titles for the slides    
-*   Support for music playback (one track for entire slider)
-*   Time setting feature for the effect changes  
-*   Right-click protection for avoiding slider image download
-*   Slider image changing possibility using bullets    
-*   Possibility to change design for the bullets, navigation buttons  
-*   Timer bar 
-*   Support for watermarks 
-*   Design customization for almost all features
-*   Custom CSS support for adding additional styling features to the slider (css3 slider options)  
-*   Possibility to use Slider WD Media Upload for uploading multiple images at once  
-*   Text and image watermarking possibility   
-*   Option of opening the slider-related link within the same page   
-*   Slide duplication   
-*   Fixed background slider      
-*   Slider widget    
+== Benefits ==
+*   **User engagement** -  Sliders are engaging. Once you add beautiful slides to your posts or pages with some high quality images and appealing styling, you may observe improved  user engagement rates. 
+*   **Better user experience** - With its swipe control support Slider WD will provide better user experience on your website. No matter the device or the screen size you can make sure your slides will perform as they should.
+*   **Differentiation** - From simple text color and fonts, to hotspot animation and effect duration, there are almost unlimited styling options you can try. Factor in support for custom CSS and you will have more space and flexibility with the styling of your sliders.    
+*   **High level of personalization** - One of the best things about Slider WD is its flexibility! You can adjust and customize every aspect of your slides.You can play with all the features of the slides and have them match with your website’s design and overall look and feel.
+*   **Grabbing users’ attention** - Since the sliders can be basically placed anywhere on your website, it’s a great way to bring attention to any information you want to highlight. Whether it’s an announcement, new post, or just one of your recent video tutorials, you can make sure it will catch the eye. 
+*   **Easy to set up, use and customize** - Plugin was developed with users in mind. Anyone from beginners to WordPress profs will be able to easily create and customize the sliders without any coding skills. 
+*   **Get Support** - Ger timely and effective support to all its users. We keep standards high and response time low. 
 
-Upgrade to [WordPress Slider Pro](https://10web.io/plugins/wordpress-slider/) to add features:
 
-*   26 transition effects for Slider   
-*   38 layer effects   
-*   Post Slides   
-*   Video Slide support (YouTube slider and Vimeo slider)  
-*   Dailymotion, Instagram and Flickr embed   
-*   Layers (text, image and media embed)- [Video Manual](https://www.youtube.com/watch?v=obnyK-Czf0k&list=PLnxWPiY5tLFWQf5XaEYYPZj0gdggUrVxP&index=2)  
-*   Social sharing buttons layer (Google+, Tumblr, Twitter, Pinterest and Facebook)   
+== What’s in it ==
+
+= UNLIMITED SLIDES AND SLIDERS =
+
+Slider WD allows you to add unlimited number of sliders to your website with as many slides as you want. Easily insert the sliders to any of your posts or pages with the generated shortcode. 
+
+
+= MULTIPLE LAYERS =
+
+The Premium version allows for creation of multi-functional sliders using the available image, text, video , social media and hotspot layers. Apart from uploading video files from your pc, you can also embed media from YouTube, Vimeo, Instagram, Flickr or Dailymotion using the file’s URL.
+
+
+= MULTIPLE TRANSITION AND LAYER EFFECTS =
+
+Slider WD Premium version offers 27 slide transition and 38 mind-blowing layer effects to give your slides a distinct look. You can specify the start/end point of the effects, as well as specify the effect duration.
+
+
+= IMAGE WATERMARKING =
+
+Add text and image watermarks to your slides, by selecting the size, transparency, and one of the available nine watermark positions.
+
+= SOCIAL SHARING BUTTONS =
+
+Add a social sharing buttons’ layer to your slides in Premium version. You can customize almost every aspect of the buttons and enable your visitors to share your slides across the major social media platforms, like Facebook, Google +, Twitter, Pinterest and Tumbler.
+
+= PARALLAX AND CAROUSEL SUPPORT =
+
+Premium version adds Parallax and carousel support. You can set to display the slides in carousel view, which shows the main image at the foreground, while having the rest of the images at the background. The parallax effect will create modern 3D-like effects on the slides and take them to the next level.
+
+= SLIDER EXPORT/IMPORT  =
+
+If you want to export/import your slides from one website to another, that’s absolutely doable with Slider WD Premium version. You can choose to transfer the slider with pictures and settings, or you can transfer only the settings of the slider and then add your images afterwards.
+
+= SETTINGS/CUSTOMIZATION  =
+*Some customizations described here are available in Premium version. Please refer to feature summary for additional info.
+
+Slider WD has an intuitive drag and drop interface, which makes it easy to create, organize and customize your slides. All the slider options as well as the plugin overview is available at the admin panel. This is basically where you can create the sliders and make the necessary changes as you go. Under the plugin’s global options, you’ll find the default options for layers and some other general settings, such as enabling Slider WD media upload, choosing the loading icon,adding font families, etc. All the other options for customizing the slides can be found under the sliders section, the place where you can actually start adding new slides. The user friendly interface lets you easily add images and videos to the slides, as well as embed media from popular social platforms. Beneath the added slides you’ll find the available layers that you can apply to them, each of the layers coming with its own set of settings. Before you save the final version of the slide you can preview all the changes you’ve made. At the top of the page,you’ll also find a settings icon,where you can configure the settings for the slider you’re working on. From this section you can activate carousel view, give custom styling to bullets and buttons, adjust settings for filmstrip view, as well as configure the settings for watermarking. Also, you can add custom CSS to the slides for the additional styling features. 
+
+
+[Premium version adds](https://web-dorado.com/products/wordpress-slider-plugin.html)  
+
+*   27 Transition effects for slider    
+*   38 Layer effects    
+*   Support for posts in the slides    
+*   Video Slide support (YouTube slider and Vimeo slider)    
+*   Dailymotion, Instagram and Flickr embed      
+*   Layers (text, image and media embed)- Video Manual    
+*   Social sharing buttons layer (Google+, Tumblr, Twitter, Pinterest and Facebook)    
 *   Hotspot layer    
-*   Filmstrip support        
-*   Navigation button/bullet styles   
-*   Parallax Slider     
-*   Carousel Slider    
-*   Video Slide and layer (mp4)   
+*   Filmstrip support    
+*   Custom styles for navigation buttons/bullets    
+*   Support for Parallax Slider    
+*   Support for Carousel effect    
+*   Video Slide and layer (mp4)     
 *   Slider Export/Import.       
 
 
-This wp slider plugin comes with a few demo sliders on its demo page, which are representing the main types of sliders supported by the plugin, whereas you can always enhance the plugin functionality combining slider types. The mentioned four types are Multi-Layer content Slider, 3D fullwidth Slider, Filmstrip Slider, Zoom Effect Slider. Let’s discuss each of these gallery slider types separately.
-
-Multi-layer content slider is designed for displaying content, image layer and social sharing layers over the slides. This type of sliders are most commonly used when you are trying to create a slider similar to one created with PowerPoint or other presentation and slider software. It can be easily turned into video slideshow.
-
-3D fullwidth slider is designed for displaying full-size sliders on any of your website pages. It uses a special effect for shifting between slides creating a 3D effect. This slider takes the width of the page, where it’s included. Fullscreen slider can also be used.
-
-Filmstrip slider is designed for displaying small icons of the set of slides included in the slider, it is similar to a thumbnail slider This is especially useful, if you have large set of slides and do want the user to choose which slide of the slider start the showcase. In addition to this, you can use this type of slider as an alternative to gallery plugins, where the displayed image opens up in a larger lightbox, which is not as convenient.
-
-Zoom Effect slider is convenient, where you have small space but want to represent the main image and enlarged extract of it. Here the image gets zoomed without switching between slides of the slider. Each image and its extract are being included in a single slide. Thus this slider is more effective when used with HD images.
-
-If you don’t want to limit yourself with one of these types of sliders, then you can freely use a combination, e.g. have multi-layer slider with 3D effect or flimstrip slider with zoom effect.
-
-
 ###IMPORTANT:    
-If you think you found a bug in Slider WD or have any problem/question concerning the plugin, please check out [WordPress Slider Support Forum](https://wordpress.org/support/plugin/slider-wd) in our website. If you do not find a solution here, do not hesitate to [click here to contact us](https://10web.io/contact-us/).
+If you think you found a bug in Slider WD or have any problem/question concerning the plugin, please check out [WordPress Slider Support Forum](https://wordpress.org/support/plugin/slider-wd) in our website. If you do not find a solution here, do not hesitate to [click here to contact us](https://web-dorado.com/support/contact-us.html).
 
- *If you need language of Slider WD which is not included in this list, please contact us and we will do the translation of Slider WD within 3 days. If you find any mistakes in the translation, please contact us and we will make relevant corrections within 3 days.  *  
- 
 
-== Installation ==   
+== Installation ==
 
 #### Thank you for your interest in Slider WD.  
 
-### Minimum requirements.  
-*   Wordpress 3.4+  
-*   PHP 5.2+  
-*   MySQL 5.x  
+**Installing via WordPress** 
+Follow the steps below to install Slider WD to your website.  
+Log-in to your WordPress administrator panel.  
+Select Plugins page from toolbar menu, click Add New.  
+Search for Slider WD in the right-top search bar if you want to download the Free version or click Upload Plugin button > “Choose file” (“Browse”) and select the Slider WD zip file if you are installing the Professional version of Slider WD.  
 
-### Perform a new installation  
+For Mac Users
+Go to your Downloads folder and locate the folder with the Slider WD. Right-click on the folder and select Compress. This will create a .zip file which can be installed as described below:  
+Click “Upload & Install” button. 
+Click “Activate Plugin” button for activating the plugin.  
 
-After downloading the ZIP file of the slider plugin,  
+**Installing via FTP**
 
-1. Log in to the administrator panel.   
-2. Go to Plugins Add > New > Upload.     
-3. Click "Choose file" ("Browse") and select the downloaded zip file of the slider.     
-*For Mac Users*     
-*Go to your Downloads folder and locate the folder with the Slider WD. Right-click on the folder and select Compress. Now you have a newly created .zip file which can be installed as described here.*     
-4. Click "Install Now" button.     
-5. Click "Activate Plugin" button for activating the Slider WD.    
-6. If the installation does not succeed, please [click here to contact us](https://10web.io/contact-us/).
+Login to your hosting space via an FTP software, e.g. FileZilla.   
+Unzip the downloaded Slider WD plugin folder without making any changes to the folder.   
+Upload the Slider WD plugin into the following location wp-content>wp-plugins.   
+Login to the WordPress Administrator Panel.   
+Activate Slider WD by going to Plugins and pressing Activate button.   
+
+If any problem occurs with installation of Slider WD, [please let us know](https://web-dorado.com/support/contact-us.html). 
+
+== Frequently Asked Questions ==
+
+= What can I achieve with Slider WD plugin? =
+
+WordPress Slider plugin is a user-friendly tool which helps you create unlimited responsive sliders for your website.
+
+It lets you add images, videos, posts and other media as slides or layers. Configure the numerous useful options and showcase your slider on a WordPress **page, post, widget area** or a **custom PHP** template.
+
+Include **YouTube, Vimeo,** as well as **self-hosted** videos to your slideshow with just a few clicks. Video autoplay feature of Slider plugin lets you provide a modern user interface for the visitors of your website.
+
+Enrich the display of your slides with **6 amazing layer features,** such as text, image and video layers, other media, social buttons, and hotspots. WordPress Slider plugin provides various aesthetic **transition effects** for slides and layers, letting you advance your slideshow to a whole new level.
+
+Using this WordPress Slider plugin, you can turn your slideshow into **a posts slider** using your website posts. Furthermore, you can create an interactive slideshow by linking any slide to an internal or external web page.
+
+Powered by modern technology, WordPress Slider plugin will help you build amazing sliders without having to code a single line. You can create the following types of CSS3 slider with wonderful autoplay feature:
+
+ * cycle slider,
+ * free video slideshow (specifically TouTube slideshow and vimeo slideshow),
+ * product carousel,
+ * Javascript slideshow,
+ * photo slideshow,
+ * testimonial slider,
+ * content slideshow,
+ * simple image rotator,
+ * video gallery and more.
+
+You can display images slider with different elegant animations. This slideshow plugin allows you to display your portfolio images, videos in a modern slider gallery.
+
+The options to create these slideshows are infinite. For instance, if you wish to create a simple PDF slider, you can use text layers and image layers on a white background image, and thus showcase your content slider in a PDF-like style.
+
+Or, you can turn the slider into a Woocommerce slider by adding links to Woocommerce product pages.
+
+= How can I add images to slider? =
+
+Press **Add Slides** button below **Slider Title** to add an item to your banner rotator. You will access **WordPress Media Library,** which lets you use existing images or upload new media.
+
+Upload the images and videos you wish to add or browse items from WordPress Media Library. You can select a single item by clicking on it, or choose multiple by pressing and holding **Shift** or **Control** keys on your keyboard.
+
+After choosing the images and videos for your image carousel or cycle slider, press **Add to Slider** button.
+
+When the slides are added, you will be able to see the list of their thumbnails which help you to easily navigate through slides. Each thumbnail has its own set of buttons, which will become visible after hovering on an item:
+
+  * **Edit.** You can change the slide image, keeping its attributes (e.g. layers on slides, transitions).
+  * **Copy.** Pressing this button will create a duplicate of the current slide. The duplicate will be added as the last slide of your slideshow.
+  * **Delete.** You can delete the slide using this button.
+
+Furthermore, you are able to change the ordering of the slides by dragging the thumbnails and repositioning them.
+
+Make sure to **Publish/Update** your slideshow to keep the changes you made. You can also **Preview** the slider to check its appearance.
+
+**Adding Images from URL**
+
+In addition to uploading, embedding items and using WordPress posts, WordPress Slider plugin allows to insert images using their absolute links. To do this, press **Add Slides** button and navigate to **Insert from URL** tab.
+
+This section of the toolbox provides an input, where you just need to add the absolute URL of an image. The link needs to have the following structure:
+
+*https://example.com/complete-file-path/image.jpg*
+
+After providing the URL of the slide image, click **Add to Slider** button.
+
+**Using WD Media Uploader**
+
+Besides using default Media Library, WordPress Slider plugin has an advanced WD Uploader for adding or editing slides. This is a powerful and user-friendly tool which allows you to upload and manage images, separate them into folders, and more.
+
+To access WD Uploader, firstly, you need to enable it from **Global Options** of Slider WD plugin. Go to **Slider WD > Options** page and set **Enable WD Media Uploader** setting to **Yes.**
+
+Afterwards, edit your slideshow and click on **Add Slides** button. Navigate to WD Media Uploader tab to start adding new images. This dashboard includes a set of options which we will describe one by one.
+
+= Can I add video slides to slider? =
+
+Slider WD plugin also lets you embed media from various platforms, such as **YouTube** and **Vimeo.** To use this feature, press **Add Slides** button then click on **Embed Media** tab. Use the input bar above to add the **URL** of the image or video you wish to add, then press **Add to slider** button.
+
+You can import items from the following websites:
+  * YouTube,
+  * Vimeo,
+  * Instagram,
+  * Flickr,
+  * Dailymotion.
+
+For instance, when adding a YouTube video as a slideshow item, you just need to provide its link.
+
+This lets you create a modern-looking fullscreen slider with videos, that showcase your products, business or services.
+
+= Is it possible to make custom style changes to a slide? =
+
+Use **CSS** tab of **Slider Settings** to write additional CSS code and apply custom styles to the slider. Note, that these changes will override the original styles of the slider.
+
+Also, you can edit its **Settings** by enabling different attributes and configuring corresponding features. For instance, you can enable slide vertical animation effect and turn your slideshow into a vertical slider.
+
+These vertical slides look especially nice, when you are displaying professional photographs. However, you are able to use all slide effects both on images and videos.
+
+= Can I publish slider as a widget? =
+
+To publish your slideshow on a widget area, navigate to Appearance > Widgets page. All widgets on your website and widget areas provided by your theme are available on this dashboard.
+
+Look for Slider WD widget, then drag it to the widget area where you wish to display the slideshow. Write a Title for the widget and choose any slideshow using Select Slider drop-down menu. Press Save and the slider will appear on this widget area immediately.
+
+= How can I add layers to slides? =
+
+WordPress slider plugin provides powerful layer options, which help you enhance the display of your slideshow. This section of Slider WD user guide will help you add them to your slides and fully customize them.
+
+The plugin is tuned up with the following types of layers, which can be added to each slide multiple times:
+
+  * **Text,** allowing you to display a **text block** on your slides,
+  * **Image,** which lets you place an **image layer** over the slide background image,
+  * **Video,** which you can use to add a **self-hosted video** on the slide,
+  * **Media Embed,** that adds **Youtube, Vimeo, Instagram, Flickr,** and **Dailymotion** media as slide layer,
+  * **Social Buttons,** letting you place **Facebook, Google+, Twitter, Pinterest,** and **Tumblr** share buttons on your slides,
+  * **Hotspot,** which adds an **animating spot** to slide. It displays additional text, when users hover the hotspot, and you can also add an onclick link to it.
+
+Click on a slide you wish to edit, and the layer buttons will appear under the main image. Press the one you wish to add to the selected slide, and let's begin customizing its settings.
+
+After a layer is added, a new toolbox becomes available, providing various customization options. Using the top bar, you can:
+  * reorder the layer using drag-and-drop feature,
+  * edit the title of the layer,
+  * delete or copy it,
+  * change its order number.
+
+Click on the gray bar to expand and edit all options of the layer. This section of user-friendly tools allows to fully personalize each layer. You are able to implement modifications such as:
+
+  * specify the dimensions of layers,
+  * set their positions on slides,
+  * configure slide in and slide out animations effects,
+  * modify their color, font style, transparency,
+  * add unique classes for layers,
+  * set links on each layer,
+  * configure various on-click actions, such as playing/pausing slideshow,
+and much more.
+
+It is important to note, that Slider WD plugin also allows you to reposition layers by dragging them around on the slide itself.
+
+= Can I move sliders from one site to another? =
+
+To save lots of time, WordPress slider plugin provides its **Import/Export** feature, letting you move created sliders from one site to another. With just a few clicks, you can have all slideshows uploaded and built on your second website.
+
+Prior to transferring the sliders, make sure to install Slider WD to the destination site. Let's begin discussing exporting and importing options.
+
+**Exporting Sliders**
+
+Navigate to **Slider WD > Sliders** page to export slideshows. Mark the sliders you would like to export, then select **Export** option from **Bulk Actions.** Afterwards, press **Apply** button and sliders will start downloading immediately.
+
+You can choose to transfer the slider with images and settings, or alternatively, just export the settings and add your own slides afterwards.
+
+**Importing Sliders**
+
+To import the downloaded sliders, go to **Slider WD > Import** page first. Use **Choose File** button to browse the exported slider. Select the file, afterwards, click **Import** button. The slider will be added automatically.
+
+You can also import slideshows from Demo site and import them to your website. Just press the **Download** button below each slider, and follow the steps described above.
+
+= How do I insert the WordPress Slider into a Page or a Post? =
+
+To insert your slider into a page or post, add or edit the post/page where you wish to showcase the slideshow. Above the content editor, there is a button titled **Add Slider WD.** All you need to do is to press this button, choose a slideshow using **Select a Slider** drop-down menu, then click **Insert.**
+
+The shortcode of your slideshow, e.g. [wds id="2"], will be added to the content of the page/post you are editing.
+
+In addition, you can add the shortcode manually by copying it from **Slider WD > Sliders** page. Each slider shortcode is displayed next to the corresponding item, under **Shortcode** column.
+
+= Can I customize Slider settings to better fit my needs? =
+
+WordPress Slider plugin comes with a set of useful options which allow you to customize each slideshow independently. Having configured slideshows separately, you can publish multiple sliders on your website, each with its own unique design and purpose.
+
+Navigate to **Settings** tab of your slider to begin configuring its options.
+
+This toolbox consists of the following sections, each providing its own pack of user-friendly options.
+
+**Global**
+
+**Global** tab of **Slider Settings** includes general options for the slider. You can personalize the way your slider behaves and shows. You can:
+  * modify its display type and dimensions,
+  * set animation effect and its duration,
+  * specify slider looping and shuffling settings,
+  * change slideshow behavior on desktop and mobile devices,
+  * set music to play along with the slider,
+  * enable parallax effect for the slider, and much more.
+
+**Carousel**
+
+Have your slideshow appearing in Carousel mode by activating it from **Carousel** tab of **Slider Settings.** With these options, you can personalize the display of your slider carousel. You are able to:
+  * change the number of images shown on carousel,
+  * set the ratio of carousel image dimensions (width divided by height),
+  * edit the styles of carousel background image, and more.
+
+**Navigation**
+
+Completely customize the way your slider navigates using the tools provided in **Navigation** section of **Slider Settings.** You are able to switch on:
+  * mouse-click navigation (Next/Previous buttons),
+  * mouse-swipe and mouse-wheel navigation,
+  * touch-swipe navigation on mobile devices,
+  * keyboard navigation with next/previous keys,
+  * on-slider Play / Pause buttons,
+  * as well as activate navigation buttons for your slider and style every attribute as you wish.
+
+**Bullets**
+
+Place **bullets** on your slider by activating them from this section. This feature lets users to easily navigate from one slide to another in a random sequence. This set of options lets you:
+  * select to show bullets on hover or always,
+  * set the position of slider bullets,
+  * choose color, size and margin for them,
+  * customize the bullets by uploading your own images, and more.
+
+**Filmstrip**
+
+Display a nifty **filmstrip** of slide thumbnails along with your slider. This is a neat way to showcase miniatures of your slides before users click to view their larger versions. You can customize the filmstrip by:
+  * changing its position on the slider,
+  * setting background color and inactive thumbnail transparency,
+  * specify thumbnail dimensions and separator size,
+  * customize the border of the active thumbnail.
+
+**Timer bar**
+
+Activating **Timer bar** lets you have a neat loading bar with each slide. The loading bar starts every time a slide displays, and ends when the slideshow switches to the next image during autoplay.
+
+You can customize the type of the Timer bar, as well as its size, color and transparency.
+
+**Watermark**
+
+You are able to add watermark to the main images of your slider with the options Watermark section provides. Choose the type of the watermark, text or image, then configure settings such as:
+  * providing watermark text or image URL,
+  * specifying font size, font style and color of watermark text.
+  * setting the size of the watermark image, and select the position of the watermark.
+  * Press Set Watermark to add the watermark text or image to main images of your slider. To remove it, simply click on Reset Watermark button.
+
+= Can I use Slider WD to create different sliders for different pages? =
+
+Yes, you can create unlimited number of sliders with unlimited amount of slides. Then you may paste corresponding slider code within each page.The slider shortcodes are listed next to the slider in **Slider WD > Slider** section.
+
+= Can I add a slider into a custom PHP template of my website theme? =
+
+In case you use custom PHP templates and would like to display your slideshow on these pages, you can use **PHP function** Slider WD plugin provides. You just need to add the function, e.g.:
+
+*<?php wd_slider(2); ?>*
+
+into the necessary .php file. For instance, if you wish to display the slideshow along with the header, simply add the code to header.php file of your website theme. You can find the function and copy it from **Slider WD > Sliders** page, under **PHP function** column.
+
+= Is it possible to add watermark to slider images? =
+
+You are able to add watermark to the main images of your slider with the options **Slider Settings > Watermark** section provides. Choose the type of the watermark, **text** or **image,** then configure settings such as:
+
+  * providing watermark **text** or **image URL,**
+  * specifying **font size, font style** and **color** of watermark text.
+  * setting the **size** of the watermark image,
+  * and select the **position** of the watermark.
+
+Press **Set Watermark** to add the watermark text or image to main images of your slider. To remove it, simply click on Reset Watermark button.
+
+= Does Slider WD support Google fonts? =
+
+Slider WD does support Google Fonts. This allows you to custom text layer over slides using the provided big variety of Google Fonts.
+
+You can change the fonts of a layer by editing it. Look for **Font family** option to enable **Google Fonts,** then select the font family you wish to use.
+
+= What are the most common applications of this wordpress responsive plugin? =
+
+This free slider plugin can be used for showcasing your portfoliow with the help of:
+  * Image slider,
+  * video slider (specifically vimeo slider, youtube slider, HTML5 slider),
+  * post slider,
+  * product slider,
+  * photo slider / gallery slider,
+  * carousel slider and more.
+
+Thes content slider options are the most commonly used applications of the best slider plugin, but those can be expanded to meet the needs. You can combine images into multi-layer content with  videos and carousel slideshow effect or display video layers.
+
+= Is this a good plugin for creating a post slider? =
+
+The plugin allows embedding WordPress posts making it a great WordPress Posts slider with various functionality and content slideshow. This is also useful in case you wish to have a product slider. You can add your products as posts and display them on your slideshow.
+
+Moreover, it can be turned into custom post types slider or a content slider with various layers, images and animations. This will help to create product carousel/image carousel with ecommerce plugins or photo slideshow with gallery plugin and even more.
+
+The good part of this is that you can have a text slider with its picture slide, while keeping up with responsive post slider if compared with other post slider or banner slider plugins. This image slideshow plugin has all the necessary features for creating various kinds of wonderful CSS3 slider.
 
 
 == Screenshots ==
@@ -128,6 +404,20 @@ After downloading the ZIP file of the slider plugin,
 
 
 == Changelog ==
+
+= 1.2.7 =
+* Fixed: Minor bug depend on PHP version.   
+
+= 1.2.6 =
+* Changed: Main PHP file structure.   
+* Changed: GET variable in slider edit page.   
+* Fixed: Keyboard, Mouse swipe, Touch swipe navigation.   
+
+= 1.2.5 =
+* Added: Insert slide image from URL.  
+* Fixed: Full width slider height.   
+* Fixed: Bug on PHP 7.2.0 version.  
+* Changed: Overview page.   
 
 = 1.2.4 =
 * Removed: Notification   
@@ -697,367 +987,4 @@ After downloading the ZIP file of the slider plugin,
 *  Initial version.  
 
 
-== Frequently Asked Questions ==
-
-= 1. Is Slider WD responsive? =
-Yes, the Slider WD is responsive and displays resized image for the mobile devices and tablets.    
-
-= 2. Can I add slider into the theme in a custom location? =
-Yes, that’s possible to achieve. The plugin automatically generates a shortcode and php code for each slider, thus you can copy and paste the php code for the slider to a custom location. The shortcode and php codes are listed next to the slider in Slider WD>Slider section.    
-   
-= 3. Can I use the Slider WD to create different sliders for different pages? =
-Yes, you can create unlimited number of sliders with unlimited amount of slides. Then you can paste the corresponding slider code within each page.The slider shortcodes are listed next to the slider in Slider WD>Slider section.      
-
-= 4. Is it possible to make custom style changes to the sliders? =
-There is a Custom CSS box within the Settings of each slider. Here you can add inline styles for that specific slider.       
-
-= 5. How can I add images to slider? =
-You can either upload the images using Media Upload option or provide the absolute URL of the images to be used within the slider.       
-
-= 6. What options does the Slider WD use during the slide transition? =
-The slider can be set to autoplay or display arrows on hover for switching in between the slides. There is a possibility of displaying a timer bar, which will indicate the timing in between the slides.       
-
-= 7. Is it possible to add advertising or watermark over the images with free version? =
-Yes, it is possible to add watermark over the slider images. There is only one watermark possibility for all images.    
-
-= 8. How to upgrade from Slider WD to Pro version? Will I lose my data? =
-To upgrade from Free to Pro version, please deactivate and delete an old version of a Slider WD and install the downloaded from Web-Dorado.com file. No data will be lost.
-
-= 9. Are Slider WD translation ready? =
-In order to translate Slider WD you'd need to define the language of your site in Settings > General> Site Language. This way the slider wd should be translated automatically.
-Otherwise, you may manually modify translation from wp-content/plugins/slider-wd/languages/ In this case you'd need POEdit.  
-If you have found mistakes in translations , please write us and we will make necessary changes within the next few days.   
-
-= 10. Can I adjust the width of the slider to be full-width? = 
-
-Yes, Slider WD has an option for displaying full-width sliders. You can use the feature for inserting not only sliders on your homepage, but also use it as a post slider using post and pages content.
-
-= 11. What audio files can be used for audio playback in Slider WD? =
-
-You can use  the following file formats with Slider WD for sliders audio playback- .aac,.m4a,.f4a,.mp3,.ogg,.oga..
-
-= 12. What transition effects are supported with free version of Slider WD? =
-
-Slider WD free version has support for 5 transition effects. Those are 'No effect',  'Fade', 'Slice in', 'Fan', 'Scale In'.
-
-= 13. How can you change the order of images (slides) within Slider WD? =
-
-Slider WD uses easy drag and drop feature. This allows to order the slides for each slider from the back end. For easier navigation you can name the slides.
-
-= 14. Does Slider WD support Google fonts? =
-Slider WD supports Google Fonts. This shall allow users to add custom fonts over slides as layers using the big variety of Google fonts.   
-
-= 15. Why my watermark is not showing? =
-Watermark may not work for the following reasons:
-1. If you add an image with an external link
-2. If your GD2 library in your server is switched off
-3. If the image you have uploaded is larger than the dimensions you have set in settings. This means that if you have placed the watermark on the angles of the photo you just won’t see it because the photo will be cut off.
-
-So, please try the following: make sure to upload photos without using any link option, make sure to have your server’s GD2 library on, resize the image and set the same dimensions as in the slider settings before upload.    
-
-= 16. What are the most common applications of this wordpress responsive plugin? =
-
-This free slider plugin can be used for showcasing your portfoliow with the help of  Image slider, video slider (specifically vimeo slider, youtube slider, HTML5 slider), post slider, product slider, photo slider / gallery slider and carousel slider options. Thes content slider options are the most commonly used applications of the best slider plugin, but those can be expanded to meet the needs. You can combine images into multi-layer content with  videos and carousel slideshow effect or display video layers.
-
-= 17. What are the main video slider opportunities? =
-
-You can create youtube slideshow and vimeo slideshow sliders with a large list of videos. Though free video slider options  is not available, the pro version is capable of adding not only video sliders but also video layers. Video slide can be used with widget slider as well.
-
-= 18. Can I use it instead of my theme slider? How to add javascript slider / jquery slider? =
-
-Since the slider can be inserted with a php shortcode, you can remove your theme slider and use the plugin option instead for all pages slider using the php shortcode instead, no additional javascript slideshow / jquery slideshow setup is necessary. The final result is responsive slideshow.
-
-= 19. Is this a good plugin for using post slider? =
-
-The plugin allows embedding WordPress posts making it a great WordPress Posts slider with various functionality and content slideshow. Moreover, it can be turned into custom post types slider with various layers, images and animations. This will help to create product carousel/ image carousel with ecommerce plugins or photo slideshow with gallery plugin and even  The good part of this that you can have a text slider with its picture slide, while keeping up with responsive post slider if compared with other post slider or banner slider plugins.
-
-= 20. Can I use this free slider plugin to create images slider or use it as a slideshow manager? =
-
-You can show your entire portfolio or gallery using the picture slider. Here the images can be edited and modified so the product is fully capable for the title of a slideshow plugin with even video slideshow and widget slideshow options. 
-
-= 21. Is it possible to embed existing images to slider? =
-
-Yes, you can use the plugin for generating wordpress picture slider integrating already added images. 
-
-
-= 22. Is this slider useful for mobile slider options? =
-
-This wordpress responsive slider is no less great deal when it comes to mobile slider options. It uses Swipe technology, turning the slides combination into a touch slider.
-
-= 23. Can I create different layout sliders? =
-
-Yes, the plugin is relevant for creating vertical slider (vertical slides), horizontal slider and even carousel slider. The content slider is handled with the help of layer slider options, which are included in pro version of this wordpress slider plugin.
-
-
-
-== Slider WD Step by step guide ==   
-
-= Step 1: Installation of Slider WD plugin. =
-1.1 Minimal requirements.
-
-WordPress 3.4+
-PHP 5.x
-MySQL 5.x
-
-1.2 Installation.
-
-Log-in to your WordPress administrator panel.
-Select Plugins page from toolbar menu, click Add New.
-Search for Slider WD in the right-top search bar if you want to download the Free version or click Upload Plugin button > "Choose file" ("Browse") and select the Sliders zip file if you are installing the Professional version of Slider WD.
-
-For Mac Users
-Go to your Downloads folder and locate the folder with the Slider WD. Right-click on the folder and select Compress. This will create a .zip file which can be installed as described below:
-Click "Upload & Install" button.
-Click "Activate Plugin" button for activating the plugin.
-If any problem occurs with installation of Slider WD, please let us know using ["Contact Us"](https://10web.io/contact-us/) form. 
-
-= Step 2:  Adding images to Sliders. =
-Go to Slider WD > select Sliders > click Add New
-First of all specify the name of the slider in Slider Title field. Below that you will be able to add your new slides.
-2.1 Published. Under the image you have just added, select YES whether you want to publish slide, so it will appear in your slider.
-2.2 Link the slide. Next to Yes/No select under the slide, you will see an option "Link the slider to". This option allows you to redirect users on click to another post/page or website. 
-2.3 Add image from Media Library. 
-ou can upload images of your Media Library to the slider, by clicking "Add Images" button on the top of your working area. Otherwise, you may upload new files using the "Upload files" tab on the top-left side of your Media Library menu. 
-2.4 Add Image URL. You can also add images providing the absolute link to it. Press Add Image URL, provide the link and press Add button.This will be useful for adding images to the slider without the need of downloading those and uploading again.
-2.5 Add Video. In addition to images, you can instead use videos  withing the slider from YouTube and Vimeo. You should click on Add Video button, provide the link to the video and press Add button. The image associated with the YouTube/Vimeo video will be automatically displayed as a slider image and then the video will be played. 
-2.6 Remove. You can use Remove button to remove the slider image or video.  
-
-For adding additional images, you should press "+" next to the Slide tab.  The Slide tabs can be renamed to make it easier to reach the desired slide within the list, as well as they can be rearranged using drag and drop feature. 
-
-= Step 3:  Adding layers to the slide. =
-There are three types of layers that can be added to the slides: text, image and social button.  
-
-The layer buttons are located on the lower left corner of each slide.  
-
-You can add more than one layer to your content slideshow. These layers can be of different or same type. You can uses flexslider, cycleslider,css3slider all features, create social slider with social layers,  add 3D effect to get Image Rotator or text rotate effects. Rotator feature will be no less interesting wit parallax slider (coinslider/flexslider) or vertical slides.
-
-3.1 Add Text Layer. You can add custom text to be set as layer over the specific slide. This is specifically handy when it comes to testimonial slider or carousel slider options.
-
-Text. Provide the text which will be displayed over the slider image.   
-Link. Provide an absolute URL to which the user will be redirected when pressing on the text layer.   
-Position. Provide the values of x and y axis to position the text layer. In addition you can drag and drop the text layer to a desired position.  
-Size. Define the font size of the text.  
-Color. Select the text color for the text layer.  
-Font family. Choose the font family for the text.  
-Font weight. Choose the font weight for the text from the provided options.  
-Effect in. Apply an effect to the process of putting the animations or layer over the slide.  
-Start- Define the timing when to start the effect.  
-Effect- Select the effect option from the drop-down list.   
-Duration- Define the duration of the effect in ms.  
-Effect out. Apply an effect to the process of taking the layer off the image.   
-Start- Define the timing when to start the effect.  
-Effect- Select the effect option from the drop-down list.   
-Duration- Define the duration of the animation in ms.  
-Padding. Using CSS type values set padding for the text.  
-Background Color. Choose a background color for the text layer.  
-Transparent. Specify the level of transparency for the layer.  
-Border. Choose the border line width, type and color.  
-Radius. Set a radius for the text layer using CSS type values.  
-Shadow. Get a shadow for the text layer using CSS type values.  
-Published. Choose whether to publish the layer or not.  
-
-
-3.2 Add Image Layer. You can add images of various dimensions to be set as layers. This is used when you plan to have photo slideshow, gallery, photo gallery or banner slider options. 
-
  
-Dimensions. Set the dimensions of the image. Note that it will be best to select dimensions which correspond to the ratio of the original image, so that the image will not be distorted.  
-Scale. By checking the box the image will be automatically scaled taking the provided width and keeping the original ratio of the image.  
-Alt. Set the HTML attribute specified in the IMG tag to provide alternate text when an image on a Web page cannot be displayed.  
-Link. Provide an absolute URL to which the user will be redirected when pressing on the image layer.  
-Position. Provide the values of x and y axis to position the image layer. In addition you can drag and drop the layer to a desired position. 
-Transparent. Define the level of transparency for the image layer.  
-Effect in. Apply an effect to the process of putting the layer over the image.  
-Start- Define the timing when to start the effect.  
-Effect- Select the effect option from the drop-down list.  
-Duration- Define the duration of the effect in ms.   
-Effect out. Apply an effect to the process of taking the layer off the image.   
-Start- Define the timing when to start the effect.   
-Effect- Select the effect option from the drop-down list.   
-Duration- Define the duration of the effect in ms.   
-Border. Choose the border line width, type and color.   
-Radius. Set a radius for the image layer using CSS type values.   
-Shadow. Get a shadow for the image layer using CSS type values.   
-Published. Choose whether to publish the layer or not.   
-
-
-3.3 Add Social Button Layer. You can add social media buttons to share the slider images over the popular social networking websites, selecting the relevant button types.    
-
-Position. Provide the values of x and y axis to position the social button layer. In addition you can drag and drop the layer to a desired position.   
-Social button. The button type can be chosen between Google +, Facebook, Twitter, Tumblr and Pinterest buttons.
-Size. Define the size of the added button.  
-Transparent. Define the level of transparency for the social button.  
-Effect in. Apply an effect to the process of putting the layer over the image.  
-Start- Define the timing when to start the effect.  
-Effect- Select the effect option from the drop-down list.  
-Duration- Define the duration of the effect in ms.  
-Effect out. Apply an effect to the process of taking the layer off the image.  
-Start- Define the timing when to start the effect.  
-Effect- Select the effect option from the drop-down list.   
-Duration- Define the duration of the effect in ms.  
-Color. Set the color for the social sharing button.  
-Hover color. Set the color for the social sharing button when hovered.  
-
-3.4 Add Video Layer. You can add YouTube or Vimeo videos as video layers to created wordpress picture slider files. To do so, it is required to provide the link to the video and press Add button. 
-Dimensions. Set the dimensions of the video layer thumbnail image with be used in slider. The thumbnail will appear with a default dimension, which can be further altered.
-Position. Provide the values of x and y axis to position the video thumbnail. In addition you can drag and drop the layer to a desired position. 
-Effect in. Apply an effect which will be used when the video layer appears over the slider.
-Start- Set time for starting the effect on slider.
-Effect - Select the effect option from the drop-down list. 
-Duration- Define the duration of the effect in ms.
-Effect out. Apply an effect which will be used when the video layer disappears from the slider.
-Start- Set time for starting the effect.
-Effect - Select the effect option from the drop-down list. 
-Duration- Define the duration of the effect in ms.
-Autoplay. Choose whether to autoplay the video layer when the layer is added on the slider or not.
-Border. Choose the border line width, type and color.
-Radius. Set a radius for the video layer using CSS type values.
-Shadow. Get a shadow for the video layer using CSS type values.
-Published. Choose whether to publish the layer or not.
-
-= Step 4:  Changing/Modifying Slider Settings. =
-To access the settings you should go to Slider WD>Sliders>Settings tab.   
-
-4.1 Global Settings. You can change the main settings here. The changes will affect only the current slider and not previously created sliders. That is to say the global settings are slider-based.  
-
-Dimensions. Set the maximum dimensions of the slider. The dimension is set to maximum since with smaller displays the slider will be displayed in smaller dimensions due to the responsiveness feature. This will be the constant dimension of the slider regardless of the images.  
-Full width. Choose whether to have the overall slider stretched to the full width of the page, where it is posted or not. The length will be given corresponding to the original ratio of the slider, e.g. if you have it set to 480x300 and the width of the page is 960, then the height of the slider will be 600.
-Background fit. There are three options for inserting the image into a slide. You can choose the relevant option best for you. If you have the image identical to the Dimensions section, then all three will provide the same full covered look of the slider. As for the cases, if the image is smaller/larger than the original one, the views will be a bit different. Let's consider the cases.  
-Cover. The image will get cut from the middle part and will get enlarged to fit the entire background.  
-Fill. The image will get stretched or compressed to the dimensions of the slider.  
-Contain. The image will stay in its original form and the rest of the slider content area will be covered by the slider background.
-Align. Set the alignment of the image within the slider.  
-Effect. Select the slider transition effect which will be applied when shifting from one slider to another. Note, that it is different from the layer effects and does not affect the layer effects.  
-Time Interval. Set the time interval for the change of the sliders.  
-Autoplay. Choose whether to autoplay the sliders or not.  
-Shuffle. Choose whether to have the slides change in a random manner or to keep the original sequence.
-Music. Choose whether to have music/audio track playback with the slider or not.  
-Music URL. Provide the full link to the audio track, which will be used with the slider.  
-Smart Load. Choose whether to have the smart load feature, which will help to have faster load for the first few images of the slider and will process the rest meanwhile.   
-Background color. Select a background color for the slider, as well as its transparency level.
-Border. Set the border width, type, as well as the color for the slider.  
-Border radius. Set the border radius using CSS type values.   
-Margin. Set a margin for the slider in pixels.   
-Shadow. Set a slider shadow using CSS type values.   
-Right click protection. Choose whether to have right click protection for avoiding the slider image download of or not.    
-Layer out on next. Choose whether to have the layer effect out regardless of the timing between the hit to the next slide or skip the effect out and get to the next slider image.   
-Published. Choose whether to publish the mentioned slider or not.  
-
-4.2 Navigation. You can change the style, colors and dimensions for the navigation buttons or completely remove the navigation buttons from the slider.   
-
-Next/ Previous buttons. Choose whether to display Previous and Next buttons within the slider or not.  
-Next/ Previous buttons. Choose whether to display Play and Pause buttons within the slider or not.   
-Show Navigation buttons. Select between the option of always displaying the navigation buttons or only when hovered.   
-Next/ Previous buttons style. Choose the style of the button you prefer to have as navigation buttons for the slider.   
-Next/ Previous buttons size. Set the dimensions for the right/left buttons of the slider.  
-Play / Pause button size. Set the dimensions for the play/pause buttons of the slider.  
-Buttons color. Select a color for the navigation buttons.  
-Hover color. Select a hover color for the navigation buttons.  
-Border . Select the type, size, as well as the color of border for the navigation buttons.   
-Border radius. Set border radius for the navigation buttons using CSS type values.  
-Background color. Select the background color for the navigation buttons using the color picker. In addition you can set the transparency level of the background for the slider.   
-
-4.3 Bullets. In addition to navigation buttons, you can also use bullets for the navigation within the slider images most likely used for the slideshow display of the slider. Upon hitting the bullet the slider image  will be shifted to the next image in the slide show in the corresponding position. This turns the best slider plugin into slideshow manager. Slideshow plugin currently also uses lightbox option to display jquery slideshows in pop-up. This turns this revolutions slider into a great choice among wordpress slideshow, javascript slideshow and jquery slider options available in the market.
-
-Enable bullets. Choose whether to have slider naviagation bullets or not.  
-Position. Select the position for the slider navigation bullets.  
-Bullet style. Choose the style for the slider bullets from provided 5 options.  
-Size. Define the size of the navigation bullets.  
-Color. Select the color for the navigation bullets.  
-Active color. Select the color for the bullet, which is currently displaying a corresponding slider image.   
-Margin. Set the margin for the navigation bullets in pixels.   
-
-4.4 Filmstrip. You can add a filmstrip for this wordpress responsive slider images.This way the entire list of the slider images will be displayed and the user can navigate immidiately to the desired slider image. Note that in case of fullscreen slider and 3D slider  options this will turn into more of thumbnail slider, since the image icons will be smaller. 
-
-Enable filmstrip. Choose whether to have thumbnails of the slides displayed as a filmstrip or not.   
-Position. Set the position of the filmstrip between 4 possible slides options.    
-Thumbnail dimensions. Define the dimensions of the filmstrip thumbnails.   
-Background color. Select the background color for the filmstrip.   
-Thumbnail margin. Set the margin for the thumbnails in pixels.   
-Active border. The thumbnail for the currently displayed image will have a border. You can set its size, type and color.   
-Deactive transparency. You can set a transparency level for the inactive filmstrip items.   
-
-4.5 Timer Bar. You can add a bar displaying the timing sidebar left to switching to the next slide. This is commonly used when using autoplay for the slider, plus it kind of adds animation to product slider or posts slider (to get featured-content-slider) which are lacking active data. When the user presses next button the autoplay is being automatically disabled and auto change is being continued with the next slide.  
-
-Enable timer bar. Choose whether to display a timer bar over the slider images or not.   
-Type. Choose the type of the timer bar to be used within the slider.   
-Size.  Define the size of the timer bar in pixels.   
-Color. Select the color and the transparency level of the timer bar.   
-
-4.6 Watermark. You can add watermark over the slider images both in the forms of text and images.   
-
-Please note that the Fill and Contain options of the slider will work fine with Watermark option regardless of the slider image dimensions, whereas for the Cover option you should have the slider image identical to the size set in the Dimensions setting. If you have uploaded the image with another dimension, you will need to resize the image and upload it again.   
-
-Watermark Type.  Choose what kind of watermark you want to use with the slider from provided 2 options (text, image) or not to use watermarks over your slides. This is an alternative option for creating a copyright layer slider. Watermark layers allow keeping up the author rides for the images and any content filled in you responsive image slider.   
-Text
-*   Watermark text. Provide the text which will be displayed over the coin slider slides.   
-*   Watermark font size. Specify the font size of the watermark in pixels for the text slider.  
-*   Watermark font style. Specify the font family for the watermark text.   
-*   Watermark color. Select the watermark text font color, as well as the watermark transparency using CSS type values.   
-*   Watermark position. Choose the positioning of the watermark from the available 9 options.   
-Image
-*   Watermark URL. Provide the absolute URL of the image which will be used for the watermark. Please note that only .png images are supported.    
-*   Watermark image size. Define the size (in percentage for the responsive look) of the image used for the watermark.    
-*   Watermark position. Choose the positioning of the watermark from the available 9 options.    
-
-4.7 CSS. You can add custom CSS in the box below to apply custom changes to the css3 slider. The changes will override the original styles coming as default with the slider.   
-
-Note that you should consider the fact that this is only applicable for content slideshow and jquery slideshow, custom video slider options such as youtube slider and vimeo slider cannot be used for this, since it is a video slider integration, we do not copy any content from external sources. Free video slider and free video slideshow options are also not included. Those come with pro version only.
-
-
-Step 5: Publishing the created Slider.   
-To insert the Slider into a Page or a Post:   
-
-You can insert the created Slider into a page or post. Go to the mentioned Post or Page. Here you will see "Insert Slider" button with a Slider icon. Press the button, Select the slider and press Insert.   
-
-In addition, you can insert the shortcode of the slider manually. The corresponding shortcode is displayed next to the created slider in Slider WD>Sliders section under Shortcode column.  
-
-To insert the Javascriipt Slider within the Theme.   
-
-You can insert the created image slideshow Slider into the theme calling it with PHP function. This feature is commonly used for adding the javascript slider code to header.php for displaying the slider within the header position of the website. You can find the function located in Slider WD>Sliders section under PHP function column.    
-
-To insert the Slider as a widget.  
-
-Go to Appearance>Widgets>Slider. Select a position for the slider widget and press Save button. Then provide the title for the slider and select the corresponding slider using the drop-down list. The widget slider is ready to go. Note that youtube slideshow, vimeo slideshow and overall video slideshow are also supported with widget slideshow.
-
-4.7 Carousel Slider.
-You can display the wp slider images in a carousel view, which displays a larger image within the center and descending size carousel images before and after the main image.
-Carousel. Choose whether to use carousel display of slider or not.
-Number of images for slider carousel. Define the number of visible images whenever using carousel slider.
-Carousel image ratio. Define the proportions between the main image and images preceding and following the main image on the slider.
-Container fit. If you activate the option the distance between the images will be identical so that the images fill the container, otherwise the distance between the images will depend on the ratio.
-Fixed Width. Define the maximum width of the slider display. Not that this feature is supported only for cases if you do not want to have fullwidth slider. Note that this is great when you have horizontal slider or vertical slider options.
-
-
-= Step 5: Publishing the created Slider. =
-To insert the Slider into a Page or a Post: 
-You can insert the created Slider into a page or post. Go to the Post or Page. Here you will see “Insert Slider” button with a Slider icon. Press the button, Select the slider and press Insert.
-In addition, you can insert the shortcode manually. The corresponding shortcode is displayed next to the created slider in Slider WD>Sliders section under Shortcode column.
-To insert the Slider within the Theme.
-You can insert the created  jquery slider into the theme calling it with PHP function. This feature is commonly used for adding the javascript code to header.php for displaying the slider within the header position of the website. You can find the function located in Slider WD>Sliders section under PHP function column.
-To insert the Slider as a widget.
-Go to Appearance>Widgets>Slider. Select a position for the slider widget and press Save button. Then provide the title for the slider and select the corresponding slider using the drop-down list. Note that as a result you wil get fully responsive image slider with responsive pictures and swipe opportunity for mobile slider (touch slider). Thus there is no difference if you choose to add it as a page shortcode of widget.
-
-= Step 6: Importing/Exporting Sliders. =
-If you plan to move the sliders from one site to another you can use this feature. Make sure that you have installed the Slider WD to the destination site.
-
-Exporting Slider
-Select the Slider you want to export using the checkbox and press Export slider button. You can choose whether to transfer the slider with pictures and settings, or only the settings of the picture slider adding your own slides afterwards.
-
-Importing Slider
-Select the file of the content slider/image slider to import and press Import button. The slider will be added automatically.
-
-Try demo sliders
-[DOWNLOAD LAYER SLIDER](https://demo.10web.io/layer-slider)         
-[DOWNLOAD LAYER SLIDER 2](https://demo.10web.io/slider-pro-2)         
-[DOWNLOAD MULTY LAYER SLIDER](https://demo.10web.io/slide1)         
-[DOWNLOAD NEWS SITE OR BLOG SLIDER](https://demo.10web.io/news-site-or-blog)         
-[DOWNLOAD POST FEED DEMO SLIDER](https://demo.10web.io/post-feed-demo)         
-[DOWNLOAD ONLINE STORE SLIDER](https://demo.10web.io/online-store)         
-[DOWNLOAD PORTFOLIO SLIDER](https://demo.10web.io/portfolio)         
-[DOWNLOAD 3D FULL-WIDTH SLIDER](https://demo.10web.io/slide2)         
-[DOWNLOAD FILMSTRIP SLIDER](https://demo.10web.io/slide3)         
-[DOWNLOAD ZOOM EFFECT SLIDER](https://demo.10web.io/slide4)       
-[DOWNLOAD CAROUSEL SLIDER](https://demo.10web.io/wordpress-slider-wd-carusel)         
-[DOWNLOAD PARALLAX SLIDER](https://demo.10web.io/parallax)       
-[DOWNLOAD HOTSPOT SLIDER](https://demo.10web.io/hotspot)       
-[DOWNLOAD VIDEO SLIDER SLIDER](https://demo.10web.io/video-slider)     

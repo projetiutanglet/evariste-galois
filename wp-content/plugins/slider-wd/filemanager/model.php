@@ -60,8 +60,7 @@ class FilemanagerModel {
 
     $components = array();
     $component = array();
-    global $WD_S_UPLOAD_DIR;
-    $component['name'] = $WD_S_UPLOAD_DIR;
+    $component['name'] = WDS()->upload_dir;
     $component['path'] = $path;
     $components[] = $component;
     for ($i = 0; $i < count($dir_names); $i++) {
@@ -79,8 +78,8 @@ class FilemanagerModel {
   }
 
   function get_files($sort_by, $sort_order) {
-    $icons_dir_path = WD_S_DIR . '/filemanager/images/file_icons';
-    $icons_dir_url = WD_S_URL . '/filemanager/images/file_icons';
+    $icons_dir_path = WDS()->plugin_dir . '/filemanager/images/file_icons';
+    $icons_dir_url = WDS()->plugin_url . '/filemanager/images/file_icons';
     $valid_types = explode(',', (isset($_REQUEST['extensions']) ? esc_html($_REQUEST['extensions']) : 'jpg,jpeg,png,gif'));
     $image_for = (isset($_REQUEST['image_for']) ? esc_html($_REQUEST['image_for']) : 'add_slides');
     $dir = (isset($_REQUEST['dir']) ? '/' . htmlspecialchars_decode(stripslashes(esc_html(str_replace('../', '', $_REQUEST['dir']))), ENT_COMPAT | ENT_QUOTES) : '');

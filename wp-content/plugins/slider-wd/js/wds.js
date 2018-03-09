@@ -1675,9 +1675,22 @@ function wds_media_uploader_add_slide(e, id, multiple) {
     multiple: multiple,
     id: id
   });
+
   // Insert files to slider.
-  custom_uploader.on('insert', function() {
-    var attachment = custom_uploader.state().get('selection').toJSON();
+  custom_uploader.on('insert select', function() {
+    var attachment = [];
+    if ( custom_uploader.state().id == "embed" ) {
+      if ( custom_uploader.state().changed.type != "image" ) {
+        alert(wds.file_not_supported);
+        return;
+      }
+      // Insert image from URL.
+      attachment.push({'url': custom_uploader.state().props.attributes.url, 'mime': 'image/jpeg'});
+    }
+    else {
+      attachment = custom_uploader.state().get('selection').toJSON();
+    }
+
     var supported_image_mime = ['image/jpeg', 'image/png', 'image/gif'];
     var supported_video_mime = ['video/mp4', 'audio/ogg', 'video/webm'];
     var supported_audio_mime = ['audio/mpeg3', 'audio/ogg', 'audio/aac', 'audio/m4a', 'audio/f4a', 'audio/mp4'];
@@ -3884,7 +3897,7 @@ function wds_get_checked() {
     ids_string = 'all';
   }
   else {
-    jQuery("#sliders_form input[type='checkbox']").each(function () {
+    jQuery("#wds_sliders_form input[type='checkbox']").each(function () {
       if (jQuery(this).is(':checked')) {
         var id = jQuery(this).attr("id");
         if (id != 'check_all' && id != 'check_all_items' && id != 'imagesexport') {
@@ -3935,6 +3948,8 @@ function wds_import() {
 }
 function wds_merge() {
   var flag = true;
+  jQuery('#bulk-action-selector-top').prop('selectedIndex',0);
+  jQuery('#select_slider_merge').prop('selectedIndex',0);
   jQuery('input[id^="check_"]').each(function() {
     var id = jQuery(this).attr("id").replace("check_", "");
     if (jQuery(this).is(':checked')) {
@@ -4117,12 +4132,12 @@ function remove_callback_item(that) {
 	jQuery("#callback_list").find("option[value=" + jQuery(that).prev().attr("name") + "]").show();
 }
 
-function wds_bulk_actions(that) {
+function wd_bulk_action(that) {
   var action = jQuery(that).val();
   if (action == 'export') {
     wds_export();
   }
-  else if (action == 'merge_sliders') {
+  else if (action == 'merge') {
    wds_merge();
    return false;
   }
@@ -4133,7 +4148,7 @@ function wds_bulk_actions(that) {
       }
     }
     spider_set_input_value('task', action);
-    jQuery('#sliders_form').submit();     
+    jQuery('#wds_sliders_form').submit();
   }
   else {
     return false;
@@ -4272,4 +4287,35 @@ function showHowToTabBlock(){
     var phpcode   = '<?php wd_slider('+ id +'); ?>';
     jQuery(".wds_howto_content .wds_howto_shortcode").val(shortcode);
     jQuery(".wds_howto_content .wds_howto_phpcode").val(phpcode);
+}
+
+/**
+ * Search on input enter.
+ *
+ * @param e
+ * @param that
+ * @returns {boolean}
+ */
+function input_search(e, that) {
+  var key_code = (e.keyCode ? e.keyCode : e.which);
+  if (key_code == 13) { /*Enter keycode*/
+    search(that);
+    return false;
+  }
+}
+
+/**
+ * Search.
+ *
+ * @param that
+ */
+/**
+ * Search.
+ *
+ * @param that
+ */
+function search(that) {
+  var form = jQuery(that).parents("form");
+  form.attr("action", window.location + "&paged=1&s=" + jQuery("input[name='s']").val());
+  form.submit();
 }

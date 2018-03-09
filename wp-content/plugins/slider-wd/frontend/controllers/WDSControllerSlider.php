@@ -9,10 +9,10 @@ class WDSControllerSlider {
   }
 
   public function display( $id, $from_shortcode = 0, $wds = 0 ) {
-    require_once WD_S_DIR . "/frontend/models/WDSModelSlider.php";
+    require_once WDS()->plugin_dir . "/frontend/models/WDSModelSlider.php";
     $model = new WDSModelSlider();
 
-    require_once WD_S_DIR . "/frontend/views/WDSViewSlider.php";
+    require_once WDS()->plugin_dir . "/frontend/views/WDSViewSlider.php";
     $view = new WDSViewSlider($model);
     
     $view->display( $id, $from_shortcode, $wds );

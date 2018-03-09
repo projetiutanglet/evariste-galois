@@ -23,10 +23,10 @@ class WDSControllerWDSShortcode {
   }
 
   public function display() {
-    require_once WD_S_DIR . "/admin/models/WDSModelWDSShortcode.php";
+    require_once WDS()->plugin_dir . "/admin/models/WDSModelWDSShortcode.php";
     $model = new WDSModelWDSShortcode();
 
-    require_once WD_S_DIR . "/admin/views/WDSViewWDSShortcode.php";
+    require_once WDS()->plugin_dir . "/admin/views/WDSViewWDSShortcode.php";
     $view = new WDSViewWDSShortcode($model);
     $view->display();
   }

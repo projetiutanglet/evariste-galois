@@ -19,7 +19,7 @@ else {
   die('Access Denied');
 }
 
-require_once(WD_S_DIR . '/filemanager/controller.php');
+require_once(WDS()->plugin_dir . '/filemanager/controller.php');
 $controller = new FilemanagerController();
 
 $upload_handler = new wds_UploadHandler(array(

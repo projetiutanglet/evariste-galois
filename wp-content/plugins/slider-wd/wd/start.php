@@ -2,9 +2,7 @@
     if ( ! defined( 'ABSPATH' ) ) {
         exit;
     }	
-    define( 'TEN_WEB_API_PLUGIN_DATA_PATH', 'https://api.web-dorado.com/v2/_id_/plugindata' );
-    define( 'TEN_WEB_SUBSCRIBE_URL', 'https://core.10web.io/api/wp-subscribe' );
-
+    define( 'DORADO_WEB_API_PLUGIN_DATA_PATH', 'https://api.web-dorado.com/v2/_id_/plugindata' );
     require_once dirname( __FILE__ ) . '/config.php';
 
     /**
@@ -16,6 +14,7 @@
      * plugin_main_file;   
      * description;  
      * plugin_features; 
+     * user_guide; 
      * video_youtube_id; 
      * plugin_wd_url; 
      * plugin_wd_demo_link; 
@@ -27,12 +26,12 @@
      * custom_post; 
      */       
             
-    function ten_web_init( $options ) {
+    function dorado_web_init( $options ) { 
     
         // load files
         require_once dirname( __FILE__ ) . '/wd.php';
 
-        $wd = new TenWeb();
+        $wd = new DoradoWeb();
         $wd->wd_init( $options );
 
     }

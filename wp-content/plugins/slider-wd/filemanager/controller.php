@@ -11,12 +11,11 @@ class FilemanagerController {
   public $uploads_url;
 
   public function __construct() {
-    global $WD_S_UPLOAD_DIR;
-    $this->uploads_dir = ABSPATH . $WD_S_UPLOAD_DIR;
+    $this->uploads_dir = ABSPATH . WDS()->upload_dir;
     if (file_exists($this->uploads_dir) == FALSE) {
       mkdir($this->uploads_dir);
     }
-    $this->uploads_url = site_url() . '/' . $WD_S_UPLOAD_DIR;
+    $this->uploads_url = site_url() . '/' . WDS()->upload_dir;
   }
 
   public function execute() {
@@ -38,10 +37,10 @@ class FilemanagerController {
   }
 
   public function display() {
-    require_once WD_S_DIR . '/filemanager/model.php';
+    require_once WDS()->plugin_dir . '/filemanager/model.php';
     $model = new FilemanagerModel($this);
 
-    require_once WD_S_DIR . '/filemanager/view.php';
+    require_once WDS()->plugin_dir . '/filemanager/view.php';
     $view = new FilemanagerView($this, $model);
     $view->display();
   }
@@ -64,7 +63,7 @@ class FilemanagerController {
     $new_dir_path = $this->esc_dir($new_dir_path);
 
     if (file_exists($new_dir_path) == true) {
-      $msg = __("Directory already exists.", 'wds');
+      $msg = __("Directory already exists.", WDS()->prefix);
     }
     else {
       $msg = '';
@@ -112,23 +111,23 @@ class FilemanagerController {
     $msg = '';
 
     if (file_exists($file_path) == false) {
-      $msg = __("File doesn't exist.", 'wds');
+      $msg = __("File doesn't exist.", WDS()->prefix);
     }
     elseif (is_dir($file_path) == true) {
       if (rename($file_path, $cur_dir_path . '/' . sanitize_file_name($file_new_name)) == false) {
-        $msg = __("Can't rename the file.", 'wds');
+        $msg = __("Can't rename the file.", WDS()->prefix);
       }
     }
     elseif ((strrpos($file_name, '.') !== false)) {
       $file_extension = substr($file_name, strrpos($file_name, '.') + 1);
       if (rename($file_path, $cur_dir_path . '/' . $file_new_name . '.' . $file_extension) == false) {
-        $msg = __("Can't rename the file.", 'wds');
+        $msg = __("Can't rename the file.", WDS()->prefix);
       }
       rename($thumb_file_path, $cur_dir_path . '/thumb/' . $file_new_name . '.' . $file_extension);
       rename($original_file_path, $cur_dir_path . '/.original/' . $file_new_name . '.' . $file_extension);
     }
     else {
-      $msg = __("Can't rename the file.", 'wds');
+      $msg = __("Can't rename the file.", WDS()->prefix);
     }
     $_REQUEST['file_names'] = '';
 
@@ -168,7 +167,7 @@ class FilemanagerController {
       $thumb_file_path = $cur_dir_path . '/thumb/' . $file_name;
       $original_file_path = $cur_dir_path . '/.original/' . $file_name;
       if (file_exists($file_path) == false) {
-        $msg = __("Some of the files couldn't be removed.", 'wds');
+        $msg = __("Some of the files couldn't be removed.", WDS()->prefix);
       }
       else {
         $this->remove_file_dir($file_path);
@@ -226,7 +225,7 @@ class FilemanagerController {
           $file_name = str_replace('../', '', $file_name);
           $src = $src_dir . '/' . $file_name;
           if (file_exists($src) == false) {
-            $msg = __("Failed to copy some of the files.", 'wds');
+            $msg = __("Failed to copy some of the files.", WDS()->prefix);
             $msg .= $file_name;
             continue;
           }
@@ -256,7 +255,7 @@ class FilemanagerController {
           }
 
           if (!$this->copy_file_dir($src, $dest)) {
-            $msg = __("Failed to copy some of the files.", 'wds');
+            $msg = __("Failed to copy some of the files.", WDS()->prefix);
           }
           if (!is_dir($src_dir . '/' . $file_name)) {
             $this->copy_file_dir($thumb_src, $thumb_dest);
@@ -284,7 +283,7 @@ class FilemanagerController {
               }
             }
             if ((file_exists($src) == false) || (file_exists($dest) == true) || (!rename($src, $dest))) {
-              $msg = __("Failed to move some of the files.", 'wds');
+              $msg = __("Failed to move some of the files.", WDS()->prefix);
             }
             if (!is_dir($src_dir . '/' . $file_name)) {
               rename($thumb_src, $thumb_dest);

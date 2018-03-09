@@ -1959,26 +1959,25 @@ function wds_resize_slider( wds ) {
       slide_width = slide_orig_width;
     }
     ratio = slide_width / (slide_orig_width + 2 * wds_params[wds].wds_glb_margin);
-  
   } 
   if (full_width == '1') {
     ratio = jQuery(window).width() / slide_orig_width;
-    slide_orig_width = jQuery(window).width();  
+    slide_orig_width = jQuery(window).width();
     if (wds_params[wds].auto_height) {
       slide_orig_height = jQuery(window).height();
     }
     else { 
-      slide_orig_height = wds_params[wds].image_height + wds_params[wds].filmstrip_height * slide_orig_width / wds_params[wds].image_width;
-    
+      //slide_orig_height = wds_params[wds].image_height + wds_params[wds].filmstrip_height * slide_orig_width / wds_params[wds].image_width;
+      slide_orig_height = (wds_params[wds].filmstrip_height + wds_params[wds].image_height) * ratio;
     }
     slide_width = jQuery(window).width();
     wds_full_width( wds );
   }
   else if ( full_width == "2" ) {
-    slide_orig_width = jQuery("#wds_container1_"+wds).parent().width();
-    ratio = wds_params[wds].image_width/wds_params[wds].image_height;
+    slide_orig_width = wds_get_overall_parent(jQuery("#wds_container1_"+wds));
+    ratio = slide_orig_width / wds_params[wds].image_width;
    // slide_orig_height = wds_params[wds].image_height + wds_params[wds].filmstrip_height * slide_orig_width / wds_params[wds].image_width;
-    slide_orig_height = (wds_params[wds].filmstrip_height+slide_orig_width)/ratio - (2 * wds_params[wds].wds_glb_margin);
+    slide_orig_height = (wds_params[wds].filmstrip_height + wds_params[wds].image_height) * ratio - (2 * wds_params[wds].wds_glb_margin);
   }
   else if ( parseInt(wds_params[wds].full_width_for_mobile) ) {
     jQuery(".wds_slideshow_image_wrap_"+wds).removeAttr("style");

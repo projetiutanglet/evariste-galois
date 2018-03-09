@@ -1,312 +1,3 @@
-/*10web banner*/
-.tenweb_banner{
-  padding: 12px 30px 11px;
-  background:#323a45;
-  width: calc(100% - 20px);
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  display:table;
-}
-.tenweb_banner > div{
-  display:table-cell;
-  vertical-align:middle;
-}
-.tenweb_banner *{
-  color:#ffffff;
-}
-
-.tenweb_banner > div{
-  text-align:center;
-}
-
-.tenweb_banner .tenweb_banner-center > div{
-  text-align:center;
-}
-.tenweb_and {
-  font-size: 26px;
-  font-weight: lighter;
-  text-align:center;
-  width:130px;
-  line-height: 2.7;
-}
-.tenweb_desc_h3 {
-  font-weight: normal;
-  font-size: 19px;
-  margin: 0 0 8px;
-}
-.tenweb_services {
-  line-height: 1.8;
-}
-.tenweb_services span {
-  position: relative;
-  display: inline-block;
-  margin: 0 16px;
-  font-size: 14px;
-  padding-left: 37px;
-}
-.tenweb_services span:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 28px;
-  height: 24px;
-  background-repeat: no-repeat;
-  background-position: 0 top;
-}
-.tenweb_banner-right a.button {
-  background: #367bf2;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 14px;
-  padding: 10px 12px;
-  line-height: 1;
-  border-radius: 2px;
-  display: inline-block;
-  border: 0 !important;
-  box-shadow: none;
-  height: auto;
-}
-.tenweb_banner-right a.button:visited,
-.tenweb_banner-right a.button:active,
-.tenweb_banner-right a.button:hover {
-  background: #367bf2;
-  color: #ffffff;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
-}
-
-.tenweb_services span.pro-plugins:before {
-  content: "";
-  background-image: url(../images/banner/pro-plugins.svg);
-}
-.tenweb_services span.themes:before {
-  content: "";
-  background-image: url(../images/banner/header.svg);
-  background-position: 0px -111px;
-  background-size: 82px;
-}
-.tenweb_services span.backup:before {
-  content: "";
-  background-image: url(../images/banner/header.svg);
-  background-position: 0 -180px;
-  background-size: 76px;
-}
-.tenweb_services span.optimizer:before {
-  content: "";
-  background-image: url(../images/banner/header.svg);
-  background-position: 0 -24px;
-  background-size: 81px;
-}
-.tenweb_services span.dashboard:before {
-  content: "";
-  background-image: url(../images/banner/header.svg);
-  background-position: 0 -81px;
-  background-size: 81px;
-}
-.tenweb_services span.seo:before {
-  content: "";
-  background-image: url(../images/banner/header.svg);
-  background-position: 0 -133px;
-  background-size: 79px;
-}
-/*.tenweb_banner .tenweb_banner-center,
-.tenweb_banner .tenweb_services{
-    flex-grow: 1;
-}*/
-.tenweb_plugin_logo{
-  width:69px;
-  height:49px;
-  background:url(../images/banner/slider-logo-white.svg);
-  margin:0 auto 10px;
-  background-size:cover;
-}
-.tenweb_plugin_name {
-  text-transform: uppercase;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.tenweb_banner_logo{
-  width: 93px;
-  height: 25px;
-  margin: 0 auto 9px;
-  background-image: url(../images/banner/header.svg);
-  background-size: 93px;
-  background-position: 0px 0px;
-}
-.tenweb_banner .mobile{
-  display:none;
-}
-
-.tenweb_desc {
-  line-height: 1.6;
-}
-.tenweb_services .tenweb_desc_h3{
-  display:none;
-}
-@media only screen and (min-width: 1620px) {
-  .tenweb_desc {
-    width: 415px;
-  }
-  .tenweb_banner .tenweb_banner-center .wd-clear div{
-    text-align:center;
-    float:left;
-  }
-  .tenweb_and {
-    font-size: 34px;
-    font-weight: lighter;
-    line-height: 2;
-
-  }
-  .tenweb_banner .tenweb_banner-center .wd-clear {
-    padding-top: 11px;
-  }
-  .tenweb_services {
-    max-width: 100%;
-  }
-  .tenweb_services span {
-    font-size: 15px;
-  }
-  .tenweb_services {
-    line-height: 2;
-  }
-
-
-}
-@media only screen and (max-width: 1620px){
-  .tenweb_and {
-    width: 100px;
-  }
-}
-@media only screen and (max-width: 1400px){
-  .tenweb_banner .tenweb_desc {
-    display:none !important;
-  }
-  .tenweb_services .tenweb_desc_h3.screen{
-    display:block;
-    line-height: 1.4;
-  }
-}
-@media only screen and (max-width: 1270px){
-  .tenweb_and,
-  .tenweb_services .tenweb_desc_h3.screen	{
-    display:none !important;
-  }
-  .tenweb_banner-left {
-    min-width: 110px;
-  }
-  .tenweb_services .tenweb_desc_h3.mobile{
-    display:block;
-  }
-
-  .tenweb_banner .tenweb_banner-center .wd-clear {
-    width: 100%;
-  }
-
-  .tenweb_plugin_logo {
-    width: 52px;
-    height: 37px;
-  }
-  .tenweb_plugin_name {
-    text-transform: none;
-    font-size: 14px;
-  }
-  .tenweb_banner {
-    padding: 12px 21px 11px;
-  }
-  .tenweb_banner-left {
-    max-width: 140px;
-  }
-}
-@media only screen and (max-width: 1120px){
-  .tenweb_services {
-    padding: 0 10px;
-  }
-  .tenweb_banner {
-    padding: 12px 21px 11px;
-    text-align: center;
-  }
-  .tenweb_banner-right a.button {
-    letter-spacing: 0px;
-    font-size: 11px;
-    padding: 9px 7px;
-  }
-
-}
-@media only screen and (max-width: 1024px){
-  .tenweb_desc_h3 {
-    font-size: 17px;
-  }
-
-}
-@media only screen and (max-width:910px){
-  .tenweb_banner {
-    padding: 12px 10px 11px;
-    text-align: center;
-  }
-  body:not(.auto-fold) 	.tenweb_banner > div {
-    display: block;
-  }
-  body:not(.auto-fold) .tenweb_banner-left {
-    margin: 0 auto;
-    max-width: 214px;
-  }
-  body:not(.auto-fold) .tenweb_services {
-    margin: 10px 0 20px;
-  }
-
-  body:not(.auto-fold) .tenweb_services span:before {
-    content: "";
-    top: 6px;
-    width: 20px;
-    height: 16px;
-  }
-  body:not(.auto-fold) .tenweb_services span.pro-plugins:before {
-    content: "";
-    background-size: contain;
-  }
-  body:not(.auto-fold) .tenweb_services span.themes:before {
-    content: "";
-    background-position: 0 -77px;
-    background-size: 57px;
-  }
-  body:not(.auto-fold) .tenweb_services span.backup:before {
-    content: "";
-    background-position: 0 -130px;
-    background-size: 55px;
-  }
-  body:not(.auto-fold) .tenweb_services span.optimizer:before {
-    content: "";
-    background-position: 0 -15px;
-    background-size: 55px;
-  }
-  body:not(.auto-fold) .tenweb_services span.dashboard:before {
-    content: "";
-    background-position: 0 -55px;
-    background-size: 55px;
-  }
-  body:not(.auto-fold) .tenweb_services span.seo:before {
-    content: "";
-    background-position: 0 -84px;
-    background-size: 50px;
-  }
-}
-@media only screen and (max-width:768px){
-  .tenweb_banner > div {
-    display: block;
-  }
-  .tenweb_banner-left {
-    margin: 0 auto;
-    max-width: 214px;
-  }
-  .tenweb_services {
-    margin: 10px 0 20px;
-  }
-}
-/* 10web banner */
-
 .wds_form .titles {
   font-size: 23px;
   font-weight: normal;
@@ -323,7 +14,7 @@
   margin: 0;
 }
 
-#sliders_form table thead th {
+#wds_sliders_form table thead th {
   line-height: 1;
 }
 
@@ -2277,11 +1968,11 @@ th.sorted a span {
   padding: 0;
 }
 
-#sliders_form .wd-group label {
+#wds_sliders_form .wd-group label {
   margin-right: 5px;
 }
 
-#sliders_form .wd-group input[type=radio] {
+#wds_sliders_form .wd-group input[type=radio] {
   margin: 0px;
 }
 
@@ -2484,4 +2175,16 @@ input[name="embed_url"]::-moz-placeholder {
 }
 input[name="embed_url"]:-ms-input-placeholder {
   color: #cccccc;
+}
+.media-embed .embed-media-settings .setting,
+.media-embed .embed-link-settings {
+  display: none;
+}
+
+div.wd-notice-margin {
+  margin: 5px 0;
+}
+.wd-form .wd-check-all {
+    float: left;
+    margin: 1px 6px 0 0;
 }

@@ -2,14 +2,14 @@
 
 class WDSControllerUninstall_wds {
   public function __construct() {
-    if ( WD_S_FREE ) {
+    if ( WDS()->is_free ) {
       global $wds_options;
-      if ( !class_exists("TenWebConfig") ) {
-        include_once(WD_S_DIR . "/wd/config.php");
+      if ( !class_exists("DoradoWebConfig") ) {
+        include_once(WDS()->plugin_dir . "/wd/config.php");
       }
-      $config = new TenWebConfig();
+      $config = new DoradoWebConfig();
       $config->set_options($wds_options);
-      $deactivate_reasons = new TenWebDeactivate($config);
+      $deactivate_reasons = new DoradoWebDeactivate($config);
       $deactivate_reasons->submit_and_deactivate();
     }
   }
@@ -26,19 +26,19 @@ class WDSControllerUninstall_wds {
   }
 
   public function display() { 
-    require_once WD_S_DIR . "/admin/models/WDSModelUninstall_wds.php";
+    require_once WDS()->plugin_dir . "/admin/models/WDSModelUninstall_wds.php";
     $model = new WDSModelUninstall_wds();
 
-    require_once WD_S_DIR . "/admin/views/WDSViewUninstall_wds.php";
+    require_once WDS()->plugin_dir . "/admin/views/WDSViewUninstall_wds.php";
     $view = new WDSViewUninstall_wds($model);
     $view->display();
   }
 
   public function uninstall() { 
-    require_once WD_S_DIR . "/admin/models/WDSModelUninstall_wds.php";
+    require_once WDS()->plugin_dir . "/admin/models/WDSModelUninstall_wds.php";
     $model = new WDSModelUninstall_wds();
 
-    require_once WD_S_DIR . "/admin/views/WDSViewUninstall_wds.php";
+    require_once WDS()->plugin_dir . "/admin/views/WDSViewUninstall_wds.php";
     $view = new WDSViewUninstall_wds($model);
     $view->uninstall();
   }
