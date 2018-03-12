@@ -59,6 +59,7 @@ ol > li:before {
 h1 {
  text-decoration: none;
  font-family: "chalkduster", sans-serif !important;
+ color:purple;
 }
 
 #primary-mono h2 {
@@ -544,6 +545,11 @@ textarea {
  background-color: #bb00bb;
 }
 
+#calendrier .day-with-post:hover {
+ background-color: #dd00dd;
+}
+
+
 #calendrier .day-with-post a {
  color: white;
 }
@@ -553,6 +559,10 @@ textarea {
  width: 25%;
  margin-top: 10px;
  vertical-align: top;
+}
+
+#calendrier-bleue .day-with-post:hover {
+ background-color: #60c0ea;
 }
 
 #calendrier-bleue .day-with-post a {
@@ -583,6 +593,10 @@ textarea {
  background-color: white;
 }
 
+#calendrier-jaune .day-with-post:hover {
+ background-color: #d6d262;
+}
+
 #calendrier-jaune .day-with-post a {
  color: white;
 }
@@ -611,6 +625,10 @@ textarea {
  background-color: white;
 }
 
+#calendrier-verte .day-with-post:hover {
+ background-color: #6eea77;
+}
+
 #calendrier-verte .day-with-post a {
  color: white;
 }
@@ -637,6 +655,10 @@ textarea {
 
 #calendrier-verte td.pad {
  background-color: white;
+}
+
+#calendrier-orange .day-with-post:hover {
+ background-color: #f18e44;
 }
 
 #calendrier-orange th {
@@ -668,6 +690,9 @@ textarea {
  background-color: white;
 }
 
+#calendrier-vert-deau .day-with-post:hover {
+background-color:  #83c7a3;
+}
 
 #calendrier-vert-deau .day-with-post a {
  color: white;
@@ -697,8 +722,6 @@ textarea {
  background-color: white;
 }
 
-
-/*--------------------------------BARRE DE RECHERCHE----------------------*/
 
 /*---------------------------DERNIER ARTICLE DU MOMENT--------------------*/
 

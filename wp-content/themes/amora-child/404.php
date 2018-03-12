@@ -12,17 +12,15 @@ get_header(); ?>
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! Cette page ne peut pas être trouvée.', 'amora' ); ?></h1>
+					<h1 class="page-title"><?php esc_html_e( 'Oops! Les enfants ont cassé la page !', 'amora' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php esc_html_e( 'Il semble que rien n\'a été trouvé à cet endroit. Peut-être essayer une recherche ci-dessous?', 'amora' ); ?></p>
+					<p><?php esc_html_e( 'Il semble que rien n\'a été trouvé à cet endroit. Peut-être essayer une recherche ci-dessous ?', 'amora' ); ?></p>
 
-					<?php get_search_form(); ?>
+					<?php WP_Advanced_Search(); ?>
 
-					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 
-					<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
 
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->

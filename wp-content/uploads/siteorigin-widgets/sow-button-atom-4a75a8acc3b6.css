@@ -1,4 +1,4 @@
-.so-widget-sow-button-atom-04647aa9f8bb .ow-button-base a {
+.so-widget-sow-button-atom-4a75a8acc3b6 .ow-button-base a {
   -ms-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -22,16 +22,12 @@
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.065);
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
 }
-.so-widget-sow-button-atom-04647aa9f8bb .ow-button-base a .sow-icon-image,
-.so-widget-sow-button-atom-04647aa9f8bb .ow-button-base a [class^="sow-icon-"] {
-  margin: 0;
-}
-.so-widget-sow-button-atom-04647aa9f8bb .ow-button-base a:visited,
-.so-widget-sow-button-atom-04647aa9f8bb .ow-button-base a:active,
-.so-widget-sow-button-atom-04647aa9f8bb .ow-button-base a:hover {
+.so-widget-sow-button-atom-4a75a8acc3b6 .ow-button-base a:visited,
+.so-widget-sow-button-atom-4a75a8acc3b6 .ow-button-base a:active,
+.so-widget-sow-button-atom-4a75a8acc3b6 .ow-button-base a:hover {
   color: #ffffff !important;
 }
-.so-widget-sow-button-atom-04647aa9f8bb .ow-button-base a.ow-button-hover:hover {
+.so-widget-sow-button-atom-4a75a8acc3b6 .ow-button-base a.ow-button-hover:hover {
   background: #49add7;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #2b95c2), color-stop(1, #49add7));
   background: -ms-linear-gradient(bottom, #2b95c2, #49add7);

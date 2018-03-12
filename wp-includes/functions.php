@@ -5872,13 +5872,12 @@ function page_breadcrumb(){
 	 if (is_page()) {
 	 $ancestors = get_post_ancestors($post);
 
-	 if ($ancestors) {
-    	 $ancestors = array_reverse($ancestors);
-
-        	 foreach ($ancestors as $crumb) {
-        	    echo ' <a href="'.get_permalink($crumb).'">'.get_the_title($crumb).'</a> - ';
-        	 }
-    	 }
+		if ($ancestors) {
+    		$ancestors = array_reverse($ancestors);
+        	foreach ($ancestors as $crumb) {
+        	   echo ' <a href="'.get_permalink($crumb).'">'.get_the_title($crumb).'</a> - ';
+        	}
+    	}
 	 }
 
 	 // Page actuelle
@@ -5932,3 +5931,4 @@ function get_my_month_link($monthlink,$year, $month) {
 }
 
 add_filter( 'month_link', 'get_my_month_link', 1, 3 ); // Where $priority is 1, $accepted_args is 3.
+
