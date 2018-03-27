@@ -12,16 +12,16 @@ get_header(); ?>
 			 <?php page_breadcrumb(); ?>
 
 			<div class="retour-arriere">
-				<a href="javascript:history.go(-1)"> < Retour à la classe
-				<?php $current = explode(' ',get_the_title()) ;
+				<?php $current = explode('/',$_SERVER['REQUEST_URI']) ;
 
-				if (! $current[2]){
-					echo $current[1];
-				}else{
+				echo '<a href="'.(isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]/le-coin-des-parents/".$current[sizeof($current)-3].'">
+					< Retour à la classe ';
 
-					echo $current[1]." ".$current[2];
-				}
-				?></a>
+				if ($current[sizeof($current)-3] == "vert-deau") {
+					echo "vert d'eau </a>";
+				} else {
+					echo $current[sizeof($current)-3]."</a>" ;
+				}?>
 			</div>
 				<!-- Le titre -->
 			<h2>

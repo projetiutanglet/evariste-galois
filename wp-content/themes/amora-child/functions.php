@@ -85,3 +85,9 @@ function get_calendar_activity(){
 	</div>';
 }
 
+// Antispambot
+function asb($content){
+    return preg_replace('/([_a-zA-Z0-9.\-]*@[a-zA-Z0-9]([_a-zA-Z0-9\-]+\.)+[a-zA-Z]{2,10})/e',"antispambot('\\1')",$content);
+}
+add_filter('the_content','asb');
+

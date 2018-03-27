@@ -73,8 +73,9 @@ h1 {
 .entry-content h3 {
  font-family: "schoolboy_samregular", sans-serif !important;
  font-size: 27px;
- color: #82C46C;
+ color: #47992c;
  font-weight: bold;
+ text-decoration: underline;
 }
 
 .entry-content h4 {
@@ -158,8 +159,7 @@ table tbody th {
 /*description sous titre*/
 
 #masthead .container h2.site-description {
- color: #82C46C;
- ;
+ color: purple;
  font-style: italic;
  text-align: right;
  font-family: "schoolboy_samregular", sans-serif !important;
@@ -307,8 +307,10 @@ textarea {
 
 .grille-ligne-item h3 {
  font-family: "schoolboy_samregular", sans-serif !important;
- font-size: 25px;
- color: #82C46C;
+ font-size: 27px;
+ color: #47992c;
+ font-weight: bold;
+ text-decoration: underline;
 }
 
 
@@ -602,11 +604,11 @@ textarea {
 }
 
 #calendrier-jaune .day-with-post {
- background-color: #B7B222;
+ background-color: #e5de0d;
 }
 
 #calendrier-jaune th {
- background-color: #B7B222;
+ background-color: #e5de0d;
  text-align: center;
  color: white;
 }
