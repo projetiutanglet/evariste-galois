@@ -75,6 +75,7 @@ function get_calendar_activity(){
 	        if ($the_query->have_posts()) :
 	             while ($the_query->have_posts()) : $the_query->the_post();
 	              echo '<h3>';
+	              echo get_the_date("l j F Y")." : ";
 	               the_title();
 	               echo '</h3>';
 	                the_content();

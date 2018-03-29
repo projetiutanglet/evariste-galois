@@ -5909,7 +5909,6 @@ function get_my_day_link($daylink,$year, $month, $day) {
     $daylink = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://".$_SERVER["HTTP_HOST"];
     $daylink .= esc_url( add_query_arg( array('Y' => $year, 'M' =>$month, 'D' => $day) ) );
 	return $daylink;
-
 }
 
 add_filter( 'day_link', 'get_my_day_link', 1, 4 ); // Where $priority is 1, $accepted_args is 3.

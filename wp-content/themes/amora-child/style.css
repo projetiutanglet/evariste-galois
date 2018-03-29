@@ -36,7 +36,7 @@ ul {
 
 ul>li {
  list-style-image: url('./puces/main.png');
- list-style-position:inside;
+ list-style-position: inside;
  padding-left: 20px;
 }
 
@@ -45,11 +45,11 @@ ol {
  counter-reset: item;
 }
 
-ol > li {
+ol>li {
  display: block;
 }
 
-ol > li:before {
+ol>li:before {
  content: counter(item) ". ";
  counter-increment: item;
  color: #82C46C;
@@ -59,7 +59,7 @@ ol > li:before {
 h1 {
  text-decoration: none;
  font-family: "chalkduster", sans-serif !important;
- color:purple;
+ color: purple;
 }
 
 #primary-mono h2 {
@@ -89,21 +89,23 @@ p a {
 }
 
 #page a {
-  color: #0058FF;
+ color: #0058FF;
 }
 
 a:hover {
  color: purple;
 }
 
-table tbody tr {
- border: solid 0.5px white;
+table td{
+ border: solid 1px #82C46C;
+ padding:5px;
 }
 
-table tbody th {
+table th {
  background-color: #82C46C;
  color: white;
  text-transform: uppercase;
+ border: solid 1px #82C46C;
 }
 
 
@@ -197,7 +199,8 @@ table tbody th {
 #site-navigation {
  background: purple;
 }
-#site-navigation ul> li{
+
+#site-navigation ul>li {
  padding-left: 0px;
 }
 
@@ -247,6 +250,10 @@ table tbody th {
 #menu-item-70>a,
 #menu-item-167>a {
  cursor: default;
+}
+
+#site-navigation ul.menu>li.menu-item>ul.sub-menu>#menu-item-60>ul.sub-menu {
+ display: inline-flex;
 }
 
 /*---------------------Page------------------------*/
@@ -327,6 +334,7 @@ textarea {
  margin-top: 10px;
  text-align: center;
  font-size: 14pt;
+ font-weight: bold;
 }
 
 #div-orange {
@@ -532,11 +540,14 @@ textarea {
  background-color: purple;
  text-align: center;
  color: white;
+ border: none;
 }
 
 #calendrier td {
  background-color: #F5F5F5;
  text-align: center;
+ border:none;
+ padding:0;
 }
 
 #calendrier td.pad {
@@ -693,7 +704,7 @@ textarea {
 }
 
 #calendrier-vert-deau .day-with-post:hover {
-background-color:  #83c7a3;
+ background-color: #83c7a3;
 }
 
 #calendrier-vert-deau .day-with-post a {
