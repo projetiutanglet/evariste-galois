@@ -36,7 +36,7 @@ ul {
 
 ul>li {
  list-style-image: url('./puces/main.png');
- list-style-position:inside;
+ list-style-position: inside;
  padding-left: 20px;
 }
 
@@ -45,11 +45,11 @@ ol {
  counter-reset: item;
 }
 
-ol > li {
+ol>li {
  display: block;
 }
 
-ol > li:before {
+ol>li:before {
  content: counter(item) ". ";
  counter-increment: item;
  color: #82C46C;
@@ -59,6 +59,7 @@ ol > li:before {
 h1 {
  text-decoration: none;
  font-family: "chalkduster", sans-serif !important;
+ color: purple;
 }
 
 #primary-mono h2 {
@@ -72,8 +73,9 @@ h1 {
 .entry-content h3 {
  font-family: "schoolboy_samregular", sans-serif !important;
  font-size: 27px;
- color: #82C46C;
+ color: #47992c;
  font-weight: bold;
+ text-decoration: underline;
 }
 
 .entry-content h4 {
@@ -87,21 +89,23 @@ p a {
 }
 
 #page a {
-  color: #0058FF;
+ color: #0058FF;
 }
 
 a:hover {
  color: purple;
 }
 
-table tbody tr {
- border: solid 0.5px white;
+table td{
+ border: solid 1px #82C46C;
+ padding:5px;
 }
 
-table tbody th {
+table th {
  background-color: #82C46C;
  color: white;
  text-transform: uppercase;
+ border: solid 1px #82C46C;
 }
 
 
@@ -157,8 +161,7 @@ table tbody th {
 /*description sous titre*/
 
 #masthead .container h2.site-description {
- color: #82C46C;
- ;
+ color: purple;
  font-style: italic;
  text-align: right;
  font-family: "schoolboy_samregular", sans-serif !important;
@@ -196,7 +199,8 @@ table tbody th {
 #site-navigation {
  background: purple;
 }
-#site-navigation ul> li{
+
+#site-navigation ul>li {
  padding-left: 0px;
 }
 
@@ -246,6 +250,10 @@ table tbody th {
 #menu-item-70>a,
 #menu-item-167>a {
  cursor: default;
+}
+
+#site-navigation ul.menu>li.menu-item>ul.sub-menu>#menu-item-60>ul.sub-menu {
+ display: inline-flex;
 }
 
 /*---------------------Page------------------------*/
@@ -306,8 +314,10 @@ textarea {
 
 .grille-ligne-item h3 {
  font-family: "schoolboy_samregular", sans-serif !important;
- font-size: 25px;
- color: #82C46C;
+ font-size: 27px;
+ color: #47992c;
+ font-weight: bold;
+ text-decoration: underline;
 }
 
 
@@ -324,6 +334,7 @@ textarea {
  margin-top: 10px;
  text-align: center;
  font-size: 14pt;
+ font-weight: bold;
 }
 
 #div-orange {
@@ -525,15 +536,18 @@ textarea {
 
 /*---------------------------CALENDRIERS--------------------*/
 
-#calendrier th {
+#calendrier table th {
  background-color: purple;
  text-align: center;
  color: white;
+ border: none;
 }
 
-#calendrier td {
+#calendrier table td {
  background-color: #F5F5F5;
  text-align: center;
+ border:none;
+ padding:0;
 }
 
 #calendrier td.pad {
@@ -544,6 +558,11 @@ textarea {
  background-color: #bb00bb;
 }
 
+#calendrier .day-with-post:hover {
+ background-color: #dd00dd;
+}
+
+
 #calendrier .day-with-post a {
  color: white;
 }
@@ -553,6 +572,10 @@ textarea {
  width: 25%;
  margin-top: 10px;
  vertical-align: top;
+}
+
+#calendrier-bleue .day-with-post:hover {
+ background-color: #60c0ea;
 }
 
 #calendrier-bleue .day-with-post a {
@@ -567,6 +590,7 @@ textarea {
  background-color: #2BA2D6;
  text-align: center;
  color: white;
+ border:none;
 }
 
 #calendrier-bleue tr {
@@ -577,10 +601,16 @@ textarea {
 #calendrier-bleue td {
  background-color: #F5F5F5;
  text-align: center;
+ border:none;
+ padding:0;
 }
 
 #calendrier-bleue td.pad {
  background-color: white;
+}
+
+#calendrier-jaune .day-with-post:hover {
+ background-color: #d6d262;
 }
 
 #calendrier-jaune .day-with-post a {
@@ -588,13 +618,14 @@ textarea {
 }
 
 #calendrier-jaune .day-with-post {
- background-color: #B7B222;
+ background-color: #e5de0d;
 }
 
 #calendrier-jaune th {
- background-color: #B7B222;
+ background-color: #e5de0d;
  text-align: center;
  color: white;
+ border:none;
 }
 
 #calendrier-jaune tr {
@@ -605,10 +636,16 @@ textarea {
 #calendrier-jaune td {
  background-color: #F5F5F5;
  text-align: center;
+ border:none;
+ padding:0;
 }
 
 #calendrier-jaune td.pad {
  background-color: white;
+}
+
+#calendrier-verte .day-with-post:hover {
+ background-color: #6eea77;
 }
 
 #calendrier-verte .day-with-post a {
@@ -623,6 +660,7 @@ textarea {
  background-color: #13DC21;
  text-align: center;
  color: white;
+ border:none;
 }
 
 #calendrier-verte tr {
@@ -633,16 +671,23 @@ textarea {
 #calendrier-verte td {
  background-color: #F5F5F5;
  text-align: center;
+ border:none;
+ padding:0;
 }
 
 #calendrier-verte td.pad {
  background-color: white;
 }
 
+#calendrier-orange .day-with-post:hover {
+ background-color: #f18e44;
+}
+
 #calendrier-orange th {
  background-color: #F37A20;
  text-align: center;
  color: white;
+ border:none;
 }
 
 #calendrier-orange .day-with-post a {
@@ -662,12 +707,17 @@ textarea {
 #calendrier-orange td {
  background-color: #F5F5F5;
  text-align: center;
+ border:none;
+ padding:0;
 }
 
 #calendrier-orange td.pad {
  background-color: white;
 }
 
+#calendrier-vert-deau .day-with-post:hover {
+ background-color: #83c7a3;
+}
 
 #calendrier-vert-deau .day-with-post a {
  color: white;
@@ -681,6 +731,7 @@ textarea {
  background-color: #65C08F;
  text-align: center;
  color: white;
+ border:none;
 }
 
 #calendrier-vert-deau tr {
@@ -691,14 +742,14 @@ textarea {
 #calendrier-vert-deau td {
  background-color: #F5F5F5;
  text-align: center;
+ border:none;
+ padding:0;
 }
 
 #calendrier-vert-deau td.pad {
  background-color: white;
 }
 
-
-/*--------------------------------BARRE DE RECHERCHE----------------------*/
 
 /*---------------------------DERNIER ARTICLE DU MOMENT--------------------*/
 

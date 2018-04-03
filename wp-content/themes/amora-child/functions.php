@@ -75,6 +75,7 @@ function get_calendar_activity(){
 	        if ($the_query->have_posts()) :
 	             while ($the_query->have_posts()) : $the_query->the_post();
 	              echo '<h3>';
+	              echo get_the_date("l j F Y")." : ";
 	               the_title();
 	               echo '</h3>';
 	                the_content();
@@ -84,4 +85,123 @@ function get_calendar_activity(){
 		echo '</div>
 	</div>';
 }
+
+// Antispambot
+function asb($content){
+    return preg_replace('/([_a-zA-Z0-9.\-]*@[a-zA-Z0-9]([_a-zA-Z0-9\-]+\.)+[a-zA-Z]{2,10})/e',"antispambot('\\1')",$content);
+}
+add_filter('the_content','asb');
+
+// Ajout d'un role
+function egalois_add_role() {
+    add_role( 'parent', 'Parent',			 // son identifiant et son nom visible
+             array(
+                  'read',
+                  'read_private_pages'		 // On liste les droits à donner
+
+                  )	    );
+}
+add_action( 'init', 'egalois_add_role' );	// On lance la création de notre fonction
+
+
+//si l'utilisateur veut s'enregistrer, il est redirigé
+function tml_action_url( $url, $action, $instance ) {
+	if ( 'register' == $action )
+		$url =(isset($_SERVER['HTTPS']) ? "https" : "http") . "://".$_SERVER["HTTP_HOST"]."/connexion/";
+	return $url;
+}
+add_filter( 'tml_action_url', 'tml_action_url', 10, 3 );
+
+
+/******************** Redirection *************************/
+//Rediriger les utilisateurs après une connexion réussi.
+function my_login_redirect( $redirect_to, $request, $user ) {
+	//is there a user to check?
+	if ( isset( $user->roles ) && is_array( $user->roles ) ) {
+		//check for admins
+		if ( in_array( 'administrator', $user->roles ) ) {
+				return $redirect_to;
+		}else{
+
+			$url =(isset($_SERVER['HTTPS']) ? "https" : "http") . "://".$_SERVER["HTTP_HOST"]."/le-coin-des-parents/";
+			return $url;
+		}
+	} else {
+		return $redirect_to;
+	}
+}
+add_filter( 'login_redirect', 'my_login_redirect', 10, 3 );
+
+/******************** fil d'ariane *************************/
+function page_breadcrumb(){
+  global $post;
+
+  echo "<div class='fil_d_ariane'>";
+
+   // Navigation
+	 if (is_page() && !is_front_page() || is_single() || is_category()) {
+
+	 echo ' <a title="Accueil" rel="nofollow" href="'.get_option('siteurl').'">Accueil</a> - ';
+
+	 if (is_page()) {
+	 $ancestors = get_post_ancestors($post);
+
+		if ($ancestors) {
+    		$ancestors = array_reverse($ancestors);
+        	foreach ($ancestors as $crumb) {
+        	   echo ' <a href="'.get_permalink($crumb).'">'.get_the_title($crumb).'</a> - ';
+        	}
+    	}
+	 }
+
+	 // Page actuelle
+	 if (is_page() || is_single()) {
+	 echo get_the_title();
+	 }
+
+	 } elseif (is_front_page()) {
+	 // Page d'accueil
+
+	 echo '<a title="Accueil" rel="nofollow" href="'.get_option('siteurl').'">Accueil</a>';
+
+	 }
+ echo "</div>";
+}
+
+
+/******************* Calendrier *************************/
+
+function get_my_day_link($daylink,$year, $month, $day) {
+
+	if ( !$year )
+        $year = gmdate('Y', current_time('timestamp'));
+    if ( !$month )
+        $month = gmdate('m', current_time('timestamp'));
+    if ( !$day )
+        $day = gmdate('j', current_time('timestamp'));
+
+    $daylink = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://".$_SERVER["HTTP_HOST"];
+    $daylink .= esc_url( add_query_arg( array('Y' => $year, 'M' =>$month, 'D' => $day) ) );
+	return $daylink;
+}
+
+add_filter( 'day_link', 'get_my_day_link', 1, 4 ); // Where $priority is 1, $accepted_args is 3.
+
+
+function get_my_month_link($monthlink,$year, $month) {
+
+	if ( !$year )
+        $year = gmdate('Y', current_time('timestamp'));
+    if ( !$month )
+        $month = gmdate('m', current_time('timestamp'));
+
+    $monthlink = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://".$_SERVER["HTTP_HOST"];
+
+    $monthlink .=  add_query_arg( array('Y' => $year, 'M' =>$month) );
+	$monthlink = add_query_arg( 'D', false, $monthlink );
+	return $monthlink;
+
+}
+
+add_filter( 'month_link', 'get_my_month_link', 1, 3 ); // Where $priority is 1, $accepted_args is 3.
 
