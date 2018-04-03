@@ -20,8 +20,6 @@ get_header(); ?>
 
 					<?php WP_Advanced_Search(); ?>
 
-
-
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 
