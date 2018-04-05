@@ -50,6 +50,7 @@ function get_calendar_activity(){
 
 		echo '" class="div-calendrier grille-ligne-item">
 		        <h3>Calendrier d\'activités</h3>';
+		        echo '<br>';
 		calcat_get_calendar(true,true,$cat);
 
 		if (strpos(get_the_title(), 'Classe') !== false) {
@@ -75,10 +76,12 @@ function get_calendar_activity(){
 	        if ($the_query->have_posts()) :
 	             while ($the_query->have_posts()) : $the_query->the_post();
 	              echo '<h3>';
-	              echo get_the_date("l j F Y")." : ";
 	               the_title();
 	               echo '</h3>';
-	                the_content();
+
+	               echo '<p class="datepublication">Publié le ' . get_the_date("l j F Y") .' </p>';
+				echo '<br>';
+	               the_content();
 	             endwhile;
 	             wp_reset_postdata();
 	         endif;
