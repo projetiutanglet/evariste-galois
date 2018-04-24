@@ -43,6 +43,7 @@ ul>li {
 
 ol {
  counter-reset: item;
+ margin-left: 1.5em;
 }
 
 ol>li {
@@ -85,7 +86,8 @@ h1 {
 
 
 p a {
- text-decoration: none;
+ text-decoration: underline ;
+ 
 }
 
 #page a {
@@ -757,4 +759,26 @@ textarea {
  width: 69%;
  margin-top: 10px;
  margin-left: 5%;
+}
+
+
+/*---------------------------COTE ADMIN----------------------------*/
+
+.misc-pub-visibility{
+ display: none;
+}
+#category-add-toggle{
+ display: none;
+}
+
+
+/*---------------------------PARTIE CONSEIL ECOLE-------------------*/
+
+.boutonConseil{
+ display:inline-block;
+}
+
+.boutonConseil{
+ display:inline-block;
+ margin: 0 25px 20px 25px;
 }
