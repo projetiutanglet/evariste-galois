@@ -50,7 +50,6 @@ function get_calendar_activity(){
 
 		echo '" class="div-calendrier grille-ligne-item">
 		        <h3>Calendrier d\'activités</h3>';
-		        echo '<br>';
 		calcat_get_calendar(true,true,$cat);
 
 		if (strpos(get_the_title(), 'Classe') !== false) {
@@ -76,12 +75,10 @@ function get_calendar_activity(){
 	        if ($the_query->have_posts()) :
 	             while ($the_query->have_posts()) : $the_query->the_post();
 	              echo '<h3>';
+	              echo get_the_date("l j F Y")." : ";
 	               the_title();
 	               echo '</h3>';
-
-	               echo '<p class="datepublication">Publié le ' . get_the_date("l j F Y") .' </p>';
-				echo '<br>';
-	               the_content();
+	                the_content();
 	             endwhile;
 	             wp_reset_postdata();
 	         endif;
@@ -208,3 +205,74 @@ function get_my_month_link($monthlink,$year, $month) {
 
 add_filter( 'month_link', 'get_my_month_link', 1, 3 ); // Where $priority is 1, $accepted_args is 3.
 
+//////// Permalinks display no //////////////
+/////////////////////////////////////////////
+add_action('admin_head', 'votretheme_permalink_none');
+function votretheme_permalink_none() {    
+	global $post_type;    
+	if ($post_type == 'CPT_NAME_HERE' ) {        
+	echo "<style>#edit-slug-box, #message a {display:none;}</style>";    
+	}
+	elseif ($post_type == 'CPT_NAME_HERE' ) {        
+	echo "<style>#edit-slug-box, #message a, #post-status-info, #postdivrich {display:none;}</style>";    
+	}
+}
+
+function get_menu_conseil(){
+	
+	$id = get_page_by_title( "Conseils d'école" )->ID;
+	$args = array(
+		'sort_order' => 'asc',
+		'sort_column' => 'ID',
+		'hierarchical' => 1,
+		'exclude' => '',
+		'include' => '',
+		'meta_key' => '',
+		'meta_value' => '',
+		'authors' => '',
+		'child_of' => $id,	//ID de la page conseils d'école
+		'parent' => -1,
+		'exclude_tree' => '',
+		'number' => '',
+		'offset' => 0,
+		'post_type' => 'page',
+		'post_status' => 'publish'
+	); 
+	$pages = get_pages($args); 
+	
+	$menu = '<div id="listeBoutonConseil">';
+	
+	$i = 0;
+	foreach($pages as $page){
+		$idConseil = $page->ID;
+		$i++;
+		$menu.='<div class="boutonConseil">
+				<a href="'.get_page_link($idConseil).'" class="aboutonConseil">
+				<span>	Conseil d\'école n°'.$i.'</span></a></div>';
+	}
+	$menu.='</div>';
+	return $menu;
+}
+
+function get_conseil_recent(){
+	
+			$args = array(
+				'sort_order' => 'asc',
+				'sort_column' => 'post_modified',
+				'hierarchical' => 1,
+				'exclude' => '',
+				'include' => '',
+				'meta_key' => '',
+				'meta_value' => '',
+				'authors' => '',
+				'child_of' => get_the_ID(),
+				'parent' => -1,
+				'exclude_tree' => '',
+				'number' => '',
+				'offset' => 0,
+				'post_type' => 'page',
+				'post_status' => 'publish'
+			); 
+			$pages = get_pages($args); 
+			return $pages[0]->post_content;
+}
