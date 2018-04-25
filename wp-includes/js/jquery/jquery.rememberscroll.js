@@ -16,7 +16,6 @@ function getScrollPosition(){
 	if (typeof position === 'undefined') {
 		position = 0;
 	}
-	console.log(position)
 	window.scrollBy(0,position);
 	document.cookie = 'positionScroll=; Max-Age=-99999999;';  
 };

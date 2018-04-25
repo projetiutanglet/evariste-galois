@@ -758,6 +758,11 @@ textarea {
  background-color: white;
 }
 
+#posteLe{
+ font-style:italic;
+ margin-bottom:0.5em;
+}
+
 
 /*---------------------------DERNIER ARTICLE DU MOMENT--------------------*/
 
@@ -768,3 +773,16 @@ textarea {
 }
 
 
+/*---------------------------PARTIE CONSEIL ECOLE-------------------*/
+
+.boutonConseil{
+ display:inline-block;
+}
+
+.boutonConseil{
+ display:inline-block;
+ margin: 0 20px 20px 20px;
+}
+
+
+/**********************RESPONSIVITE MENU***************************/
