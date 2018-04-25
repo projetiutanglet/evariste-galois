@@ -4,7 +4,7 @@ Tags: responsive slider, slider, slideshow, wordpress slider, image slider, gall
 Requires at least: 3.4
 Tested up to: 4.9
 Requires PHP: 5.2
-Stable tag: 1.2.7
+Stable tag: 1.2.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -404,6 +404,9 @@ The good part of this is that you can have a text slider with its picture slide,
 
 
 == Changelog ==
+
+= 1.2.8 =
+* Fixed: Layer effect in animation in some case.    
 
 = 1.2.7 =
 * Fixed: Minor bug depend on PHP version.   
