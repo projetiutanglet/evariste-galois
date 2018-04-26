@@ -20,11 +20,42 @@ h1{
 #visibility{
     display:none;
 }
-
+/*---------------------------CACHER LE BOUTON AJOUTER UNE GALERIE DANS UN ARTICLE--------------------*/
 .button.foogallery-modal-trigger{
     display:none;
 }
-
+/*---------------------------CACHER LE BOUTON AJOUTER UN SLIDER DANS UN ARTICLE--------------------*/
 .wds_thickbox.button{
+    display:none;
+}
+/*---------------------------CACHER LE BOUTON LIRE PLUS DANS L'EDITEUR DE TEXTE--------------------*/
+#mceu_10-button{
+    display:none;
+}
+/*---------------------------CACHER LA BANNIERE SLIDER WD--------------------*/
+.wd_topic{
+    display:none;
+}
+/*---------------------------CACHER LA COLONNE SHORTCODE--------------------*/
+
+
+
+/*---------------------------CACHER LA COLONNE PHP FUNCTION--------------------*/
+
+
+#layer_add_buttons{
+    display:none;
+}
+
+.postbox.closed{
+    display:none;
+}
+
+.bgcolor td .titles{
+    display:none;
+    
+}
+
+.tab_conteiner{
     display:none;
 }

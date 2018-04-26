@@ -4602,7 +4602,7 @@ msgstr "Un jolinom (nicename) ne devrait pas dépasser les 50 caractères."
 #. translators: %s: user name
 #: wp-includes/user.php:171
 msgid "<strong>ERROR</strong>: The password you entered for the username %s is incorrect."
-msgstr "<strong>ERREUR</strong> : ce mot de passe ne correspond pas à l’identifiant %s."
+msgstr "<strong>ERREUR</strong> : ce mot de passe ne correspond pas à l’identifiant de connexion."
 
 #: wp-includes/user.php:147
 msgid "<strong>ERROR</strong>: Invalid username."

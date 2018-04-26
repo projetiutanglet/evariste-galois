@@ -86,12 +86,6 @@ function get_calendar_activity(){
 	</div>';
 }
 
-// Antispambot
-function asb($content){
-    return preg_replace('/([_a-zA-Z0-9.\-]*@[a-zA-Z0-9]([_a-zA-Z0-9\-]+\.)+[a-zA-Z]{2,10})/e',"antispambot('\\1')",$content);
-}
-add_filter('the_content','asb');
-
 
 // Ajout d'un role Parent
 function egalois_add_role() {
@@ -102,35 +96,6 @@ function egalois_add_role() {
 
                   )	    );
                   
-      add_role( 'enseignant', 'Enseignant',			 // son identifiant et son nom visible
-             array(
-             	'delete_others_pages',
-				'delete_others_posts',
-				'delete_pages',
-				'delete_posts',
-				'delete_private_pages',
-				'delete_private_posts',
-				'delete_published_pages',
-				'delete_published_posts',
-				'edit_others_pages',
-				'edit_others_posts',
-				'edit_pages',
-				'edit_posts',
-				'edit_private_pages',
-				'edit_private_posts',
-				'edit_published_pages',
-				'edit_published_posts',
-				'manage_categories',
-				'manage_links',
-				'moderate_comments',
-				'publish_pages',
-				'publish_posts',
-				'read',
-				'read_private_pages',
-				'read_private_posts',
-				'unfiltered_html',
-				'upload_files',
-                  )	    );
 }
 
 add_action( 'init', 'egalois_add_role' );	// On lance la création de notre fonction
@@ -151,7 +116,7 @@ function my_login_redirect( $redirect_to, $request, $user ) {
 	//is there a user to check?
 	if ( isset( $user->roles ) && is_array( $user->roles ) ) {
 		//check for admins
-		if ( in_array( 'administrator', $user->roles )||in_array( 'editor', $user->roles ) ) {
+		if ( in_array( 'administrator', $user->roles )||in_array( 'enseignant', $user->roles ) ) {
 				return $redirect_to;
 		}else{
 
@@ -163,6 +128,7 @@ function my_login_redirect( $redirect_to, $request, $user ) {
 	}
 }
 add_filter( 'login_redirect', 'my_login_redirect', 10, 3 );
+
 
 /******************** fil d'ariane *************************/
 function page_breadcrumb(){
@@ -261,12 +227,22 @@ function get_menu_conseil(){
 	
 	$menu = '<div id="listeBoutonConseil">';
 	
+	$numconseil = substr(get_the_title(), -1);
+	if ($numconseil >=1 && $numconseil <=3) {
+		$actuel = $numconseil;
+	}
+	
 	$i = 0;
 	foreach($pages as $page){
 		$idConseil = $page->ID;
 		$i++;
 		$menu.='<div class="boutonConseil">
-				<a href="'.get_page_link($idConseil).'" class="aboutonConseil">
+				<a href="'.get_page_link($idConseil).'" ';
+		if ($i == $actuel){
+			$menu .= 'id="conseilActuel"';
+		}
+
+		$menu.='>
 				<span>	Conseil d\'école n°'.$i.'</span></a></div>';
 	}
 	$menu.='</div>';

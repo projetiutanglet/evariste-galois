@@ -39,7 +39,6 @@ jQuery(window).load(function() {
         //sticky sidebar
         jQuery('.sticky-sidebar').scrollToFixed({
             marginTop: 30,
-            limit: jQuery('#primary').offset().top + jQuery('#primary').height() - jQuery('.sticky-sidebar').height(),
         });
 
     });

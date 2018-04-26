@@ -91,7 +91,6 @@ h1 {
 
 p a {
  text-decoration: none;
- 
  font-family: "quicksand_bold", sans-serif !important;
 }
 
@@ -118,7 +117,6 @@ table th {
  text-transform: uppercase;
  border: solid 1px #82C46C;
 }
-
 
 
 /*---------------------HEADER------------------------*/
@@ -314,6 +312,14 @@ textarea {
 
 
 /*---------------------Page coin des parents------------------------*/
+
+#theme-my-login p a {
+ display: none;
+}
+
+.tml p{
+ text-align:center;
+}
 
 .grille-ligne {
  display: inline-block;
@@ -789,6 +795,9 @@ textarea {
  margin: 0 20px 20px 20px;
 }
 
+a#conseilActuel{
+ color:#AAA;
+}
 
 /**********************RESPONSIVITE MENU***************************/
 @media screen and (max-width: 1200px) {
