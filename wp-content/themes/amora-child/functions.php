@@ -92,7 +92,8 @@ function asb($content){
 }
 add_filter('the_content','asb');
 
-// Ajout d'un role
+
+// Ajout d'un role Parent
 function egalois_add_role() {
     add_role( 'parent', 'Parent',			 // son identifiant et son nom visible
              array(
@@ -100,7 +101,38 @@ function egalois_add_role() {
                   'read_private_pages'		 // On liste les droits à donner
 
                   )	    );
+                  
+      add_role( 'enseignant', 'Enseignant',			 // son identifiant et son nom visible
+             array(
+             	'delete_others_pages',
+				'delete_others_posts',
+				'delete_pages',
+				'delete_posts',
+				'delete_private_pages',
+				'delete_private_posts',
+				'delete_published_pages',
+				'delete_published_posts',
+				'edit_others_pages',
+				'edit_others_posts',
+				'edit_pages',
+				'edit_posts',
+				'edit_private_pages',
+				'edit_private_posts',
+				'edit_published_pages',
+				'edit_published_posts',
+				'manage_categories',
+				'manage_links',
+				'moderate_comments',
+				'publish_pages',
+				'publish_posts',
+				'read',
+				'read_private_pages',
+				'read_private_posts',
+				'unfiltered_html',
+				'upload_files',
+                  )	    );
 }
+
 add_action( 'init', 'egalois_add_role' );	// On lance la création de notre fonction
 
 
