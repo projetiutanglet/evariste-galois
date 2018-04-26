@@ -47,6 +47,7 @@ ul>li {
 
 ol {
  counter-reset: item;
+ margin-left: 1.5em;
 }
 
 ol>li {
@@ -92,11 +93,6 @@ p a {
  text-decoration: none;
  
  font-family: "quicksand_bold", sans-serif !important;
-}
-
-.datepublication{
- font-style: italic;
- font-size:13px;
 }
 
 #page a {
@@ -827,4 +823,5 @@ textarea {
 .amora-logo {
     display:none;
  }
+
 }
