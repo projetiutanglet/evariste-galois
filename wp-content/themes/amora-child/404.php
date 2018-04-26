@@ -18,7 +18,7 @@ get_header(); ?>
 				<div class="page-content">
 					<p><?php esc_html_e( 'Il semble que rien n\'a été trouvé à cet endroit. Peut-être essayer une recherche ci-dessous ?', 'amora' ); ?></p>
 
-					<?php WP_Advanced_Search(); ?>
+					
 
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->

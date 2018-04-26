@@ -19,23 +19,23 @@ get_header(); ?>
 			<h2>
 			<?php $current = explode('/',$_SERVER['REQUEST_URI']) ;
 			if ($current[sizeof($current)-2] == "orange") {?>
-				<img src=<?php echo $adresse."wp-content/uploads/2018/02/porte-orange-275x300.png";?>  alt=""  style="height:65px" />
+				<img src=<?php echo $adresse."wp-content/themes/amora-child/images/porte-orange-275x300.png";?>  alt=""  style="height:65px" />
 			<?php
 			}
 			if ($current[sizeof($current)-2] == "vert-deau") {?>
-				<img src=<?php echo $adresse."wp-content/uploads/2018/03/porte-vert-deau-292x300.png" ;?> alt="" style="height:65px" />
+				<img src=<?php echo $adresse."wp-content/themes/amora-child/images/porte-vert-deau-292x300.png" ;?> alt="" style="height:65px" />
 			<?php
 			}
 			if ($current[sizeof($current)-2] == "verte") {?>
-				<img src=<?php echo $adresse."wp-content/uploads/2018/03/porte-verte-254x300.png" ;?>  alt="" style="height:65px" />
+				<img src=<?php echo $adresse."wp-content/themes/amora-child/images/porte-verte-254x300.png" ;?>  alt="" style="height:65px" />
 			<?php
 			}
 			if ($current[sizeof($current)-2] == "bleue") {?>
-				<img src=<?php echo $adresse."wp-content/uploads/2018/03/porte-bleue-229x300.png" ;?>  alt="" style="height:65px" />
+				<img src=<?php echo $adresse."wp-content/themes/amora-child/images/porte-bleue-229x300.png" ;?>  alt="" style="height:65px" />
 			<?php
 			}
 			if ($current[sizeof($current)-2] == "jaune") {?>
-				<img src=<?php echo $adresse."wp-content/uploads/2018/03/porte-jaune-229x300.png" ;?>  alt="" style="height:65px" />
+				<img src=<?php echo $adresse."wp-content/themes/amora-child/images/porte-jaune-229x300.png" ;?>  alt="" style="height:65px" />
 			<?php
 			}
 			?>
