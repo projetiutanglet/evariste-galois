@@ -75,9 +75,9 @@ function get_calendar_activity(){
 	        if ($the_query->have_posts()) :
 	             while ($the_query->have_posts()) : $the_query->the_post();
 	              echo '<h3>';
-	              echo get_the_date("l j F Y")." : ";
 	               the_title();
 	               echo '</h3>';
+	               echo '<div id="posteLe">Posté le '.get_the_date("l j F Y")." : ".'</div>';
 	                the_content();
 	             endwhile;
 	             wp_reset_postdata();
@@ -119,7 +119,7 @@ function my_login_redirect( $redirect_to, $request, $user ) {
 	//is there a user to check?
 	if ( isset( $user->roles ) && is_array( $user->roles ) ) {
 		//check for admins
-		if ( in_array( 'administrator', $user->roles ) ) {
+		if ( in_array( 'administrator', $user->roles )||in_array( 'editor', $user->roles ) ) {
 				return $redirect_to;
 		}else{
 
@@ -205,19 +205,6 @@ function get_my_month_link($monthlink,$year, $month) {
 
 add_filter( 'month_link', 'get_my_month_link', 1, 3 ); // Where $priority is 1, $accepted_args is 3.
 
-//////// Permalinks display no //////////////
-/////////////////////////////////////////////
-add_action('admin_head', 'votretheme_permalink_none');
-function votretheme_permalink_none() {    
-	global $post_type;    
-	if ($post_type == 'CPT_NAME_HERE' ) {        
-	echo "<style>#edit-slug-box, #message a {display:none;}</style>";    
-	}
-	elseif ($post_type == 'CPT_NAME_HERE' ) {        
-	echo "<style>#edit-slug-box, #message a, #post-status-info, #postdivrich {display:none;}</style>";    
-	}
-}
-
 function get_menu_conseil(){
 	
 	$id = get_page_by_title( "Conseils d'école" )->ID;
@@ -257,7 +244,9 @@ function get_menu_conseil(){
 function get_conseil_recent(){
 	
 			$args = array(
-				'sort_order' => 'asc',
+
+				'sort_order' => 'desc',
+
 				'sort_column' => 'post_modified',
 				'hierarchical' => 1,
 				'exclude' => '',
@@ -271,8 +260,28 @@ function get_conseil_recent(){
 				'number' => '',
 				'offset' => 0,
 				'post_type' => 'page',
+
 				'post_status' => 'publish'
 			); 
 			$pages = get_pages($args); 
 			return $pages[0]->post_content;
+
 }
+
+//////// CSS Administration //////////////
+
+
+function admin_style() {
+wp_enqueue_style('admin-styles', get_stylesheet_directory_uri().'/admin.css');
+}
+add_action('admin_enqueue_scripts', 'admin_style');
+
+
+function my_custom_js() {
+    echo '<script type="text/javascript" src="https://projet-evariste-galois-lbarbe.c9users.io/wp-includes/js/jquery/jquery.js"></script>';
+    echo '<script type="text/javascript" src="https://projet-evariste-galois-lbarbe.c9users.io/wp-includes/js/jquery/jquery.cookie.js"></script>';
+    echo '<script type="text/javascript" src="https://projet-evariste-galois-lbarbe.c9users.io/wp-includes/js/jquery/jquery.rememberscroll.js"></script>';
+}
+// Add hook for front-end <head></head>
+add_action('wp_head', 'my_custom_js');
+

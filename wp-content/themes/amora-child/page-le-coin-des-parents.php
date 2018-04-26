@@ -35,7 +35,7 @@ get_header(); ?>
 				<div id="div-orange"  class="grille-ligne-item" >
 					<div class="porte hvr-float-shadow">
 						<a href= <?php echo $adresse."le-coin-des-parents/orange/";?> >
-						<img src=<?php echo $adresse."wp-content/uploads/2018/02/porte-orange-275x300.png";?>  alt=""  srcset=<?php echo $adresse."wp-content/uploads/2018/02/porte-orange-275x300.png 210w, ". $adresse."wp-content/uploads/2018/02/porte-orange.png 627w";?> sizes="(max-width: 275px) 100vw, 275px" /></a>
+						<img src=<?php echo $adresse."wp-content/themes/amora-child/images/porte-orange-275x300.png";?>  alt=""  srcset=<?php echo $adresse."wp-content/uploads/2018/02/porte-orange-275x300.png 210w, ". $adresse."wp-content/uploads/2018/02/porte-orange.png 627w";?> sizes="(max-width: 275px) 100vw, 275px" /></a>
 					</div>
 					<div class="text-porte">
 						Classe orange
@@ -44,7 +44,7 @@ get_header(); ?>
 				<div id="div-vert-deau"  class="grille-ligne-item" >
 					<div class="porte hvr-float-shadow">
 						<a href=<?php echo $adresse."le-coin-des-parents/vert-deau/";?> >
-							<img src=<?php echo $adresse."wp-content/uploads/2018/03/porte-vert-deau-292x300.png" ;?> alt="" srcset=<?php echo $adresse."wp-content/uploads/2018/03/porte-vert-deau-292x300.png 292w, ". $adresse."wp-content/uploads/2018/03/porte-vert-deau.png 683w";?> sizes="(max-width: 292px) 100vw, 292px" /></a>
+							<img src=<?php echo $adresse."wp-content/themes/amora-child/images/porte-vert-deau-292x300.png" ;?> alt="" srcset=<?php echo $adresse."wp-content/uploads/2018/03/porte-vert-deau-292x300.png 292w, ". $adresse."wp-content/uploads/2018/03/porte-vert-deau.png 683w";?> sizes="(max-width: 292px) 100vw, 292px" /></a>
 					</div>
 					<div class="text-porte">
 						Classe vert d'eau
@@ -53,7 +53,7 @@ get_header(); ?>
 				<div id="div-verte"  class="grille-ligne-item" >
 					<div class="porte hvr-float-shadow">
 						<a href=<?php echo $adresse."le-coin-des-parents/verte/";?> >
-							<img src=<?php echo $adresse."wp-content/uploads/2018/03/porte-verte-254x300.png" ;?>  alt="" srcset=<?php echo $adresse."wp-content/uploads/2018/03/porte-verte-254x300.png 254w, ". $adresse."wp-content/uploads/2018/03/porte-verte.png 585w";?> sizes="(max-width: 254px) 100vw, 254px" /></a>
+							<img src=<?php echo $adresse."wp-content/themes/amora-child/images/porte-verte-254x300.png" ;?>  alt="" srcset=<?php echo $adresse."wp-content/uploads/2018/03/porte-verte-254x300.png 254w, ". $adresse."wp-content/uploads/2018/03/porte-verte.png 585w";?> sizes="(max-width: 254px) 100vw, 254px" /></a>
 					</div>
 					<div class="text-porte">
 						Classe verte
@@ -62,7 +62,7 @@ get_header(); ?>
 				<div id="div-bleue"  class="grille-ligne-item" >
 					<div class="porte hvr-float-shadow">
 						<a href=<?php echo $adresse."le-coin-des-parents/bleue/";?> >
-							<img src=<?php echo $adresse."wp-content/uploads/2018/03/porte-bleue-229x300.png" ;?>  alt="" srcset=<?php echo $adresse."wp-content/uploads/2018/03/porte-bleue-229x300.png 229w, ". $adresse."wp-content/uploads/2018/03/porte-bleue.png 529w";?> sizes="(max-width: 229px) 100vw, 229px" /></a>
+							<img src=<?php echo $adresse."wp-content/themes/amora-child/images/porte-bleue-229x300.png" ;?>  alt="" srcset=<?php echo $adresse."wp-content/uploads/2018/03/porte-bleue-229x300.png 229w, ". $adresse."wp-content/uploads/2018/03/porte-bleue.png 529w";?> sizes="(max-width: 229px) 100vw, 229px" /></a>
 					</div>
 					<div class="text-porte">
 						Classe bleue
@@ -71,7 +71,7 @@ get_header(); ?>
 				<div id="div-jaune"  class="grille-ligne-item" >
 					<div class="porte hvr-float-shadow">
 						<a href=<?php echo $adresse."le-coin-des-parents/jaune/";?> >
-							<img src=<?php echo $adresse."wp-content/uploads/2018/03/porte-jaune-229x300.png" ;?>  alt="" srcset=<?php echo $adresse."wp-content/uploads/2018/03/porte-jaune-229x300.png 229w, ". $adresse."wp-content/uploads/2018/03/porte-jaune.png 521w";?> sizes="(max-width: 229px) 100vw, 229px" /></a>
+							<img src=<?php echo $adresse."wp-content/themes/amora-child/images/porte-jaune-229x300.png" ;?>  alt="" srcset=<?php echo $adresse."wp-content/uploads/2018/03/porte-jaune-229x300.png 229w, ". $adresse."wp-content/uploads/2018/03/porte-jaune.png 521w";?> sizes="(max-width: 229px) 100vw, 229px" /></a>
 					</div>
 					<div class="text-porte">
 						Classe jaune

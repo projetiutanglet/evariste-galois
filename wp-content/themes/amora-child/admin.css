@@ -1,0 +1,30 @@
+
+
+
+
+/*---------------------------H1--------------------*/
+h1{
+    color : purple;
+}
+
+/*---------------------------CACHER PERMALIENS--------------------*/
+#edit-slug-box{
+    display:none;
+}
+
+/*---------------------------CACHER LA POSSIBILITE D'AJOUT DE CATEGORIE DANS UN ARTICLE--------------------*/
+#category-adder{
+    display:none;
+}
+/*---------------------------CACHER LA VISIBILITE D'UN ARTICLE--------------------*/
+#visibility{
+    display:none;
+}
+
+.button.foogallery-modal-trigger{
+    display:none;
+}
+
+.wds_thickbox.button{
+    display:none;
+}

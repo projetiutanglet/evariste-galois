@@ -86,16 +86,18 @@ h1 {
 
 
 p a {
- text-decoration: underline ;
- 
+ text-decoration: none;
+ font-weight:bold;
 }
 
 #page a {
  color: #0058FF;
+ font-weight:bold;
 }
 
 a:hover {
  color: purple;
+
 }
 
 table td{
@@ -752,6 +754,11 @@ textarea {
  background-color: white;
 }
 
+#posteLe{
+ font-style:italic;
+ margin-bottom:0.5em;
+}
+
 
 /*---------------------------DERNIER ARTICLE DU MOMENT--------------------*/
 
@@ -759,16 +766,6 @@ textarea {
  width: 69%;
  margin-top: 10px;
  margin-left: 5%;
-}
-
-
-/*---------------------------COTE ADMIN----------------------------*/
-
-.misc-pub-visibility{
- display: none;
-}
-#category-add-toggle{
- display: none;
 }
 
 
@@ -780,5 +777,42 @@ textarea {
 
 .boutonConseil{
  display:inline-block;
- margin: 0 25px 20px 25px;
+ margin: 0 20px 20px 20px;
+}
+
+
+/**********************RESPONSIVITE MENU***************************/
+@media screen and (max-width: 1200px) {
+ .porte,
+ .porte img{
+  height:200px;
+ }
+ 
+}
+@media screen and (max-width: 1000px) {
+ #masthead h1.site-title.title-font {
+    font-size: 40px;
+ }
+ #site-navigation ul.menu li a {
+  font-size: 13px;
+ }
+ #site-navigation ul.menu li ul.sub-menu {
+  font-size: 13px;
+ }
+ .porte,
+ .porte img{
+  height:150px;
+ }
+}
+@media screen and (max-width: 800px) {
+.page #masthead {
+    background-color: #FEECCD;
+    background-image: none;
+ }
+}
+@media screen and (max-width: 570px) {
+.amora-logo {
+    display:none;
+ }
+
 }

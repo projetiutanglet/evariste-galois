@@ -1547,9 +1547,10 @@ function wds_set_layer_effect_in_wds(wds, j, key) {
   wds_params[wds].wds_clear_layers_effects_in[key][j] = setTimeout(function () {
     cout = jQuery('#wds_' + wds + '_slide' + wds_params[wds].wds_data[key]["id"] + '_layer' + wds_params[wds].wds_data[key]["layer_" + j + "_id"]);
     if (wds_params[wds].wds_data[key]["layer_" + j + "_type"] != 'social') {
-      if (jQuery('#wds_' + wds + '_slide' + wds_params[wds].wds_data[key]["id"] + '_layer' + wds_params[wds].wds_data[key]["layer_" + j + "_id"]).prev().attr('id') != 'wds_' + wds + '_slide' + wds_params[wds].wds_data[key]["id"] + '_layer' + wds_params[wds].wds_data[key]["layer_" + j + "_id"] + '_round_effect') {
+      if (cout.prev().attr('id') != 'wds_' + wds + '_slide' + wds_params[wds].wds_data[key]["id"] + '_layer' + wds_params[wds].wds_data[key]["layer_" + j + "_id"] + '_round_effect') {
         cout.css('-webkit-animation-duration', wds_params[wds].wds_data[key]["layer_" + j + "_duration_eff_in"] / 1000 + 's').css('animation-duration', wds_params[wds].wds_data[key]["layer_" + j + "_duration_eff_in"] / 1000 + 's');
-        jQuery('#wds_' + wds + '_slide' + wds_params[wds].wds_data[key]["id"] + '_layer' + wds_params[wds].wds_data[key]["layer_" + j + "_id"]).removeClass().addClass(wds_params[wds].wds_data[key]["layer_" + j + "_layer_effect_in"] + ' wds_animated');
+        cout.attr("class", "");
+        cout.addClass(wds_params[wds].wds_data[key]["layer_" + j + "_layer_effect_in"] + ' wds_animated');
         cout.addClass(jQuery('#wds_' + wds + '_slide' + wds_params[wds].wds_data[key]["id"] + '_layer' + wds_params[wds].wds_data[key]["layer_" + j + "_id"]).data("class"));
       }
       else {
@@ -1565,14 +1566,11 @@ function wds_set_layer_effect_in_wds(wds, j, key) {
     /* Play video on layer in.*/
 
     if (wds_params[wds].wds_data[key]["layer_" + j + "_type"] == "video") {
-
       if (wds_params[wds].wds_data[key]["layer_" + j + "_video_autoplay"] == "on") {
         cout.find("iframe").each(function () {
           if (jQuery(this).data('type') == 'youtube') {
             player = wds_params[wds].youtube_iframes_ids.indexOf(this.id);
-
             if (typeof wds_params[wds].youtube_iframes[player] != "undefined") {
-
               wds_playVideo(wds_params[wds].youtube_iframes[player]);
             }
           }
