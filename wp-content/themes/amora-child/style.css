@@ -22,6 +22,10 @@
  margin-bottom: 20px;
 }
 
+p strong{
+ color:rgb(94,94,94);
+ font-family: "quicksand_bold", sans-serif !important;
+}
 
 body {
  font-family: "quicksand_book", sans-serif !important;
@@ -87,19 +91,21 @@ h1 {
 
 p a {
  text-decoration: none;
- font-weight:bold;
+ font-family: "quicksand_bold", sans-serif !important;
 }
 
 #page a {
  color: #0058FF;
- font-weight:bold;
+ font-family: "quicksand_bold", sans-serif !important;
 }
 
 a:hover {
  color: purple;
-
 }
 
+#footer-sidebar .footer-column .widget a{
+  font-family: "quicksand_book", sans-serif !important;
+}
 table td{
  border: solid 1px #82C46C;
  padding:5px;
@@ -213,6 +219,8 @@ table th {
 #site-navigation ul.menu li a {
  font-size: 15px;
  background-color: purple;
+ font-family: "Bree Serif", sans-serif !important;
+ 
 }
 
 /*couleur menu survolé*/
