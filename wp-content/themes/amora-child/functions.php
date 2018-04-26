@@ -244,7 +244,9 @@ function get_menu_conseil(){
 function get_conseil_recent(){
 	
 			$args = array(
+
 				'sort_order' => 'desc',
+
 				'sort_column' => 'post_modified',
 				'hierarchical' => 1,
 				'exclude' => '',
@@ -258,12 +260,12 @@ function get_conseil_recent(){
 				'number' => '',
 				'offset' => 0,
 				'post_type' => 'page',
-				
-			
+
 				'post_status' => 'publish'
 			); 
 			$pages = get_pages($args); 
 			return $pages[0]->post_content;
+
 }
 
 //////// CSS Administration //////////////
@@ -282,3 +284,4 @@ function my_custom_js() {
 }
 // Add hook for front-end <head></head>
 add_action('wp_head', 'my_custom_js');
+
