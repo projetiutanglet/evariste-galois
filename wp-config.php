@@ -91,3 +91,7 @@ if ( !defined('ABSPATH') )
 require_once(ABSPATH . 'wp-settings.php');
 
 define ('WPLANG', 'fr_FR');
+
+
+/* Les mises à jour mineures et majeures sont téléchargées et installées automatiquement */
+define( ‘WP_AUTO_UPDATE_CORE’, true);
