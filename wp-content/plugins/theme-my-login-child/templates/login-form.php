@@ -8,8 +8,7 @@ Theme My Login will always look in your theme's directory first, before using th
 	<?php $template->the_action_template_message( 'login' ); ?>
 	<?php $template->the_errors(); ?>
 		<form name="loginform" id="loginform<?php $template->the_instance(); ?>" action="<?php $template->the_action_url( 'login', 'login_post' ); ?>" method="post">
-
-		<?php if($_SERVER['REQUEST_URI'] == '/le-coin-des-enseignants/'):?>
+		<?php if(strpos($_SERVER['REQUEST_URI'], '/le-coin-des-enseignants') !== false):?>
 		  <p class="tml-user-login-wrap">
 			<label for="user_login<?php $template->the_instance(); ?>"><?php
 				if ( 'username' == $theme_my_login->get_option( 'login_type' ) ) {

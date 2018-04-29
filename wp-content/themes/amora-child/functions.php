@@ -3,6 +3,7 @@ add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
     wp_enqueue_style( 'child-style', get_stylesheet_uri(), array( 'parent-style', 'amora-main-theme-style' ) );
+    wp_enqueue_script( 'amora-external', get_template_directory_uri() . '/js/external.js', array('jquery'), '20120206', true );
 }
 
 
@@ -114,17 +115,33 @@ add_filter( 'tml_action_url', 'tml_action_url', 10, 3 );
 //Rediriger les utilisateurs après une connexion réussi.
 function my_login_redirect( $redirect_to, $request, $user ) {
 	//is there a user to check?
+
 	if ( isset( $user->roles ) && is_array( $user->roles ) ) {
 		//check for admins
-		if ( in_array( 'administrator', $user->roles )||in_array( 'enseignant', $user->roles ) ) {
-				return $redirect_to;
+		
+		if ( in_array( 'administrator', $user->roles )||in_array( 'editor', $user->roles ) ) {
+			return $redirect_to;
 		}else{
 
-			$url =(isset($_SERVER['HTTPS']) ? "https" : "http") . "://".$_SERVER["HTTP_HOST"]."/le-coin-des-parents/";
-			return $url;
+			$lien =(isset($_SERVER['HTTPS']) ? "https" : "http") . "://".$_SERVER["HTTP_HOST"]."/le-coin-des-parents/";
+			return $lien;
 		}
 	} else {
-		return $redirect_to;
+		//si il y a une erreur de connexion
+		if (array_key_exists('incorrect_password', $user->errors)){
+			$user->errors['incorrect_password'][0] = "<strong>ERREUR</strong> : Ce mot de passe ne correspond pas à l’identifiant de connexion";
+		}
+		if (array_key_exists('invalid_username', $user->errors)){
+			$user->errors['invalid_username'][0] = "<strong>ERREUR</strong> : Nom d’utilisateur non valide.";
+		}
+		
+		if(strpos($_SERVER['HTTP_REFERER'], '/le-coin-des-enseignants') !== false){
+			$lien = home_url() . "/le-coin-des-enseignants/";
+			return $lien;
+		}else{
+			return $redirect_to;
+			
+		}
 	}
 }
 add_filter( 'login_redirect', 'my_login_redirect', 10, 3 );

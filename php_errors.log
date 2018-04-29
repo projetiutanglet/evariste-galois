@@ -2212,3 +2212,80 @@
 [26-Apr-2018 07:58:18 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/admin.php:31
 [26-Apr-2018 07:58:18 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:37
 [26-Apr-2018 07:58:18 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:91
+[27-Apr-2018 09:24:59 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/ubuntu/workspace/wp-content/themes/amora-child/functions.php on line 130
+[27-Apr-2018 09:24:59 UTC] PHP Stack trace:
+[27-Apr-2018 09:24:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/edit.php:0
+[27-Apr-2018 09:24:59 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/edit.php:10
+[27-Apr-2018 09:24:59 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/admin.php:31
+[27-Apr-2018 09:24:59 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:37
+[27-Apr-2018 09:24:59 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:91
+[27-Apr-2018 09:25:03 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/ubuntu/workspace/wp-content/themes/amora-child/functions.php on line 130
+[27-Apr-2018 09:25:03 UTC] PHP Stack trace:
+[27-Apr-2018 09:25:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/edit.php:0
+[27-Apr-2018 09:25:03 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/edit.php:10
+[27-Apr-2018 09:25:03 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/admin.php:31
+[27-Apr-2018 09:25:03 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:37
+[27-Apr-2018 09:25:03 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:91
+[27-Apr-2018 09:25:07 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/ubuntu/workspace/wp-content/themes/amora-child/functions.php on line 130
+[27-Apr-2018 09:25:07 UTC] PHP Stack trace:
+[27-Apr-2018 09:25:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/edit.php:0
+[27-Apr-2018 09:25:07 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/edit.php:10
+[27-Apr-2018 09:25:07 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/admin.php:31
+[27-Apr-2018 09:25:07 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:37
+[27-Apr-2018 09:25:07 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:91
+[27-Apr-2018 09:25:12 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/ubuntu/workspace/wp-content/themes/amora-child/functions.php on line 130
+[27-Apr-2018 09:25:12 UTC] PHP Stack trace:
+[27-Apr-2018 09:25:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[27-Apr-2018 09:25:12 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[27-Apr-2018 09:25:12 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[27-Apr-2018 09:25:12 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91
+[27-Apr-2018 13:19:43 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans Calcat_Widget_Calendar est <strong>obsolète</strong> depuis la version 4.3.0 ! Utilisez <pre>__construct()</pre> à la place. in /home/ubuntu/workspace/wp-includes/functions.php on line 3902
+[27-Apr-2018 13:19:43 UTC] PHP Stack trace:
+[27-Apr-2018 13:19:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[27-Apr-2018 13:19:43 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[27-Apr-2018 13:19:43 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[27-Apr-2018 13:19:43 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:91
+[27-Apr-2018 13:19:43 UTC] PHP   5. do_action() /home/ubuntu/workspace/wp-settings.php:450
+[27-Apr-2018 13:19:43 UTC] PHP   6. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[27-Apr-2018 13:19:43 UTC] PHP   7. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[27-Apr-2018 13:19:43 UTC] PHP   8. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[27-Apr-2018 13:19:43 UTC] PHP   9. wp_widgets_init() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[27-Apr-2018 13:19:43 UTC] PHP  10. do_action() /home/ubuntu/workspace/wp-includes/widgets.php:1648
+[27-Apr-2018 13:19:43 UTC] PHP  11. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[27-Apr-2018 13:19:43 UTC] PHP  12. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[27-Apr-2018 13:19:43 UTC] PHP  13. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[27-Apr-2018 13:19:43 UTC] PHP  14. calcat_widget_init() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[27-Apr-2018 13:19:43 UTC] PHP  15. register_widget() /home/ubuntu/workspace/wp-content/plugins/calendar-category child/calendar-category.php:64
+[27-Apr-2018 13:19:43 UTC] PHP  16. WP_Widget_Factory->register() /home/ubuntu/workspace/wp-includes/widgets.php:115
+[27-Apr-2018 13:19:43 UTC] PHP  17. Calcat_Widget_Calendar->Calcat_Widget_Calendar() /home/ubuntu/workspace/wp-includes/class-wp-widget-factory.php:100
+[27-Apr-2018 13:19:43 UTC] PHP  18. WP_Widget->WP_Widget() /home/ubuntu/workspace/wp-content/plugins/calendar-category child/calendar-category.php:22
+[27-Apr-2018 13:19:43 UTC] PHP  19. _deprecated_constructor() /home/ubuntu/workspace/wp-includes/class-wp-widget.php:186
+[27-Apr-2018 13:19:43 UTC] PHP  20. trigger_error() /home/ubuntu/workspace/wp-includes/functions.php:3902
+[27-Apr-2018 13:19:43 UTC] PHP Notice:  Use of undefined constant ‘WP_AUTO_UPDATE_CORE’ - assumed '‘WP_AUTO_UPDATE_CORE’' in /home/ubuntu/workspace/wp-config.php on line 97
+[27-Apr-2018 13:19:43 UTC] PHP Stack trace:
+[27-Apr-2018 13:19:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[27-Apr-2018 13:19:43 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[27-Apr-2018 13:19:43 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[29-Apr-2018 14:50:19 UTC] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in /home/ubuntu/workspace/wp-content/themes/amora-child/functions.php on line 131
+[29-Apr-2018 14:50:19 UTC] PHP Stack trace:
+[29-Apr-2018 14:50:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[29-Apr-2018 14:50:19 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/admin-ajax.php:97
+[29-Apr-2018 14:50:19 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[29-Apr-2018 14:50:19 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[29-Apr-2018 14:50:19 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[29-Apr-2018 14:50:19 UTC] PHP   6. WPSEO_Shortcode_Filter->do_filter() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[29-Apr-2018 14:50:19 UTC] PHP   7. do_shortcode() /home/ubuntu/workspace/wp-content/plugins/wordpress-seo/admin/ajax/class-shortcode-filter.php:35
+[29-Apr-2018 14:50:19 UTC] PHP   8. preg_replace_callback() /home/ubuntu/workspace/wp-includes/shortcodes.php:197
+[29-Apr-2018 14:50:19 UTC] PHP   9. do_shortcode_tag() /home/ubuntu/workspace/wp-includes/shortcodes.php:197
+[29-Apr-2018 14:50:19 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/wp-includes/shortcodes.php:319}() /home/ubuntu/workspace/wp-includes/shortcodes.php:319
+[29-Apr-2018 14:50:19 UTC] PHP  11. Theme_My_Login->shortcode() /home/ubuntu/workspace/wp-includes/shortcodes.php:319
+[29-Apr-2018 14:50:19 UTC] PHP  12. Theme_My_Login_Template->display() /home/ubuntu/workspace/wp-content/plugins/theme-my-login-child/includes/class-theme-my-login.php:909
+[29-Apr-2018 14:50:19 UTC] PHP  13. Theme_My_Login_Template->get_template() /home/ubuntu/workspace/wp-content/plugins/theme-my-login-child/includes/class-theme-my-login-template.php:125
+[29-Apr-2018 14:50:19 UTC] PHP  14. include() /home/ubuntu/workspace/wp-content/plugins/theme-my-login-child/includes/class-theme-my-login-template.php:481
+[29-Apr-2018 14:50:19 UTC] PHP  15. Theme_My_Login_Template->the_redirect_url() /home/ubuntu/workspace/wp-content/plugins/theme-my-login-child/templates/login-form.php:55
+[29-Apr-2018 14:50:19 UTC] PHP  16. Theme_My_Login_Template->get_redirect_url() /home/ubuntu/workspace/wp-content/plugins/theme-my-login-child/includes/class-theme-my-login-template.php:528
+[29-Apr-2018 14:50:19 UTC] PHP  17. apply_filters() /home/ubuntu/workspace/wp-content/plugins/theme-my-login-child/includes/class-theme-my-login-template.php:514
+[29-Apr-2018 14:50:19 UTC] PHP  18. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[29-Apr-2018 14:50:19 UTC] PHP  19. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[29-Apr-2018 14:50:19 UTC] PHP  20. my_login_redirect() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[29-Apr-2018 14:50:19 UTC] PHP  21. array_key_exists() /home/ubuntu/workspace/wp-content/themes/amora-child/functions.php:131

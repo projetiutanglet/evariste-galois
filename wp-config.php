@@ -94,4 +94,4 @@ define ('WPLANG', 'fr_FR');
 
 
 /* Les mises à jour mineures et majeures sont téléchargées et installées automatiquement */
-define( ‘WP_AUTO_UPDATE_CORE’, true);
+define( 'WP_AUTO_UPDATE_CORE', true);
