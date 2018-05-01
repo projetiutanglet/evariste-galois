@@ -3,6 +3,7 @@ add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
     wp_enqueue_style( 'child-style', get_stylesheet_uri(), array( 'parent-style', 'amora-main-theme-style' ) );
+    wp_enqueue_script( 'amora-external', get_template_directory_uri() . '/js/external.js', array('jquery'), '20120206', true );
 }
 
 
@@ -86,12 +87,6 @@ function get_calendar_activity(){
 	</div>';
 }
 
-// Antispambot
-function asb($content){
-    return preg_replace('/([_a-zA-Z0-9.\-]*@[a-zA-Z0-9]([_a-zA-Z0-9\-]+\.)+[a-zA-Z]{2,10})/e',"antispambot('\\1')",$content);
-}
-add_filter('the_content','asb');
-
 
 // Ajout d'un role Parent
 function egalois_add_role() {
@@ -102,35 +97,6 @@ function egalois_add_role() {
 
                   )	    );
                   
-      add_role( 'enseignant', 'Enseignant',			 // son identifiant et son nom visible
-             array(
-             	'delete_others_pages',
-				'delete_others_posts',
-				'delete_pages',
-				'delete_posts',
-				'delete_private_pages',
-				'delete_private_posts',
-				'delete_published_pages',
-				'delete_published_posts',
-				'edit_others_pages',
-				'edit_others_posts',
-				'edit_pages',
-				'edit_posts',
-				'edit_private_pages',
-				'edit_private_posts',
-				'edit_published_pages',
-				'edit_published_posts',
-				'manage_categories',
-				'manage_links',
-				'moderate_comments',
-				'publish_pages',
-				'publish_posts',
-				'read',
-				'read_private_pages',
-				'read_private_posts',
-				'unfiltered_html',
-				'upload_files',
-                  )	    );
 }
 
 add_action( 'init', 'egalois_add_role' );	// On lance la création de notre fonction
@@ -149,20 +115,37 @@ add_filter( 'tml_action_url', 'tml_action_url', 10, 3 );
 //Rediriger les utilisateurs après une connexion réussi.
 function my_login_redirect( $redirect_to, $request, $user ) {
 	//is there a user to check?
+
 	if ( isset( $user->roles ) && is_array( $user->roles ) ) {
 		//check for admins
+		
 		if ( in_array( 'administrator', $user->roles )||in_array( 'editor', $user->roles ) ) {
-				return $redirect_to;
+			return $redirect_to;
 		}else{
 
-			$url =(isset($_SERVER['HTTPS']) ? "https" : "http") . "://".$_SERVER["HTTP_HOST"]."/le-coin-des-parents/";
-			return $url;
+			$lien =(isset($_SERVER['HTTPS']) ? "https" : "http") . "://".$_SERVER["HTTP_HOST"]."/le-coin-des-parents/";
+			return $lien;
 		}
 	} else {
-		return $redirect_to;
+		//si il y a une erreur de connexion
+		if (array_key_exists('incorrect_password', $user->errors)){
+			$user->errors['incorrect_password'][0] = "<strong>ERREUR</strong> : Ce mot de passe ne correspond pas à l’identifiant de connexion";
+		}
+		if (array_key_exists('invalid_username', $user->errors)){
+			$user->errors['invalid_username'][0] = "<strong>ERREUR</strong> : Nom d’utilisateur non valide.";
+		}
+		
+		if(strpos($_SERVER['HTTP_REFERER'], '/le-coin-des-enseignants') !== false){
+			$lien = home_url() . "/le-coin-des-enseignants/";
+			return $lien;
+		}else{
+			return $redirect_to;
+			
+		}
 	}
 }
 add_filter( 'login_redirect', 'my_login_redirect', 10, 3 );
+
 
 /******************** fil d'ariane *************************/
 function page_breadcrumb(){
@@ -261,12 +244,22 @@ function get_menu_conseil(){
 	
 	$menu = '<div id="listeBoutonConseil">';
 	
+	$numconseil = substr(get_the_title(), -1);
+	if ($numconseil >=1 && $numconseil <=3) {
+		$actuel = $numconseil;
+	}
+	
 	$i = 0;
 	foreach($pages as $page){
 		$idConseil = $page->ID;
 		$i++;
 		$menu.='<div class="boutonConseil">
-				<a href="'.get_page_link($idConseil).'" class="aboutonConseil">
+				<a href="'.get_page_link($idConseil).'" ';
+		if ($i == $actuel){
+			$menu .= 'id="conseilActuel"';
+		}
+
+		$menu.='>
 				<span>	Conseil d\'école n°'.$i.'</span></a></div>';
 	}
 	$menu.='</div>';

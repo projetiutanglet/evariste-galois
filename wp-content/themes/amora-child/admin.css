@@ -20,11 +20,11 @@ h1{
 #visibility{
     display:none;
 }
-
+/*---------------------------CACHER LE BOUTON AJOUTER UNE GALERIE DANS UN ARTICLE--------------------*/
 .button.foogallery-modal-trigger{
     display:none;
 }
-
+/*---------------------------CACHER LE BOUTON AJOUTER UN SLIDER DANS UN ARTICLE--------------------*/
 .wds_thickbox.button{
     display:none;
 }
@@ -33,3 +33,69 @@ h1{
 #mceu_10-button{
     display:none;
 }
+
+/*---------------------------CACHER LA BANNIERE SLIDER WD--------------------*/
+.wd_topic{
+    display:none;
+}
+/*---------------------------CACHER LA COLONNE SHORTCODE--------------------*/
+
+
+
+/*---------------------------CACHER LA COLONNE PHP FUNCTION--------------------*/
+
+
+#layer_add_buttons{
+    display:none;
+}
+
+.postbox.closed{
+    display:none;
+}
+
+.bgcolor td .titles{
+    display:none;
+    
+}
+
+.compat-field-foogallery_custom_url{
+    display:none;
+}
+
+.view-list{
+    display:none;
+}
+
+.compat-item p{
+    display:none;
+}
+
+
+.compat-item .compat-field-foogallery_custom_url{
+    display:none;
+}
+
+.compat-item .compat-field-foogallery_custom_url{
+    display:none;
+}
+
+.compat-item .compat-field-foogallery_custom_url{
+    display:none;
+}
+
+.compat-item .compat-field-foogallery_custom_target{
+    display:none;
+}
+
+.compat-item .compat-field-foogallery_custom_class{
+    display:none;
+}
+
+.compat-item .compat-field-crop-from-position{
+    display:none;
+}
+
+#mceu_5-button{
+    display:none;
+}
+

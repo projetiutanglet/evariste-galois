@@ -24,7 +24,7 @@ msgstr ""
 #: extensions/albums/admin/class-columns.php:19
 #: includes/admin/class-columns.php:24
 msgid "Template"
-msgstr ""
+msgstr "Thème"
 
 #: extensions/albums/admin/class-columns.php:20
 #: extensions/nextgen-importer/view-importer.php:294
@@ -35,18 +35,18 @@ msgstr "Galeries"
 #: extensions/albums/admin/class-columns.php:21
 #: includes/admin/class-columns.php:26
 msgid "Shortcode"
-msgstr ""
+msgstr "Code court"
 
 #: extensions/albums/admin/class-columns.php:62
 #: extensions/albums/admin/class-metaboxes.php:260
 #: includes/admin/class-columns.php:101
 #: includes/admin/class-gallery-metaboxes.php:371
 msgid "Shortcode copied to clipboard :)"
-msgstr ""
+msgstr "Code court copié :)"
 
 #: extensions/albums/admin/class-metaboxes.php:57
 msgid "Galleries - click a gallery to add it to your album."
-msgstr ""
+msgstr "Galeries - Cliquez sur une galerie pour l'ajouter à votre album"
 
 #: extensions/albums/admin/class-metaboxes.php:66
 #: includes/admin/class-admin.php:65 includes/admin/class-menu.php:30
@@ -59,11 +59,11 @@ msgstr "Options"
 #: includes/admin/class-gallery-metaboxes.php:106
 #: pro/includes/class-foogallery-pro-bulk-copy.php:151
 msgid "Custom CSS"
-msgstr ""
+msgstr "CSS personnalisé"
 
 #: extensions/albums/admin/class-metaboxes.php:84
 msgid "Album Shortcode"
-msgstr ""
+msgstr "Album Code court"
 
 #: extensions/albums/admin/class-metaboxes.php:93
 msgid "Album Sorting"
@@ -77,23 +77,23 @@ msgstr ""
 
 #: extensions/albums/admin/class-metaboxes.php:182
 msgid "Edit Gallery Details"
-msgstr ""
+msgstr "Modifier les détails de la galerie"
 
 #: extensions/albums/admin/class-metaboxes.php:187
 msgid "Loading details for "
-msgstr ""
+msgstr "Chargement des détails"
 
 #: extensions/albums/admin/class-metaboxes.php:194
 msgid "Save Gallery Details"
-msgstr ""
+msgstr "Enregistrer les détails de la galerie"
 
 #: extensions/albums/admin/class-metaboxes.php:201
 msgid "Close media panel"
-msgstr ""
+msgstr "Fermer"
 
 #: extensions/albums/admin/class-metaboxes.php:227
 msgid "Edit Album Info"
-msgstr ""
+msgstr "Modifier"
 
 #: extensions/albums/admin/class-metaboxes.php:247
 msgid "Paste the above shortcode into a post or page to show the album."
@@ -143,28 +143,28 @@ msgstr ""
 
 #: extensions/albums/admin/class-metaboxes.php:542
 msgid "Gallery Title"
-msgstr ""
+msgstr "Titre de la galerie"
 
 #: extensions/albums/admin/class-metaboxes.php:544
 #: includes/class-posttypes.php:30
 msgid "Edit Gallery"
-msgstr ""
+msgstr "Modifier la galerie"
 
 #: extensions/albums/admin/class-metaboxes.php:548
 #: includes/admin/view-extensions-build-your-own.php:134
 msgid "Gallery Template"
-msgstr ""
+msgstr "Thème de la galerie"
 
 #: extensions/albums/admin/class-metaboxes.php:554
 #: includes/admin/class-columns.php:25
 msgid "Media"
-msgstr ""
+msgstr "Media"
 
 #: extensions/albums/admin/class-metaboxes.php:560
 #: extensions/albums/functions.php:83
 #: includes/admin/class-attachment-fields.php:27 includes/functions.php:984
 msgid "Custom URL"
-msgstr ""
+msgstr "URL personnalisé"
 
 #: extensions/albums/admin/class-metaboxes.php:562
 msgid "Point your gallery to a custom URL"
@@ -173,7 +173,7 @@ msgstr ""
 #: extensions/albums/admin/class-metaboxes.php:566
 #: includes/admin/class-attachment-fields.php:34
 msgid "Custom Target"
-msgstr ""
+msgstr "Cible personnalisée"
 
 #: extensions/albums/admin/class-metaboxes.php:568
 msgid "Set a custom target for your gallery"
@@ -216,7 +216,7 @@ msgstr ""
 
 #: extensions/albums/class-foogallery-album.php:205
 msgid "No galleries"
-msgstr ""
+msgstr "Pas de galerie"
 
 #: extensions/albums/class-foogallery-album.php:207
 msgid "1 gallery"
@@ -233,7 +233,7 @@ msgstr ""
 
 #: extensions/albums/class-posttypes.php:28
 msgid "Add Album"
-msgstr ""
+msgstr "Ajouter un album"
 
 #: extensions/albums/class-posttypes.php:29
 msgid "Add New Album"
@@ -4082,78 +4082,78 @@ msgstr ""
 
 #: pro/includes/class-foogallery-pro-paging.php:21
 msgid "Pagination"
-msgstr ""
+msgstr "Pagination"
 
 #: pro/includes/class-foogallery-pro-paging.php:22
 msgid "Infinite Scroll"
-msgstr ""
+msgstr "Scroll infini"
 
 #: pro/includes/class-foogallery-pro-paging.php:23
 msgid "Load More"
-msgstr ""
+msgstr "Voir plus"
 
 #: pro/includes/class-foogallery-pro-presets.php:27
 msgid "Sadie"
-msgstr ""
+msgstr "Sadie"
 
 #: pro/includes/class-foogallery-pro-presets.php:28
 msgid "Layla"
-msgstr ""
+msgstr "Layla"
 
 #: pro/includes/class-foogallery-pro-presets.php:29
 msgid "Oscar"
-msgstr ""
+msgstr "Oscar"
 
 #: pro/includes/class-foogallery-pro-presets.php:30
 msgid "Sarah"
-msgstr ""
+msgstr "Sarah"
 
 #: pro/includes/class-foogallery-pro-presets.php:31
 msgid "Goliath"
-msgstr ""
+msgstr "Goliath"
 
 #: pro/includes/class-foogallery-pro-presets.php:32
 msgid "Jazz"
-msgstr ""
+msgstr "Jazz"
 
 #: pro/includes/class-foogallery-pro-presets.php:33
 msgid "Lily"
-msgstr ""
+msgstr "Lily"
 
 #: pro/includes/class-foogallery-pro-presets.php:34
 msgid "Ming"
-msgstr ""
+msgstr "Ming"
 
 #: pro/includes/class-foogallery-pro-presets.php:35
 msgid "Selena"
-msgstr ""
+msgstr "Selena"
 
 #: pro/includes/class-foogallery-pro-presets.php:36
 msgid "Steve"
-msgstr ""
+msgstr "Steve"
 
 #: pro/includes/class-foogallery-pro-presets.php:37
 msgid "Zoe"
-msgstr ""
+msgstr "Zoe"
 
 #. Plugin Name of the plugin/theme
 msgid "FooGallery"
-msgstr ""
+msgstr "FooGallery"
 
 #. Plugin URI of the plugin/theme
 msgid "https://foo.gallery"
-msgstr ""
+msgstr "https://foo.gallery"
 
 #. Description of the plugin/theme
 msgid ""
 "FooGallery is the most intuitive and extensible gallery management tool ever "
 "created for WordPress"
-msgstr ""
+msgstr "FooGallery est l'outil le plus intuitif jamais créé pour Wordpress"
 
 #. Author of the plugin/theme
 msgid "FooPlugins"
-msgstr ""
+msgstr "FooPlugins"
 
 #. Author URI of the plugin/theme
 msgid "http://fooplugins.com"
-msgstr ""
+msgstr "http://fooplugins.com"
