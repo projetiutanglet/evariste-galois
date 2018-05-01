@@ -28,10 +28,12 @@ h1{
 .wds_thickbox.button{
     display:none;
 }
+
 /*---------------------------CACHER LE BOUTON LIRE PLUS DANS L'EDITEUR DE TEXTE--------------------*/
 #mceu_10-button{
     display:none;
 }
+
 /*---------------------------CACHER LA BANNIERE SLIDER WD--------------------*/
 .wd_topic{
     display:none;
